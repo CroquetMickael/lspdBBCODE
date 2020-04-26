@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Accordeon } from "../../Component/Accordeon";
 import { EditorState } from "draft-js";
 import { HtmlEditor } from "../../Component/Editor/Editor.component";
@@ -14,7 +14,7 @@ const RPTPatrouilleComponent = (props: any) => {
 
   const [Officers, setOfficers] = useState<string>("");
   const [Date, setDate] = useState<string>("");
-  const [Type, setType] = useState<string>("Rapport de patrouille");
+  const [Type, setType] = useState<string>("Incident");
 
   const propsToSend = {
     Officers,
@@ -33,6 +33,12 @@ const RPTPatrouilleComponent = (props: any) => {
     lastName: userValues.lastName
   };
 
+  useEffect(() => {
+    ModalValues.setShow(true);
+    ModalValues.setLink("https://lspd-online.forumactif.com/f11-rapports-personnels");
+  })
+
+  
   return (
     <div className="w-full p-2">
       <Accordeon title="Information">

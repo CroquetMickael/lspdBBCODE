@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Accordeon } from "../../Component/Accordeon";
 import { EditorState, ContentState } from "draft-js";
 import { HtmlEditor } from "../../Component/Editor/Editor.component";
@@ -53,6 +53,10 @@ const DetentionComponent = (props: any) => {
     firstName: userValues.firstName,
   };
 
+  useEffect(() => {
+    ModalValues.setShow(true);
+    ModalValues.setLink("https://lspd-online.forumactif.com/f10-enregistrements-en-detention")
+  })
   return (
     <div className="w-full p-2">
       <Accordeon title="Information">

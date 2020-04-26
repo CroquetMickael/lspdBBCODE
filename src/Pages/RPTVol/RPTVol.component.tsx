@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Accordeon } from "../../Component/Accordeon";
 import { EditorState } from "draft-js";
 import { HtmlEditor } from "../../Component/Editor/Editor.component";
@@ -31,6 +31,11 @@ const RPTVolComponent = (props: any) => {
     setLastName: userValues.setLastName,
     firstName: userValues.firstName
   };
+  
+  useEffect(() => {
+    ModalValues.setShow(false);
+  })
+
 
   return (
     <div className="w-full p-2">

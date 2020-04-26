@@ -30,7 +30,19 @@ const ModalComponent = (props: any) => (
           </div>
         </div>
         <hr />
-        <textarea className="w-full" readOnly={true} value={props.bbCode}></textarea>
+        <textarea
+          className="w-full h-64"
+          readOnly={true}
+          value={props.bbCode}
+        ></textarea>
+        <hr className="py-2" />
+        {props.show && (
+          <a href={props.link} target="_blank">
+            <button className="w-full bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+              Lien vers le forum
+            </button>
+          </a>
+        )}
       </div>
     </div>
   </div>

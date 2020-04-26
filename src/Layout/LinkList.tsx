@@ -7,15 +7,15 @@ const links = [
     libelle: "Rapport Patrouille",
   },
   {
-    href: "/VolSOB",
+    href: "/rapportVolSOB",
     libelle: "Rapport de vol SOB",
   },
   {
-    href: "/PATINDIA",
+    href: "/rapportPatrouilleIndia",
     libelle: "Rapport Patrouille India",
   },
   {
-    href: "/detention",
+    href: "/EnregistrementDetention",
     libelle: "Enregistrement en détention",
   }
 ];

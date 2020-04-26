@@ -36,7 +36,6 @@ const RPTPatrouilleIndiaAccComponent = (props: any) => (
           placeholder="Véhicule"
           type="text"
           border={true}
-          value={props.lastName}
           onChange={(e: any) => props.setVehicle(e.target.value)}
         />
       </div>

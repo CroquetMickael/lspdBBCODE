@@ -18,9 +18,9 @@ const AppRouter = () => (
       <UserProvider>
         <Router>
           <RouterPage path="/" pageComponent={<RPTPatrouilleComponent />} />
-          <RouterPage path="/VolSOB" pageComponent={<RPTVolComponent />} />
-          <RouterPage path="/PATINDIA" pageComponent={<RPTPatrouilleIndiaComponent />} />
-          <RouterPage path="/detention" pageComponent={<DetentionComponent />} />
+          <RouterPage path="/rapportVolSOB" pageComponent={<RPTVolComponent />} />
+          <RouterPage path="/rapportPatrouilleIndia" pageComponent={<RPTPatrouilleIndiaComponent />} />
+          <RouterPage path="/EnregistrementDetention" pageComponent={<DetentionComponent />} />
         </Router>
       </UserProvider>
     </Layout>

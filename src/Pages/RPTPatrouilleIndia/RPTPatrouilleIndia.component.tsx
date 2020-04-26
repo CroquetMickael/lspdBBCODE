@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Accordeon } from "../../Component/Accordeon";
 import { EditorState, convertFromHTML, ContentState } from "draft-js";
 import { HtmlEditor } from "../../Component/Editor/Editor.component";
@@ -39,6 +39,10 @@ const RPTPatrouilleIndiaComponent = (props: any) => {
     firstName: userValues.firstName,
     lastName: userValues.lastName
   };
+
+  useEffect(() => {
+    ModalValues.setShow(false);
+  })
 
   return (
     <div className="w-full p-2">

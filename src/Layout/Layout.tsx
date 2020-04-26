@@ -10,11 +10,16 @@ const Layout = (props: any) => {
       <div className="flex content-start flex-wrap h-full">
         <Header />
         <div className="w-full z-20">{props.children}</div>
+        <footer className='w-full text-center border-t border-grey p-4 pin-b'>
+            Made by @Haze for LSPD LRP 2020-2021
+        </footer>
         <ModalContainer
           modalOpen={modalValues.modalOpen}
           toggleModal={modalValues.toggleModal}
           bbCode={modalValues.bbCode}
           title="Code génére"
+          link={modalValues.link}
+          show={modalValues.show}
         />
       </div>
     </>

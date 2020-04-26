@@ -1,6 +1,5 @@
 import React from "react";
 import Logo from "../Assets/lspd11.png";
-import { Link } from "@reach/router";
 import { LinkList } from "./LinkList";
 
 const Header = () => (

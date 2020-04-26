@@ -14,12 +14,17 @@ const ModalProvider = (props: ModalProps) => {
     const [modalOpen, setModalOpen] = useState(false);
     const toggleModal = () => setModalOpen(!modalOpen);
     const [bbCode, setBBCode] = useState("");
-
+    const [link, setLink] = useState("");
+    const [show, setShow] = useState(true);
   return (
     <ModalContext.Provider
       value={{
         modalOpen,
         toggleModal,
+        link,
+        show,
+        setShow,
+        setLink,
         bbCode,
         setBBCode
       }}

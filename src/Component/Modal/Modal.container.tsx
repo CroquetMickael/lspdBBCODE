@@ -6,6 +6,8 @@ interface ModalProps {
   toggleModal: Function;
   title: string;
   bbCode: string;
+  link: string;
+  show: boolean;
 }
 
 const ModalContainer: FunctionComponent<ModalProps> = (props: ModalProps) => {
