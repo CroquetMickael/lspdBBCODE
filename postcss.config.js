@@ -1,31 +1,39 @@
-const purgecss = require('@fullhuman/postcss-purgecss')({
+const WhitelistPatterns = [
+  /^rdw/,
+  /^DraftEditor/,
+  /^public/,
+  /^pre/,
+  /^code/,
+  /^token/,
+  /^line-numbers/,
+  /^div.code/,
+];
 
-  // Specify the paths to all of the template files in your project 
-  content: [
-    './src/**/*.tsx',
-  ],
+const purgecss = require("@fullhuman/postcss-purgecss")({
+  // Specify the paths to all of the template files in your project
+  content: ["./src/**/*.tsx"],
 
   // Include any special characters you're using in this regular expression
-  defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
-})
+  defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
+  whitelistPatterns: WhitelistPatterns,
+});
 
 module.exports = {
   plugins: [
     require("postcss-flexbugs-fixes"),
-    require('postcss-import'),
+    require("postcss-import"),
     require("postcss-preset-env")({
       autoprefixer: {
-        flexbox: "no-2009"
+        flexbox: "no-2009",
       },
       stage: 3,
       features: {
-        "nesting-rules": true
-      }
+        "nesting-rules": true,
+      },
     }),
-    require('tailwindcss'),
-    require('autoprefixer'),
-    ...process.env.NODE_ENV === 'production'
-      ? [purgecss]
-      : []
-  ]
-}
+
+    require("tailwindcss"),
+    require("autoprefixer"),
+    ...(process.env.NODE_ENV === "production" ? [purgecss] : []),
+  ],
+};
