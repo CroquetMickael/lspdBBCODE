@@ -6,6 +6,7 @@ import { ModalContext } from "../../Component/Context/ModalContext";
 import { GenerateButtonComponent } from "../../Component/GenerateButton/GenerateButton.container";
 import { UserContext } from "../../Component/Context/UserContext";
 import { DetentionAccComponent } from "./DetentionAcc.component";
+import { PeineComponent } from "./Peine.component";
 
 const DetentionComponent = (props: any) => {
   const [editorState, setEditorState] = useState(
@@ -62,6 +63,9 @@ const DetentionComponent = (props: any) => {
     <div className="w-full p-2">
       <Accordeon title="Information">
         <DetentionAccComponent {...propsToSend} />
+      </Accordeon>
+      <Accordeon title="Peine">
+        <PeineComponent/>
       </Accordeon>
       <div className="w-full max-h-3/4">
       <div className="w-full my-4">Charges retenues: </div>
