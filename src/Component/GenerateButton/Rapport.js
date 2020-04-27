@@ -127,7 +127,7 @@ ${
     : "[ ] Autre, précisez ci-contre:"
 }
 
-
+${code}
 
 
 </div>
