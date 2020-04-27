@@ -45,6 +45,7 @@ const RPTPatrouilleComponent = (props: any) => {
         <RPTPatrouilleAccComponent {...propsToSend} />
       </Accordeon>
       <div className="w-full max-h-3/4">
+      <div className="w-full my-4">Contextes : </div>
         <HtmlEditor editorState={editorState} setEditorState={setEditorState} />
       </div>
       <GenerateButtonComponent rapportType="RAPT" {...propsToSend} />

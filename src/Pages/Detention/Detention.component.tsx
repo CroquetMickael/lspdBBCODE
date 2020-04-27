@@ -51,6 +51,7 @@ const DetentionComponent = (props: any) => {
     setFirstName: userValues.setFirstName,
     setLastName: userValues.setLastName,
     firstName: userValues.firstName,
+    lastName: userValues.lastName
   };
 
   useEffect(() => {
@@ -63,6 +64,7 @@ const DetentionComponent = (props: any) => {
         <DetentionAccComponent {...propsToSend} />
       </Accordeon>
       <div className="w-full max-h-3/4">
+      <div className="w-full my-4">Charges retenues: </div>
         <HtmlEditor editorState={editorState} setEditorState={setEditorState} />
       </div>
       <GenerateButtonComponent rapportType="DET" {...propsToSend} />

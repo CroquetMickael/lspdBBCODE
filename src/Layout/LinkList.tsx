@@ -4,7 +4,7 @@ import { Match, Link } from "@reach/router";
 const links = [
   {
     href: "/",
-    libelle: "Rapport Patrouille",
+    libelle: "Rapport de patrouille",
   },
   {
     href: "/rapportVolSOB",
@@ -12,11 +12,15 @@ const links = [
   },
   {
     href: "/rapportPatrouilleIndia",
-    libelle: "Rapport Patrouille India",
+    libelle: "Rapport de patrouille INDIA",
   },
   {
     href: "/EnregistrementDetention",
     libelle: "Enregistrement en détention",
+  },
+  {
+    href: "/Saisie",
+    libelle: "Rapport de saisie",
   }
 ];
 

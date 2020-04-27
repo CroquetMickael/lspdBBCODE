@@ -50,6 +50,7 @@ const RPTPatrouilleIndiaComponent = (props: any) => {
         <RPTPatrouilleIndiaAccComponent {...propsToSend} />
       </Accordeon>
       <div className="w-full max-h-3/4">
+      <div className="w-full my-4">Résumé d'intervention:</div>
         <HtmlEditor editorState={editorState} setEditorState={setEditorState} />
       </div>
       <GenerateButtonComponent rapportType="RAPTINDIA" {...propsToSend} />

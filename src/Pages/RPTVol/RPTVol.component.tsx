@@ -29,7 +29,8 @@ const RPTVolComponent = (props: any) => {
     setBBCode: ModalValues.setBBCode,
     setFirstName: userValues.setFirstName,
     setLastName: userValues.setLastName,
-    firstName: userValues.firstName
+    firstName: userValues.firstName,
+    lastName: userValues.lastName
   };
   
   useEffect(() => {
@@ -43,6 +44,7 @@ const RPTVolComponent = (props: any) => {
         <RPTVolAccComponent {...propsToSend} />
       </Accordeon>
       <div className="w-full max-h-3/4">
+      <div className="w-full my-4">Interventions menées: </div>
         <HtmlEditor editorState={editorState} setEditorState={setEditorState} />
       </div>
       <GenerateButtonComponent rapportType="RVOL" {...propsToSend} />

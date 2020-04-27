@@ -136,6 +136,56 @@ ${elements.firstName}
   setter(Code);
 }
 
+function generateSaisie(elements,code,setter) {
+  const Code = `
+  Code:COPIER
+[table style="border-collapse:collapse;background-color:white;box-shadow: 0px 0px 1px black;color:black;font-family:Arial;border:1px solid grey;font-size:12px;border-radius:none;" align="center" width="100%|50"]
+[tr style=][td style="padding:25px;"]
+[b]DÉPÔT DE SAISIE[/b]
+
+[b]Nom du suspect :[/b] ${elements.suspectName}
+[b]Contexte de la saisie (bref résumé) :[/b] ${code}
+
+[b]DROGUES[/b]
+Indiquez la quantité dans les cases correspondantes.
+
+[${elements.meth}] MÉTHAMPHÉTAMINE
+[${elements.coc}] COCAÏNE
+[${elements.cann}] CANNABIS
+[${elements.stero}] STÉROÏDE
+[${elements.hero}] HÉROÏNE
+
+[b]ARMES[/b]
+Indiquez la quantité dans les cases correspondantes.
+
+[${elements.mm}] 9mm
+[${elements.mmS}] 9mm silencieux
+[${elements.de}] .50 (Desert Eagle)
+[${elements.pompe}] Fusil à pompe
+[${elements.uzi}] Micro SMG/Uzi
+[${elements.mp5}] MP5
+[${elements.ak}] AK-47
+[${elements.m4}] M4
+[${elements.tec9}] Tec-9
+[${elements.rifle}] Country Rifle
+[${elements.srifle}] Sniper Rifle
+[${elements.rpg}] RPG
+
+[b]AUTRES[/b]
+Indiquez ici la nature et la quantité des autres effets saisies.
+
+[spoiler=OOC]
+${elements.log}
+[/spoiler]
+
+[/td]
+[/tr]
+
+[/table]
+`;
+  setter(Code);
+}
+
 export function generate(type, elements, code, setter) {
   switch (type) {
     case "RAPT":
@@ -149,6 +199,8 @@ export function generate(type, elements, code, setter) {
       break;
     case "DET":
       generateFormDetention(elements,code,setter);
+    case "SAI":
+      generateSaisie(elements, code, setter);
     default:
       break;
   }
