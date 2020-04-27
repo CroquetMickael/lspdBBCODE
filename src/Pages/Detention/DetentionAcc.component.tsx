@@ -14,8 +14,8 @@ interface RPTPatrouilleProps {
 const DetentionAccComponent = (props: any) => (
   <form className="w-full">
     <div className="flex flex-wrap justify-between w-full mb-6">
-      <div className="flex w-full justify-center">
-        <div className="ml-4 mb-4">
+      <div className="flex w-full">
+        <div className="mb-4 ml-4">
           <InputComponent
             placeholder="Nom"
             type="text"
@@ -34,7 +34,8 @@ const DetentionAccComponent = (props: any) => (
           />
         </div>
       </div>
-      <div className="flex w-full justify-center">
+      <div className="w-full mx-4 mb-2">Identité et droit</div>
+      <div className="flex w-full">
         <div className="ml-4">
           <InputComponent
             placeholder="Identité suspect"
@@ -51,7 +52,8 @@ const DetentionAccComponent = (props: any) => (
           />
         </div>
       </div>
-      <div className="flex w-full justify-center">
+      <div className="w-full mx-4 mb-2">Assistance juridique</div>
+      <div className="flex w-full">
         <div className="ml-4">
           <ToggleButtonComponent
             label="Conseiller juridique ?"
@@ -77,7 +79,8 @@ const DetentionAccComponent = (props: any) => (
           />
         </div>
       </div>
-      <div className="flex w-full justify-center">
+      <div className="w-full mx-4 mb-2">Assistance juridique</div>
+      <div className="flex w-full">
         <div className="ml-4">
           <InputComponent
             placeholder="Numéro de la personne"
@@ -87,9 +90,9 @@ const DetentionAccComponent = (props: any) => (
             onChange={(e: any) => props.setContactNumber(e.target.value)}
           />
         </div>
-        <div className="ml-4 py-1">
+        <div className="py-1 ml-4">
           <select
-            className="shadow py-2"
+            className="py-2 shadow"
             onChange={(e: any) => props.setNature(e.target.value)}
           >
             <option value="#">Aucun</option>

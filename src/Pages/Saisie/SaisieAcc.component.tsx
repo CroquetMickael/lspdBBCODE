@@ -166,9 +166,9 @@ const SaisieAccComponent = (props: any) => (
           />
         </div>
       </div>
-      <div className="w-full mb-2 ml-4">LOGS (OOC)</div>
+      <div className="w-full mx-4 mb-2">LOGS (OOC)</div>
       <div className="flex w-full mb-4">
-        <div className="w-full ml-4 ">
+        <div className="w-full mx-4 ">
          <textarea className="w-full shadow " onChange={(e: any) => props.setLog(e.target.value)}></textarea>
         </div>
       </div>

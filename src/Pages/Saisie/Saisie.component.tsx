@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Accordeon } from "../../Component/Accordeon";
-import { EditorState, ContentState } from "draft-js";
+import { EditorState } from "draft-js";
 import { HtmlEditor } from "../../Component/Editor/Editor.component";
 import { ModalContext } from "../../Component/Context/ModalContext";
 import { GenerateButtonComponent } from "../../Component/GenerateButton/GenerateButton.container";
@@ -98,7 +98,7 @@ const SaisieComponent = (props: any) => {
         <div className="w-full my-4">Contexte de la saisie (bref résumé) :</div>
         <HtmlEditor editorState={editorState} setEditorState={setEditorState} />
       </div>
-      <GenerateButtonComponent rapportType="DET" {...propsToSend} />
+      <GenerateButtonComponent rapportType="SAI" {...propsToSend} />
     </div>
   );
 };

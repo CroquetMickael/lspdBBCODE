@@ -36,7 +36,7 @@ ${code}
   setter(Code);
 }
 
-function generateRapportPatrouilleIndia(elements,code,setter) {
+function generateRapportPatrouilleIndia(elements, code, setter) {
   const Code = `
   [table style="border-collapse:collapse;background-color:black;border-style:solid;border-width:1px;color:black;font-size:12px;font-family:arial;" align="center" width="100%"]
 [tr style=][td style="padding:10px" align="center"][img(140px,140px)]https://cdn.discordapp.com/attachments/560758312300445707/572854744305893386/14641810.png[/img][/td]
@@ -69,7 +69,7 @@ ${code}
   setter(Code);
 }
 
-function generateFormDetention(elements,code,setter) {
+function generateFormDetention(elements, code, setter) {
   const Code = `
   <div style="border: 1px solid #000000; background-image: url(https://nsa38.casimages.com/img/2015/11/07/151107050411686728.png); background-repeat:repeat-y; background-color: #fafafa; padding-left: 40px;">
 
@@ -87,18 +87,26 @@ function generateFormDetention(elements,code,setter) {
 
 [b]❯ A COMPLÉTER SI LE SUSPECT A SUBIT UN INTERROGATOIRE[/b].
 
-${elements.miranda ? "[X] L'AVERTISSEMENT MIRANDA A BIEN ÉTÉ LU AVANT L'INTERROGATOIRE.": "[ ] L'AVERTISSEMENT MIRANDA A BIEN ÉTÉ LU AVANT L'INTERROGATOIRE."}
+${
+  elements.miranda
+    ? "[X] L'AVERTISSEMENT MIRANDA A BIEN ÉTÉ LU AVANT L'INTERROGATOIRE."
+    : "[ ] L'AVERTISSEMENT MIRANDA A BIEN ÉTÉ LU AVANT L'INTERROGATOIRE."
+}
 
 [b]Le suspect a été assisté d'un conseiller juridique ?[/b]
 
-${elements.conseil ?
-   `[X] Oui, précisez l'identité du conseiller: ${elements.conseilName}
-[] NON.` 
-   : `[] Oui, précisez l'identité du conseiller:
-[X] NON.`}
+${
+  elements.conseil
+    ? `[X] Oui, précisez l'identité du conseiller: ${elements.conseilName}
+[] NON.`
+    : `[] Oui, précisez l'identité du conseiller:
+[X] NON.`
+}
 
 
-[b]Remarques sur l'interrogatoire (suspect coopératif/droit au silence...):[/b] ${elements.remarque}
+[b]Remarques sur l'interrogatoire (suspect coopératif/droit au silence...):[/b] ${
+    elements.remarque
+  }
 
 [b]❯ A COMPLÉTER SI LE SUSPECT A UTILISER SON DROIT A UN APPEL TÉLÉPHONIQUE[/b].
 
@@ -106,20 +114,24 @@ ${elements.conseil ?
 
 [b]Nature de la personne contactée:[/b]
 
-${elements.nature == "JUR" ? "[X] Conseiller juridique" : "[ ] Conseiller juridique"}
+${
+  elements.nature == "JUR"
+    ? "[X] Conseiller juridique"
+    : "[ ] Conseiller juridique"
+}
 ${elements.nature == "EMP" ? "[X] Employeur" : "[ ] Employeur"}
 ${elements.nature == "PRO" ? "[X] Proche" : "[ ] Proche"}
-${elements.nature == "AUT" ? `[X] Autre, précisez ci-contre: ${elements.contactPersonne}` : "[ ] Autre, précisez ci-contre:"}
+${
+  elements.nature == "AUT"
+    ? `[X] Autre, précisez ci-contre: ${elements.contactPersonne}`
+    : "[ ] Autre, précisez ci-contre:"
+}
 
 
 
 
 </div>
 <div style="height: auto; text-align: center; padding:6px;background-color: #003964; color: white ;font-size:17px;padding: 20px 40px;margin: 0 50px;box-shadow: 0px 0px 1px #003964;">[b]INSTRUCTION JUDICIAIRE[/b]</div><div style="padding: 40px;background-color:#ffffff;margin: 0 50px;box-shadow: 0px 0px 1px #b1b2b2;">
-
-${code}
-
-
 [size=10][color=grey](( A remplir si [b]OPTION 2.[/b] dans le cadre d'une [url=https://www.leroleplay.fr/viewtopic.php?id=43875]demande d'accusation[/url]. ))[/color][/size]
 [b]Référence de la demande d'accusation[/b]: 
 
@@ -136,10 +148,8 @@ ${elements.firstName}
   setter(Code);
 }
 
-function generateSaisie(elements,code,setter) {
-  const Code = `
-  Code:COPIER
-[table style="border-collapse:collapse;background-color:white;box-shadow: 0px 0px 1px black;color:black;font-family:Arial;border:1px solid grey;font-size:12px;border-radius:none;" align="center" width="100%|50"]
+function generateSaisie(elements, code, setter) {
+  const Code = `[table style="border-collapse:collapse;background-color:white;box-shadow: 0px 0px 1px black;color:black;font-family:Arial;border:1px solid grey;font-size:12px;border-radius:none;" align="center" width="100%|50"]
 [tr style=][td style="padding:25px;"]
 [b]DÉPÔT DE SAISIE[/b]
 
@@ -198,9 +208,11 @@ export function generate(type, elements, code, setter) {
       generateRapportPatrouilleIndia(elements, code, setter);
       break;
     case "DET":
-      generateFormDetention(elements,code,setter);
+      generateFormDetention(elements, code, setter);
+      break;
     case "SAI":
       generateSaisie(elements, code, setter);
+      break;
     default:
       break;
   }
