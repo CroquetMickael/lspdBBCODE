@@ -74,19 +74,17 @@ const DetentionAccComponent = (props: any) => (
             placeholder="Remarque"
             type="text"
             border={true}
-            value={props.lastName}
             onChange={(e: any) => props.setRemarque(e.target.value)}
           />
         </div>
       </div>
-      <div className="w-full mx-4 mb-2">Assistance juridique</div>
+      <div className="w-full mx-4 mb-2">Contact</div>
       <div className="flex w-full">
         <div className="ml-4">
           <InputComponent
             placeholder="Numéro de la personne"
             type="text"
             border={true}
-            value={props.lastName}
             onChange={(e: any) => props.setContactNumber(e.target.value)}
           />
         </div>
@@ -107,7 +105,6 @@ const DetentionAccComponent = (props: any) => (
             placeholder="Personne (Si autre)"
             type="text"
             border={true}
-            value={props.lastName}
             onChange={(e: any) => props.setContactPersonne(e.target.value)}
           />
         </div>
