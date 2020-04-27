@@ -56,7 +56,7 @@ const DetentionComponent = (props: any) => {
 
   useEffect(() => {
     ModalValues.setShow(true);
-    ModalValues.setLink("https://lspd-online.forumactif.com/f10-enregistrements-en-detention")
+    ModalValues.setLink("https://lspd-online.forumactif.com/post?f=10&mode=newtopic")
   })
   return (
     <div className="w-full p-2">
