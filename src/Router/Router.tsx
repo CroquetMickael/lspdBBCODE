@@ -10,6 +10,7 @@ import { DetentionComponent } from "../Pages/Detention/Detention.component";
 import { SaisieComponent } from "../Pages/Saisie/Saisie.component";
 import { TirComponent } from "../Pages/Tir/Tir.component";
 import { SabotComponent } from "../Pages/Sabot/Sabot.component";
+import { FourriereComponent } from "../Pages/Fourriere/Fourriere.component";
 
 const RouterPage = (
   props: { pageComponent: JSX.Element } & RouteComponentProps
@@ -36,6 +37,7 @@ const AppRouter = () => (
           <RouterPage path="/Saisie" pageComponent={<SaisieComponent />} />
           <RouterPage path="/Tir" pageComponent={<TirComponent />} />
           <RouterPage path="/Sabot" pageComponent={<SabotComponent />} />
+          <RouterPage path="/Fourriere" pageComponent={<FourriereComponent />} />
         </Router>
       </UserProvider>
     </Layout>

@@ -29,6 +29,10 @@ const links = [
   {
     href: "/Sabot",
     libelle: "Placement de Sabot",
+  },
+  {
+    href: "/Fourriere",
+    libelle: "Placement en fourriere",
   }
 ];
 
