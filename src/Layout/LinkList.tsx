@@ -25,6 +25,10 @@ const links = [
   {
     href: "/Tir",
     libelle: "Rapport de tir en service",
+  },
+  {
+    href: "/Sabot",
+    libelle: "Placement de Sabot",
   }
 ];
 

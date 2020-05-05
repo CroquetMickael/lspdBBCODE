@@ -31,8 +31,8 @@ const RPTPatrouilleAccComponent = (props: any) => (
           onChange={(e: any) => props.setLastName(e.target.value)}
         />
       </div>
-      <div className="ml-4 py-1">
-        <select className="shadow py-2" onChange={(e: any) => props.setType(e.target.value)}>
+      <div className="py-1 ml-4">
+        <select className="py-2 shadow" onChange={(e: any) => props.setType(e.target.value)}>
           <option value="Incident">Incident</option>
           <option value="Rapport de patrouille">Rapport de patrouille</option>
         </select>
@@ -46,12 +46,13 @@ const RPTPatrouilleAccComponent = (props: any) => (
         />
       </div>
       <div className="ml-4 mr-4">
-        <InputComponent
-          placeholder="Date"
-          type="text"
-          border={true}
-          onChange={(e: any) => props.setDate(e.target.value)}
-        />
+      <InputComponent
+            placeholder="Date"
+            type="text"
+            border={true}
+            value={props.date}
+            onChange={(e: any) => props.setDate(e.target.value)}
+          />
       </div>
     </div>
   </form>

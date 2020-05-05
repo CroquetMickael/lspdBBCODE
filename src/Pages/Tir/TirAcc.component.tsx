@@ -128,12 +128,13 @@ const TirAccComponent = (props: any) => (
         </div>
       </div>
       <div className="ml-4 mr-4">
-        <InputComponent
-          placeholder="Date"
-          type="text"
-          border={true}
-          onChange={(e: any) => props.setDate(e.target.value)}
-        />
+      <InputComponent
+            placeholder="Date"
+            type="text"
+            border={true}
+            value={props.date}
+            onChange={(e: any) => props.setDate(e.target.value)}
+          />
       </div>
     </div>
   </form>

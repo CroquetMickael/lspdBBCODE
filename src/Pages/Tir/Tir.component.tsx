@@ -12,7 +12,7 @@ const TirComponent = (props: any) => {
   const ModalValues = useContext(ModalContext);
   const userValues = useContext(UserContext);
 
-  const [Date, setDate] = useState<string>("");
+  const [date, setDate] = useState<string>(Intl.DateTimeFormat('en-US').format(Date.now()));
   const [rangAffec, setRangAffec] = useState<string>("");
   const [superviseur, setSuperviseur] = useState<string>("");
   const [temoin, setTemoin] = useState<string>("");
@@ -27,7 +27,7 @@ const TirComponent = (props: any) => {
   const propsToSend = {
     code: editorState,
     toggleModal: ModalValues.toggleModal,
-    Date,
+    date,
     setDate,
     rangAffec,
     setRangAffec,

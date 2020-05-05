@@ -14,7 +14,7 @@ const RPTPatrouilleIndiaComponent = (props: any) => {
   const userValues = useContext(UserContext);
 
   const [Operators, setOperators] = useState<string>("");
-  const [Date, setDate] = useState<string>("");
+  const [date, setDate] = useState<string>(Intl.DateTimeFormat('en-US').format(Date.now()));
   const [heureDebut, setHeureDebut] = useState<string>("");
   const [heureFin, setHeureFin] = useState<string>("");
   const [Vehicle, setVehicle] = useState<string>("");
@@ -24,7 +24,7 @@ const RPTPatrouilleIndiaComponent = (props: any) => {
     setOperators,
     code: editorState,
     toggleModal: ModalValues.toggleModal,
-    Date,
+    date,
     setDate,
     Vehicle,
     setVehicle,

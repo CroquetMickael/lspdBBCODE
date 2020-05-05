@@ -13,7 +13,7 @@ const RPTVolComponent = (props: any) => {
   const userValues = useContext(UserContext);
 
   const [etat, setEtat] = useState<string>("");
-  const [Date, setDate] = useState<string>("");
+  const [date, setDate] = useState<string>(Intl.DateTimeFormat('en-US').format(Date.now()));
   const [Type, setType] = useState<string>("Rapport de patrouille");
 
   const propsToSend = {
@@ -21,7 +21,7 @@ const RPTVolComponent = (props: any) => {
     setEtat,
     code: editorState,
     toggleModal: ModalValues.toggleModal,
-    Date,
+    date,
     setDate,
     Type,
     setType,

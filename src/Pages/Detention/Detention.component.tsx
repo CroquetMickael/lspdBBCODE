@@ -21,7 +21,7 @@ const DetentionComponent = (props: any) => {
   const [conseilName, setConseilName] = useState("");
   const [contactNumber, setContactNumber] = useState("");
   const [remarque, setRemarque] = useState<string>("");
-  const [Date, setDate] = useState<string>("");
+  const [date, setDate] = useState<string>(Intl.DateTimeFormat('en-US').format(Date.now()));
   const [contactPersonne, setContactPersonne] = useState(false);
   const [nature, setNature] = useState("");
   const [suspectName, setSuspectName] = useState("");
@@ -35,7 +35,7 @@ const DetentionComponent = (props: any) => {
     setSuspectName,
     code: editorState,
     toggleModal: ModalValues.toggleModal,
-    Date,
+    date,
     setDate,
     contactPersonne,
     contactNumber,

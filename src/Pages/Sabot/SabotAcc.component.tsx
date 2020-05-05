@@ -1,6 +1,5 @@
 import React from "react";
-import { InputComponent } from "../../Component/Input.component";
-import { ToggleButtonComponent } from "../../Component/ToggleButton.component";
+import { InputComponent } from "../../Component/Input.component"
 
 interface RPTPatrouilleProps {
   Officers: string;
@@ -11,9 +10,10 @@ interface RPTPatrouilleProps {
   setType: () => void;
 }
 
-const DetentionAccComponent = (props: any) => (
+const SabotAccComponent = (props: any) => (
   <form className="w-full">
     <div className="flex flex-wrap justify-between w-full mb-6">
+    <div className="w-full mx-4 mb-2">Information sur l'officier</div>
       <div className="flex w-full">
         <div className="mb-4 ml-4">
           <InputComponent
@@ -33,83 +33,70 @@ const DetentionAccComponent = (props: any) => (
             onChange={(e: any) => props.setLastName(e.target.value)}
           />
         </div>
-      </div>
-      <div className="w-full mx-4 mb-2">Identité et droit</div>
-      <div className="flex w-full">
         <div className="ml-4">
           <InputComponent
-            placeholder="Identité suspect"
+            placeholder="Grade"
             type="text"
             border={true}
-            onChange={(e: any) => props.setSuspectName(e.target.value)}
+            onChange={(e: any) => props.setGrade(e.target.value)}
           />
         </div>
         <div className="ml-4">
-          <ToggleButtonComponent
-            label="Droit miranda cité"
-            setValue={props.setMiranda}
-            value={props.miranda}
+          <InputComponent
+            placeholder="Assignation (Bureau)"
+            type="text"
+            border={true}
+            onChange={(e: any) => props.setAffectation(e.target.value)}
           />
         </div>
       </div>
-      <div className="w-full mx-4 mb-2">Assistance juridique</div>
+      <div className="w-full mx-4 mb-2">Information sur le véhicule</div>
       <div className="flex w-full">
         <div className="ml-4">
-          <ToggleButtonComponent
-            label="Conseiller juridique ?"
-            setValue={props.setConseil}
-            value={props.conseil}
+          <InputComponent
+            placeholder="Modèle du véhicule"
+            type="text"
+            border={true}
+            onChange={(e: any) => props.setModeleVeh(e.target.value)}
           />
         </div>
         <div className="ml-4">
           <InputComponent
-            placeholder="Nom du conseillé"
+            placeholder="Plaque du véhicule"
             type="text"
             border={true}
-            onChange={(e: any) => props.setConseilName(e.target.value)}
+            onChange={(e: any) => props.setPlaqueVeh(e.target.value)}
           />
         </div>
         <div className="ml-4">
           <InputComponent
-            placeholder="Remarque"
+            placeholder="Propriétaire"
             type="text"
             border={true}
-            onChange={(e: any) => props.setRemarque(e.target.value)}
+            onChange={(e: any) => props.setProprio(e.target.value)}
+          />
+        </div>
+        <div className="ml-4">
+          <InputComponent
+            placeholder="Lien de la photo"
+            type="text"
+            border={true}
+            onChange={(e: any) => props.setPhotoLink(e.target.value)}
           />
         </div>
       </div>
-      <div className="w-full mx-4 mb-2">Contact</div>
+      <div className="w-full mx-4 mb-2">Informations Supplémentaires</div>
       <div className="flex w-full">
         <div className="ml-4">
           <InputComponent
-            placeholder="Numéro de la personne"
+            placeholder="Raison du placement"
             type="text"
             border={true}
-            onChange={(e: any) => props.setContactNumber(e.target.value)}
-          />
-        </div>
-        <div className="py-1 ml-4">
-          <select
-            className="py-2 shadow"
-            onChange={(e: any) => props.setNature(e.target.value)}
-          >
-            <option value="#">Aucun</option>
-            <option value="JUR">Conseiller juridique</option>
-            <option value="EMP">Employeur</option>
-            <option value="PRO">Proche</option>
-            <option value="AUT">Autre</option>
-          </select>
-        </div>
-        <div className="ml-4">
-          <InputComponent
-            placeholder="Personne (Si autre)"
-            type="text"
-            border={true}
-            onChange={(e: any) => props.setContactPersonne(e.target.value)}
+            onChange={(e: any) => props.setRaison(e.target.value)}
           />
         </div>
         <div className="ml-4 mr-4">
-        <InputComponent
+          <InputComponent
             placeholder="Date"
             type="text"
             border={true}
@@ -122,4 +109,4 @@ const DetentionAccComponent = (props: any) => (
   </form>
 );
 
-export { DetentionAccComponent };
+export { SabotAccComponent };

@@ -6,7 +6,7 @@ function generateRapportPatrouille(elements, code, setter) {
 
 [b]Type de rapport[/b]: ${elements.Type}
 [b]Agent(s) présent(s)[/b]:  ${elements.Officers}
-[b]Date, heure et lieu[/b]:${elements.Date}
+[b]Date, heure et lieu[/b]:${elements.date}
 [b]Contexte[/b]:
 ${code}
 [right]
@@ -23,7 +23,7 @@ function generateRapportVol(elements, code, setter) {
 [center][size=18][b]RAPPORT DE VOL - OPÉRATEUR ${elements.lastName} ${elements.firstName}[/b][/size][/center]
 
 <div style="width: 100%;color: black;padding: 10px;background-color: white;border: 1px solid black;">
-[b]Date et et tranche horaire du vol[/b]: ${elements.Date}
+[b]Date et et tranche horaire du vol[/b]: ${elements.date}
 [b]Nature du vol[/b]: ${elements.type}
 [b]Interventions menées[/b]:
 ${code}
@@ -53,7 +53,7 @@ Rapport de patrouille INDIA[/size][/color]
 
 [tr style=][td style="padding-left:85px;padding-right:85px;background-color:#ffffff;" colspan="2"]
 
-[center][b]Date:[/b] ${elements.Date}
+[center][b]Date:[/b] ${elements.date}
 [b]De[/b] ${elements.heureDebut} [b]h à[/b] ${elements.heureFin} [b]h[/b][/center]
 [b]Véhicule(s) utilisés :[/b] ${elements.Vehicle}
 [b]Opérateurs présents :[/b] ${elements.Operators}
@@ -138,7 +138,7 @@ ${code}
 </div>
 
 <div style="margin: 0 50px;text-align:right;">
-Le ${elements.Date},
+Le ${elements.date},
 [b]Signature.[/b]
 ${elements.firstName}
 </div>
@@ -254,7 +254,7 @@ ${elements.type == "NONE" ? `[X] Aucune blessure` : "[ ] Aucune blessure"}
   </div>
   
   <div style="margin: 0 50px;text-align:right;">
-  Le ${elements.Date},
+  Le ${elements.date},
   
   [b]Signature.[/b]
   ${elements.firstName}
@@ -265,6 +265,49 @@ ${elements.type == "NONE" ? `[X] Aucune blessure` : "[ ] Aucune blessure"}
 `;
   setter(Code);
 }
+
+function generateSabot(elements, code, setter) {
+  const Code = `<div style="background-color: white; color: black; padding: 13px; border: 1px solid black; box-shadow: 0px 0px 2px #F2F2F2; border-top-radius: 3px; width:100%; text-align: left;margin:auto;width:100%">
+  <center>[img]https://i.servimg.com/u/f74/19/84/45/72/i81a1u10.png[/img]</center>
+  
+  [center][size=18][b]FORMULAIRE DE PLACEMENT D'UN SABOT[/b][/size][/center]
+  
+  <h2></h2>
+  
+  <div style="width: 100%; background-color: #f2f2f2; height: auto; padding:6px; border:1px dashed;">
+  
+  [b][u][1] INFORMATIONS SUR L'OFFICIER[/u][/b]
+  
+  [list]
+  [*]1.1 NOM DE L'OFFICIER: ${elements.firstName} ${elements.lastName}
+  [*]1.2 GRADE DE L'OFFICIER: ${elements.Grade} 
+  [*]1.3 ASSIGNATION DE L'OFFICIER: ${elements.Affectation} 
+  [/list]
+  
+  [b][u][2] INFORMATIONS SUR LE VÉHICULE[/u][/b]
+  
+  [list]
+  [*]2.1 MODÈLE DU VÉHICULE: ${elements.modeleVeh} 
+  [*]2.2 PLAQUE DU VÉHICULE: ${elements.plaqueVeh} 
+  [*]2.3 NOM DU PROPRIÉTAIRE: ${elements.proprio} 
+  [*]2.4 PHOTOGRAPHIE DU VÉHICULE EN INFRACTION:
+  [img]${elements.photoLink}[/img]
+  [/list]
+  
+  [b][u][3] INFORMATIONS SUPPLÉMENTAIRES[/u][/b]
+  
+  [list]
+  [*]3.1 RAISON DU PLACEMENT DU SABOT: ${elements.raison} 
+  [*]3.2 DATE: ${elements.date} 
+  [*]3.3 COMMENTAIRE A AJOUTER:
+  ${code} 
+  [/list]
+  
+  </div>
+  </div>`;
+  setter(Code);
+}
+
 
 export function generate(type, elements, code, setter) {
   switch (type) {
@@ -286,6 +329,9 @@ export function generate(type, elements, code, setter) {
     case "TIR":
       generateTir(elements, code, setter);
       break;
+    case "SABOT":
+        generateSabot(elements, code, setter);
+        break;
     default:
       break;
   }
