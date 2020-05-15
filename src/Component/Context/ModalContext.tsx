@@ -16,6 +16,7 @@ const ModalProvider = (props: ModalProps) => {
     const [bbCode, setBBCode] = useState("");
     const [link, setLink] = useState("");
     const [show, setShow] = useState(true);
+    
   return (
     <ModalContext.Provider
       value={{
