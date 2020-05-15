@@ -6,14 +6,13 @@ import { ModalContext } from "../../Component/Context/ModalContext";
 import { GenerateButtonComponent } from "../../Component/GenerateButton/GenerateButton.container";
 import { UserContext } from "../../Component/Context/UserContext";
 import { RPTVolAccComponent } from "./RPTVolAcc.component";
+import { PageLayout } from "../../Layout/PageLayout";
 
 const RPTVolComponent = (props: any) => {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
   const ModalValues = useContext(ModalContext);
   const userValues = useContext(UserContext);
-
   const [etat, setEtat] = useState<string>("");
-  const [date, setDate] = useState<string>(Intl.DateTimeFormat('en-US').format(Date.now()));
   const [Type, setType] = useState<string>("Rapport de patrouille");
 
   const propsToSend = {
@@ -21,8 +20,8 @@ const RPTVolComponent = (props: any) => {
     setEtat,
     code: editorState,
     toggleModal: ModalValues.toggleModal,
-    date,
-    setDate,
+    date: userValues.currentDate,
+    setDate: userValues.setCurrentDate,
     Type,
     setType,
     bbCode: ModalValues.bbCode,
@@ -39,16 +38,16 @@ const RPTVolComponent = (props: any) => {
 
 
   return (
-    <div className="w-full p-2">
+    <PageLayout>
       <Accordeon title="Information">
         <RPTVolAccComponent {...propsToSend} />
       </Accordeon>
-      <div className="w-full max-h-3/4">
+      <div className="flex flex-col w-full h-full">
       <div className="w-full my-4">Interventions menées: </div>
         <HtmlEditor editorState={editorState} setEditorState={setEditorState} />
       </div>
       <GenerateButtonComponent rapportType="RVOL" {...propsToSend} />
-    </div>
+    </PageLayout>
   );
 };
 

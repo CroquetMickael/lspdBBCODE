@@ -8,6 +8,12 @@ module.exports = {
       full: "100%",
     },
     extend: {
+      height: {
+        sm: '8px',
+        md: '16px',
+        lg: '24px',
+        xl: '44rem',
+       },
       inset: {
         "0": 0,
         auto: "auto",

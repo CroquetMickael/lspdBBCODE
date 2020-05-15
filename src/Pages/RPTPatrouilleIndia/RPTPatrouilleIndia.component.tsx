@@ -6,6 +6,7 @@ import { ModalContext } from "../../Component/Context/ModalContext";
 import { GenerateButtonComponent } from "../../Component/GenerateButton/GenerateButton.container";
 import { UserContext } from "../../Component/Context/UserContext";
 import { RPTPatrouilleIndiaAccComponent } from "./RPTPatrouilleIndiaAcc.component";
+import { PageLayout } from "../../Layout/PageLayout";
 
 const RPTPatrouilleIndiaComponent = (props: any) => {
   const [editorState, setEditorState] = useState(EditorState.createWithContent(ContentState.createFromText(`[b]Interventions effectuées :[/b] 
@@ -14,7 +15,6 @@ const RPTPatrouilleIndiaComponent = (props: any) => {
   const userValues = useContext(UserContext);
 
   const [Operators, setOperators] = useState<string>("");
-  const [date, setDate] = useState<string>(Intl.DateTimeFormat('en-US').format(Date.now()));
   const [heureDebut, setHeureDebut] = useState<string>("");
   const [heureFin, setHeureFin] = useState<string>("");
   const [Vehicle, setVehicle] = useState<string>("");
@@ -24,8 +24,8 @@ const RPTPatrouilleIndiaComponent = (props: any) => {
     setOperators,
     code: editorState,
     toggleModal: ModalValues.toggleModal,
-    date,
-    setDate,
+    date: userValues.currentDate,
+    setDate: userValues.setCurrentDate,
     Vehicle,
     setVehicle,
     heureDebut,
@@ -45,16 +45,16 @@ const RPTPatrouilleIndiaComponent = (props: any) => {
   })
 
   return (
-    <div className="w-full p-2">
+    <PageLayout>
       <Accordeon title="Information">
         <RPTPatrouilleIndiaAccComponent {...propsToSend} />
       </Accordeon>
-      <div className="w-full max-h-3/4">
+      <div className="flex flex-col w-full h-full">
       <div className="w-full my-4">Résumé d'intervention:</div>
         <HtmlEditor editorState={editorState} setEditorState={setEditorState} />
       </div>
       <GenerateButtonComponent rapportType="RAPTINDIA" {...propsToSend} />
-    </div>
+    </PageLayout>
   );
 };
 

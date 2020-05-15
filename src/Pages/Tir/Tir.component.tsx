@@ -6,13 +6,16 @@ import { ModalContext } from "../../Component/Context/ModalContext";
 import { GenerateButtonComponent } from "../../Component/GenerateButton/GenerateButton.container";
 import { UserContext } from "../../Component/Context/UserContext";
 import { TirAccComponent } from "./TirAcc.component";
+import { PageLayout } from "../../Layout/PageLayout";
 
 const TirComponent = (props: any) => {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
   const ModalValues = useContext(ModalContext);
   const userValues = useContext(UserContext);
 
-  const [date, setDate] = useState<string>(Intl.DateTimeFormat('en-US').format(Date.now()));
+  const [date, setDate] = useState<string>(
+    Intl.DateTimeFormat("en-US").format(Date.now())
+  );
   const [rangAffec, setRangAffec] = useState<string>("");
   const [superviseur, setSuperviseur] = useState<string>("");
   const [temoin, setTemoin] = useState<string>("");
@@ -65,16 +68,16 @@ const TirComponent = (props: any) => {
   });
 
   return (
-    <div className="w-full p-2">
+    <PageLayout>
       <Accordeon title="Information">
         <TirAccComponent {...propsToSend} />
       </Accordeon>
-      <div className="w-full max-h-3/4">
+      <div className="flex flex-col w-full h-full">
         <div className="w-full my-4">Contextes : </div>
         <HtmlEditor editorState={editorState} setEditorState={setEditorState} />
       </div>
       <GenerateButtonComponent rapportType="TIR" {...propsToSend} />
-    </div>
+    </PageLayout>
   );
 };
 

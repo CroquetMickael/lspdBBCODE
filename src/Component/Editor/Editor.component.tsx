@@ -8,7 +8,7 @@ const HtmlEditor = (props: any) => {
     <Editor
       editorState={props.editorState}
       toolbarClassName="w-full mt-4"
-      wrapperClassName="shadow"
+      wrapperClassName="shadow max-height-3/4"
       editorClassName=""
       onEditorStateChange={props.setEditorState}
     />

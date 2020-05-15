@@ -6,6 +6,7 @@ import { ModalContext } from "../../Component/Context/ModalContext";
 import { GenerateButtonComponent } from "../../Component/GenerateButton/GenerateButton.container";
 import { UserContext } from "../../Component/Context/UserContext";
 import { RPTPatrouilleAccComponent } from "./RPTPatrouilleAcc.component";
+import { PageLayout } from "../../Layout/PageLayout";
 
 const RPTPatrouilleComponent = (props: any) => {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
@@ -13,7 +14,6 @@ const RPTPatrouilleComponent = (props: any) => {
   const userValues = useContext(UserContext);
 
   const [Officers, setOfficers] = useState<string>("");
-  const [date, setDate] = useState<string>(Intl.DateTimeFormat('en-US').format(Date.now()));
   const [Type, setType] = useState<string>("Incident");
 
   const propsToSend = {
@@ -21,8 +21,8 @@ const RPTPatrouilleComponent = (props: any) => {
     setOfficers,
     code: editorState,
     toggleModal: ModalValues.toggleModal,
-    date,
-    setDate,
+    date: userValues.currentDate,
+    setDate: userValues.setCurrentDate,
     Type,
     setType,
     bbCode: ModalValues.bbCode,
@@ -40,16 +40,16 @@ const RPTPatrouilleComponent = (props: any) => {
 
   
   return (
-    <div className="w-full p-2">
+    <PageLayout>
       <Accordeon title="Information">
         <RPTPatrouilleAccComponent {...propsToSend} />
       </Accordeon>
-      <div className="w-full max-h-3/4">
+      <div className="flex flex-col w-full h-full">
       <div className="w-full my-4">Contextes : </div>
         <HtmlEditor editorState={editorState} setEditorState={setEditorState} />
       </div>
       <GenerateButtonComponent rapportType="RAPT" {...propsToSend} />
-    </div>
+    </PageLayout>
   );
 };
 

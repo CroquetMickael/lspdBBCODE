@@ -7,6 +7,7 @@ import { GenerateButtonComponent } from "../../Component/GenerateButton/Generate
 import { UserContext } from "../../Component/Context/UserContext";
 import { DetentionAccComponent } from "./DetentionAcc.component";
 import { PeineComponent } from "./Peine.component";
+import { PageLayout } from "../../Layout/PageLayout";
 
 const DetentionComponent = (props: any) => {
   const [editorState, setEditorState] = useState(
@@ -21,7 +22,6 @@ const DetentionComponent = (props: any) => {
   const [conseilName, setConseilName] = useState("");
   const [contactNumber, setContactNumber] = useState("");
   const [remarque, setRemarque] = useState<string>("");
-  const [date, setDate] = useState<string>(Intl.DateTimeFormat('en-US').format(Date.now()));
   const [contactPersonne, setContactPersonne] = useState(false);
   const [nature, setNature] = useState("");
   const [suspectName, setSuspectName] = useState("");
@@ -35,8 +35,8 @@ const DetentionComponent = (props: any) => {
     setSuspectName,
     code: editorState,
     toggleModal: ModalValues.toggleModal,
-    date,
-    setDate,
+    date: userValues.currentDate,
+    setDate: userValues.setCurrentDate,
     contactPersonne,
     contactNumber,
     setContactPersonne,
@@ -52,27 +52,29 @@ const DetentionComponent = (props: any) => {
     setFirstName: userValues.setFirstName,
     setLastName: userValues.setLastName,
     firstName: userValues.firstName,
-    lastName: userValues.lastName
+    lastName: userValues.lastName,
   };
 
   useEffect(() => {
     ModalValues.setShow(true);
-    ModalValues.setLink("https://lspd-online.forumactif.com/post?f=10&mode=newtopic")
-  })
+    ModalValues.setLink(
+      "https://lspd-online.forumactif.com/post?f=10&mode=newtopic"
+    );
+  });
   return (
-    <div className="w-full p-2">
+    <PageLayout>
       <Accordeon title="Information">
         <DetentionAccComponent {...propsToSend} />
       </Accordeon>
       <Accordeon title="Peine">
-        <PeineComponent/>
+        <PeineComponent />
       </Accordeon>
-      <div className="w-full max-h-3/4">
-      <div className="w-full my-4">Charges retenues: </div>
+      <div className="flex flex-col w-full h-full">
+        <div className="w-full my-4">Charges retenues: </div>
         <HtmlEditor editorState={editorState} setEditorState={setEditorState} />
       </div>
       <GenerateButtonComponent rapportType="DET" {...propsToSend} />
-    </div>
+    </PageLayout>
   );
 };
 

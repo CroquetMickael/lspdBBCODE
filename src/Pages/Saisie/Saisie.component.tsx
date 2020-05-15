@@ -6,6 +6,7 @@ import { ModalContext } from "../../Component/Context/ModalContext";
 import { GenerateButtonComponent } from "../../Component/GenerateButton/GenerateButton.container";
 import { UserContext } from "../../Component/Context/UserContext";
 import { SaisieAccComponent } from "./SaisieAcc.component";
+import { PageLayout } from "../../Layout/PageLayout";
 
 const SaisieComponent = (props: any) => {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
@@ -90,16 +91,16 @@ const SaisieComponent = (props: any) => {
     );
   });
   return (
-    <div className="w-full p-2">
+    <PageLayout>
       <Accordeon title="Information">
         <SaisieAccComponent {...propsToSend} />
       </Accordeon>
-      <div className="w-full max-h-3/4">
+      <div className="flex flex-col w-full h-full">
         <div className="w-full my-4">Contexte de la saisie (bref résumé) :</div>
         <HtmlEditor editorState={editorState} setEditorState={setEditorState} />
       </div>
       <GenerateButtonComponent rapportType="SAI" {...propsToSend} />
-    </div>
+    </PageLayout>
   );
 };
 

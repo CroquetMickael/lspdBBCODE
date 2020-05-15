@@ -20,7 +20,7 @@ const AppRouter = () => (
   <ModalProvider>
     <Layout>
       <UserProvider>
-        <Router>
+        <Router className="h-full">
           <RouterPage path="/" pageComponent={<RPTPatrouilleComponent />} />
           <RouterPage
             path="/rapportVolSOB"
@@ -37,7 +37,10 @@ const AppRouter = () => (
           <RouterPage path="/Saisie" pageComponent={<SaisieComponent />} />
           <RouterPage path="/Tir" pageComponent={<TirComponent />} />
           <RouterPage path="/Sabot" pageComponent={<SabotComponent />} />
-          <RouterPage path="/Fourriere" pageComponent={<FourriereComponent />} />
+          <RouterPage
+            path="/Fourriere"
+            pageComponent={<FourriereComponent />}
+          />
         </Router>
       </UserProvider>
     </Layout>

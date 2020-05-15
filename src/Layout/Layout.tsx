@@ -7,10 +7,10 @@ const Layout = (props: any) => {
   const modalValues = useContext(ModalContext);
   return (
     <>
-      <div className="flex content-start flex-wrap h-full">
+      <div className="flex flex-col content-start h-full">
         <Header />
-        <div className="w-full z-20">{props.children}</div>
-        <footer className='w-full text-center border-t border-grey p-4 pin-b'>
+        <div className="z-20 w-full h-full">{props.children}</div>
+        <footer className='w-full p-4 text-center text-white bg-blue-800 border-t border-grey pin-b'>
             Made by @Haze for LSPD LRP 2020-2021
         </footer>
         <ModalContainer
