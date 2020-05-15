@@ -8,11 +8,12 @@ const Header = () => {
   return (
     <div className="z-20 flex flex-wrap w-full p-2 bg-blue-800">
       <div className="p-2 mx-auto text-center text-gray-700">
-        <img alt="lspdLogo" className="m-auto" src={Logo}></img>
-        <hr className="my-4" />
-        <h1 className="text-2xl text-white">LSPD BBCODE GENERATOR</h1>
+        <img alt="lspdLogo" className="hidden m-auto sm:block" src={Logo}></img>
+        <hr className="hidden my-4 sm:block" />
+        <h1 className="hidden text-2xl text-white sm:block">LSPD BBCODE GENERATOR</h1>
       </div>
       <nav className="flex flex-wrap items-center justify-between w-full p-6">
+        <p className="block text-white sm:hidden">LSPD BBCODE GENERATOR</p>
         <div className="block lg:hidden">
           <button
             className="flex items-center px-3 py-2 text-gray-200 border border-gray-400 rounded hover:text-white hover:border-white"
