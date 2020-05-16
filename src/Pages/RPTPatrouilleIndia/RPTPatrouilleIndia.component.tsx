@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Accordeon } from "../../Component/Accordeon";
-import { EditorState, convertFromHTML, ContentState } from "draft-js";
+import { EditorState, ContentState } from "draft-js";
 import { HtmlEditor } from "../../Component/Editor/Editor.component";
 import { ModalContext } from "../../Component/Context/ModalContext";
 import { GenerateButtonComponent } from "../../Component/GenerateButton/GenerateButton.container";

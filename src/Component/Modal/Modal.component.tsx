@@ -26,7 +26,7 @@ const ModalComponent = (props: any) => {
         className={`absolute h-full w-full pin bg-black ease-out transition-all duration-500 ${
           props.modalOpen ? "opacity-75" : "opacity-0 "
         }`}
-        onClick={props.modalOpen ? props.toggleModal : ""}
+        onClick={props.toggleModal}
       />
       <div
         className={`relative ease-out transition-all duration-500 ${
@@ -70,7 +70,7 @@ const ModalComponent = (props: any) => {
             }
             {props.show && (
               <div className="w-full text-center">
-                <a href={props.link} target="_blank">
+                <a href={props.link} target="_blank" rel="noopener noreferrer">
                   <button className="w-full px-4 py-2 my-2 font-semibold text-blue-700 bg-transparent border border-blue-500 rounded hover:bg-blue-500 hover:text-white hover:border-transparent">
                     Lien vers le forum
                   </button>
