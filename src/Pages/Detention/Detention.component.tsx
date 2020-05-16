@@ -43,7 +43,6 @@ const DetentionComponent = (props: any) => {
       );
       setPeineTotalAmende(calcul);
     });
-
     let result = Selected.sort((a: ObjectPeine, b: ObjectPeine) => {
       if (a.tempsOOC > b.tempsOOC && a.Amende > b.Amende) {
         return -1;
@@ -169,7 +168,7 @@ const DetentionComponent = (props: any) => {
         />
       </div>
       {resultSearch.length !== 0 && (
-        <div className="flex flex-col w-full h-64 overflow-y-auto bg-white shadow">
+        <div className="absolute flex flex-col w-full h-64 mt-32 overflow-y-auto bg-white shadow">
           {resultSearch.map((result: ObjectPeine, index: number) => {
             return (
               <div
@@ -183,7 +182,7 @@ const DetentionComponent = (props: any) => {
           })}
         </div>
       )}
-      <div className="flex flex-col w-full mt-8">
+      <div className="flex flex-col w-full h-64 mt-8 overflow-y-auto">
         {peineSelected.map((result: ObjectPeine, index: number) => {
           return (
             <div key={index} className="py-2">
@@ -198,15 +197,15 @@ const DetentionComponent = (props: any) => {
             </div>
           );
         })}
-        <p className="py-4">
+      </div>
+      <div>        <p className="py-4">
           Peine à mettre en /juger :{" "}
-          {peineTotalAmende > "20.000" ? "20.000" : peineTotalAmende}$ d'amende
+          {parseFloat(peineTotalAmende) > parseFloat("20.000") ? "20.000" : peineTotalAmende}$ d'amende
           et {peineTotalTempsOOC} minutes
         </p>
         <p className="py-4">
           Rappel: Plus de 70 ans de peine IC équivaut à un CK
-        </p>
-      </div>
+        </p></div>
       <div className="flex flex-col w-full h-full">
         <div className="w-full my-4">Charges retenues: </div>
         <HtmlEditor editorState={editorState} setEditorState={setEditorState} />
