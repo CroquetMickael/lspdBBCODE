@@ -44,7 +44,7 @@ const DetentionComponent = (props: any) => {
       setPeineTotalAmende(calcul);
     });
 
-    const result = Selected.sort((a: ObjectPeine, b: ObjectPeine) => {
+    let result = Selected.sort((a: ObjectPeine, b: ObjectPeine) => {
       if (a.tempsOOC > b.tempsOOC && a.Amende > b.Amende) {
         return -1;
       }
@@ -76,7 +76,13 @@ const DetentionComponent = (props: any) => {
         )
       )
     );
-    const result = Selected.sort((a: ObjectPeine, b: ObjectPeine) => {
+    Selected.forEach((element, index) => {
+      if (element.article === peineSelect.article) {
+        Selected.splice(index, 1);
+      }
+    });
+
+    let result = Selected.sort((a: ObjectPeine, b: ObjectPeine) => {
       if (a.tempsOOC > b.tempsOOC && a.Amende > b.Amende) {
         return -1;
       }
@@ -85,26 +91,15 @@ const DetentionComponent = (props: any) => {
       }
       return 0;
     });
-    Selected.forEach((element, index) => {
-      if (result.length > 1) {
-        if (result[0].article === peineSelect.article) {
-          setPeineTotalTempsOOC(
-            peineTotalTempsOOC - parseInt(result[0].tempsOOC)
-          );
-        } else if (result[1].article === peineSelect.article) {
-          setPeineTotalTempsOOC(
-            peineTotalTempsOOC - parseInt(result[1].tempsOOC)
-          );
-        }
-      } else {
-        setPeineTotalTempsOOC(
-          peineTotalTempsOOC - parseInt(result[0].tempsOOC)
-        );
-      }
-      if (element.article === peineSelect.article) {
-        Selected.splice(index, 1);
-      }
-    });
+    if (result.length > 1) {
+      setPeineTotalTempsOOC(
+        parseInt(result[0].tempsOOC) + parseInt(result[1].tempsOOC)
+      );
+    } else if (result.length === 1) {
+      setPeineTotalTempsOOC(peineTotalTempsOOC - parseInt(result[0].tempsOOC));
+    } else {
+      setPeineTotalTempsOOC(0);
+    }
     setPeineSelected(Selected);
     setSearch("");
     setResultSearch([]);
@@ -204,11 +199,12 @@ const DetentionComponent = (props: any) => {
           );
         })}
         <p className="py-4">
-         Peine à mettre en /juger :{" "}
+          Peine à mettre en /juger :{" "}
           {peineTotalAmende > "20.000" ? "20.000" : peineTotalAmende}$ d'amende
           et {peineTotalTempsOOC} minutes
-        </p><p className="py-4">
-         Rappel: Plus de 70 ans de peine IC équivaut à un CK
+        </p>
+        <p className="py-4">
+          Rappel: Plus de 70 ans de peine IC équivaut à un CK
         </p>
       </div>
       <div className="flex flex-col w-full h-full">
