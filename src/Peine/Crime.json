@@ -1,0 +1,207 @@
+[
+{
+    "article": "222-1.",
+    "label": "Détournement de fonds publics aggravé.",
+    "tempsIC": "40",
+    "typeTempsIC": "ans",
+    "tempsOOC": "300",
+    "Amende": "50.000"
+},
+{
+    "article": "223-1.",
+    "label": "Meurtre au premier degré.",
+    "tempsIC": "60",
+    "typeTempsIC": "ans",
+    "tempsOOC": "360",
+    "Amende": "20.000"
+},
+{
+    "article": "223-3.",
+    "label": "Meurtre au second degré.",
+    "tempsIC": "40",
+    "typeTempsIC": "ans",
+    "tempsOOC": "300",
+    "Amende": "10.000"
+},
+{
+    "article": "223-5.",
+    "label": "Meurtre au troisième degré.",
+    "tempsIC": "10",
+    "typeTempsIC": "ans",
+    "tempsOOC": "180",
+    "Amende": "7.500"
+},
+{
+    "article": "224-1.",
+    "label": "Mutilation.",
+    "tempsIC": "40",
+    "typeTempsIC": "ans",
+    "tempsOOC": "300",
+    "Amende": "15.000"
+},
+{
+    "article": "223-2.",
+    "label": "Viol.",
+    "tempsIC": "40",
+    "typeTempsIC": "ans",
+    "tempsOOC": "300",
+    "Amende": "15.000"
+},{
+    "article": "224-3.",
+    "label": "Agression sexuelle sur un mineur de moins de 16 ans.",
+    "tempsIC": "20",
+    "typeTempsIC": "ans",
+    "tempsOOC": "240",
+    "Amende": "15.000"
+},
+{
+    "article": "224-4.",
+    "label": "Empoisonnement.",
+    "tempsIC": "40",
+    "typeTempsIC": "ans",
+    "tempsOOC": "300",
+    "Amende": "15.000"
+},{
+    "article": "224-5.",
+    "label": "Mercenariat.",
+    "tempsIC": "20",
+    "typeTempsIC": "ans",
+    "tempsOOC": "240",
+    "Amende": "25.000"
+},{
+    "article": "225-1.",
+    "label": "Enlèvement.",
+    "tempsIC": "10",
+    "typeTempsIC": "ans",
+    "tempsOOC": "180",
+    "Amende": "10.000"
+},{
+    "article": "225-2.",
+    "label": "Séquestration.",
+    "tempsIC": "10",
+    "typeTempsIC": "ans",
+    "tempsOOC": "180",
+    "Amende": "10.000"
+},{
+    "article": "225-4.",
+    "label": "Prise d'otage.",
+    "tempsIC": "20",
+    "typeTempsIC": "ans",
+    "tempsOOC": "240",
+    "Amende": "15.000"
+},
+{
+    "article": "226-1.",
+    "label": "Blanchiment.",
+    "tempsIC": "10",
+    "typeTempsIC": "ans",
+    "tempsOOC": "180",
+    "Amende": "30.000"
+},
+{
+    "article": "226-3.",
+    "label": "Faux-monnayage.",
+    "tempsIC": "20",
+    "typeTempsIC": "ans",
+    "tempsOOC": "240",
+    "Amende": "50.000"
+},{
+    "article": "226-4.",
+    "label": "Investissement dans une activité criminelle.",
+    "tempsIC": "10",
+    "typeTempsIC": "ans",
+    "tempsOOC": "180",
+    "Amende": "40.000"
+},{
+    "article": "226-5.",
+    "label": "Organisation d'insolvabilité.",
+    "tempsIC": "10",
+    "typeTempsIC": "ans",
+    "tempsOOC": "180",
+    "Amende": "20.000"
+},{
+    "article": "227-1.",
+    "label": "Corruption aggravée.",
+    "tempsIC": "40",
+    "typeTempsIC": "ans",
+    "tempsOOC": "300",
+    "Amende": "40.000"
+},{
+    "article": "228-1.",
+    "label": "Terrorisme.",
+    "tempsIC": "100",
+    "typeTempsIC": "ans",
+    "tempsOOC": "600",
+    "Amende": "50.000"
+},{
+    "article": "229-2.",
+    "label": "Appropriation illégale du corps d'un enfant conçu non-né.",
+    "tempsIC": "10",
+    "typeTempsIC": "ans",
+    "tempsOOC": "180",
+    "Amende": "15.000"
+},{
+    "article": "229-3.",
+    "label": "Clonage.",
+    "tempsIC": "20",
+    "typeTempsIC": "ans",
+    "tempsOOC": "240",
+    "Amende": "15.000"
+},{
+    "article": "229-4.",
+    "label": "Profanation de cadavre.",
+    "tempsIC": "10",
+    "typeTempsIC": "ans",
+    "tempsOOC": "180",
+    "Amende": "7.500"
+},{
+    "article": "229-5.",
+    "label": "Traite d'êtres humains (pour proxénétisme sans contrainte, voir 233-2.).",
+    "tempsIC": "20",
+    "typeTempsIC": "ans",
+    "tempsOOC": "240",
+    "Amende": "20.000"
+},{
+    "article": "229-6.",
+    "label": "Trafic d'organes ou de parties du corps humain.",
+    "tempsIC": "20",
+    "typeTempsIC": "ans",
+    "tempsOOC": "240",
+    "Amende": "25.000"
+},{
+    "article": "2210-1.",
+    "label": "Extorsion au premier degré.",
+    "tempsIC": "10",
+    "typeTempsIC": "ans",
+    "tempsOOC": "180",
+    "Amende": "15.000"
+},{
+    "article": "2210-2.",
+    "label": "Atteinte criminelle à la propriété par l'usage d'explosifs ou par incendie.",
+    "tempsIC": "20",
+    "typeTempsIC": "ans",
+    "tempsOOC": "240",
+    "Amende": "15.000"
+},{
+    "article": "2210-3.",
+    "label": "Braquage.",
+    "tempsIC": "10",
+    "typeTempsIC": "ans",
+    "tempsOOC": "180",
+    "Amende": "10.000"
+},{
+    "article": "2211-1.",
+    "label": "Sédition.",
+    "tempsIC": "60",
+    "typeTempsIC": "ans",
+    "tempsOOC": "360",
+    "Amende": "50.000"
+},{
+    "article": "2211-2.",
+    "label": "Sécession.",
+    "tempsIC": "40",
+    "typeTempsIC": "ans",
+    "tempsOOC": "300",
+    "Amende": "30.000"
+}
+]

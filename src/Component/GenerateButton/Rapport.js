@@ -115,14 +115,14 @@ ${
 [b]Nature de la personne contactée:[/b]
 
 ${
-  elements.nature == "JUR"
+  elements.nature === "JUR"
     ? "[X] Conseiller juridique"
     : "[ ] Conseiller juridique"
 }
-${elements.nature == "EMP" ? "[X] Employeur" : "[ ] Employeur"}
-${elements.nature == "PRO" ? "[X] Proche" : "[ ] Proche"}
+${elements.nature === "EMP" ? "[X] Employeur" : "[ ] Employeur"}
+${elements.nature === "PRO" ? "[X] Proche" : "[ ] Proche"}
 ${
-  elements.nature == "AUT"
+  elements.nature === "AUT"
     ? `[X] Autre, précisez ci-contre: ${elements.contactPersonne}`
     : "[ ] Autre, précisez ci-contre:"
 }
@@ -236,14 +236,14 @@ function generateTir(elements, code, setter) {
   [b]État de la cible:[/b]
   
   
-${elements.type == "DEC" ? "[X] Décédé" : "[ ] Décédé"}
-${elements.type == "GRAVE" ? "[X] Blessures graves" : "[ ] Blessures graves"}
+${elements.type === "DEC" ? "[X] Décédé" : "[ ] Décédé"}
+${elements.type === "GRAVE" ? "[X] Blessures graves" : "[ ] Blessures graves"}
 ${
-  elements.type == "SUPP"
+  elements.type === "SUPP"
     ? "[X] Blessures superficielles"
     : "[ ] Blessures superficielles"
 }
-${elements.type == "NONE" ? `[X] Aucune blessure` : "[ ] Aucune blessure"}
+${elements.type === "NONE" ? `[X] Aucune blessure` : "[ ] Aucune blessure"}
   
   
   
@@ -371,9 +371,10 @@ export function generate(type, elements, code, setter) {
       break;
     case "SABOT":
         generateSabot(elements, code, setter);
+        break;
     case "FOUR":
       generateFourriere(elements,code,setter)
-        break;
+      break;
     default:
       break;
   }

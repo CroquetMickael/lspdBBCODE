@@ -1,0 +1,106 @@
+[
+    {
+        "article": "312-1.",
+        "label": "Possession de stupéfiants (délit).",
+        "tempsIC": "6",
+        "typeTempsIC": "mois",
+        "tempsOOC": "60",
+        "Amende": "5.000"
+    },
+    {
+        "article": "312-2.",
+        "label": "Possession aggravée de stupéfiants (crime).",
+        "tempsIC": "10",
+        "typeTempsIC": "ans",
+        "tempsOOC": "180",
+        "Amende": "15.000"
+    },
+    {
+        "article": "312-3.",
+        "label": "Trafic de drogue (délit).",
+        "tempsIC": "7",
+        "typeTempsIC": "ans",
+        "tempsOOC": "150",
+        "Amende": "10.000"
+    },
+    {
+        "article": "312-4.",
+        "label": "Trafic de drogue aggravé (crime).",
+        "tempsIC": "20",
+        "typeTempsIC": "ans",
+        "tempsOOC": "240",
+        "Amende": "25.000"
+    },
+    {
+        "article": "312-5.",
+        "label": "Production de stupéfiants au second degré.",
+        "tempsIC": "10",
+        "typeTempsIC": "ans",
+        "tempsOOC": "180",
+        "Amende": "15.000"
+    },
+    {
+        "article": "312-6.",
+        "label": "Production de stupéfiants au premier degré.",
+        "tempsIC": "40",
+        "typeTempsIC": "ans",
+        "tempsOOC": "300",
+        "Amende": "30.000"
+    },
+    {
+        "article": "322-1.",
+        "label": "Possession illégale d'arme à feu au premier degré (crime).",
+        "tempsIC": "20",
+        "typeTempsIC": "ans",
+        "tempsOOC": "240",
+        "Amende": "15.000"
+    },
+    {
+        "article": "322-2.",
+        "label": "Possession illégale d'arme à feu au second degré (délit).",
+        "tempsIC": "3",
+        "typeTempsIC": "ans",
+        "tempsOOC": "120",
+        "Amende": "7.500"
+    },
+    {
+        "article": "322-3.",
+        "label": "Possession illégale d'arme à feu au troisième degré.",
+        "tempsIC": "1",
+        "typeTempsIC": "an",
+        "tempsOOC": "90",
+        "Amende": "5.000"
+    },
+    {
+        "article": "322-4.",
+        "label": "Production illégale d'arme à feu au premier degré.",
+        "tempsIC": "40",
+        "typeTempsIC": "ans",
+        "tempsOOC": "300",
+        "Amende": "30.000"
+    },
+    {
+        "article": "322-5.",
+        "label": "Production illégale d'arme à feu au second degré.",
+        "tempsIC": "10",
+        "typeTempsIC": "ans",
+        "tempsOOC": "180",
+        "Amende": "15.000"
+    },
+    {
+        "article": "322-6.",
+        "label": "Trafic d'armes à feu au premier degré (crime).",
+        "tempsIC": "20",
+        "typeTempsIC": "ans",
+        "tempsOOC": "240",
+        "Amende": "25.000"
+    },
+    {
+        "article": "322-7.",
+        "label": "Trafic d'armes à feu au deuxième degré (délit).",
+        "tempsIC": "7",
+        "typeTempsIC": "ans",
+        "tempsOOC": "150",
+        "Amende": "10.000"
+    }
+    ]

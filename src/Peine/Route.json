@@ -1,0 +1,52 @@
+[
+    {
+        "article": "2-1.",
+        "label": "Délit de conduite sous influence.",
+        "tempsIC": "3",
+        "typeTempsIC": "ans",
+        "tempsOOC": "60",
+        "Amende": "5.000"
+    },{
+        "article": "2-2.",
+        "label": "Délit de course illégale.",
+        "tempsIC": "3",
+        "typeTempsIC": "ans",
+        "tempsOOC": "120",
+        "Amende": "10.000"
+    },{
+        "article": "2-3.",
+        "label": "Délit de conduite sans permis.",
+        "tempsIC": "1",
+        "typeTempsIC": "an",
+        "tempsOOC": "90",
+        "Amende": "8.000"
+    },{
+        "article": "2-4.",
+        "label": "Délit de non-immatriculation aggravée d'un véhicule.",
+        "tempsIC": "3",
+        "typeTempsIC": "ans",
+        "tempsOOC": "120",
+        "Amende": "5.000"
+    },{
+        "article": "4-1.",
+        "label": "Délit de conduite illégale de navires",
+        "tempsIC": "1",
+        "typeTempsIC": "an",
+        "tempsOOC": "90",
+        "Amende": "10.000"
+    },{
+        "article": "4-1-2.",
+        "label": "Délit de conduite illégale de aéronefs",
+        "tempsIC": "7",
+        "typeTempsIC": "ans",
+        "tempsOOC": "150",
+        "Amende": "20.000"
+    },{
+        "article": "4-2.",
+        "label": "Délit de navigation ou vol dangereux.",
+        "tempsIC": "3",
+        "typeTempsIC": "ans",
+        "tempsOOC": "120",
+        "Amende": "8.000"
+    }
+    ]

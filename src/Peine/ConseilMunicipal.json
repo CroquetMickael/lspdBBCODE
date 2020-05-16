@@ -1,0 +1,66 @@
+[
+    {
+        "article": "§4111.",
+        "label": "Perturbation du Conseil.",
+        "tempsIC": "6",
+        "typeTempsIC": "mois",
+        "tempsOOC": "45",
+        "Amende": "5.000"
+    },{
+        "article": "§4111-2.",
+        "label": "Perturbation du Conseil Aggravée.",
+        "tempsIC": "1",
+        "typeTempsIC": "an",
+        "tempsOOC": "90",
+        "Amende": "7.500"
+    },{
+        "article": "§4121.",
+        "label": "Entrave au Conseil.",
+        "tempsIC": "7",
+        "typeTempsIC": "ans",
+        "tempsOOC": "150",
+        "Amende": "10.000"
+    },{
+        "article": "§4121.",
+        "label": "Entrave au Conseil Aggravée.",
+        "tempsIC": "10",
+        "typeTempsIC": "ans",
+        "tempsOOC": "180",
+        "Amende": "15.000"
+    },{
+        "article": "§4131.",
+        "label": "Parjure devant le Conseil.",
+        "tempsIC": "3",
+        "typeTempsIC": "ans",
+        "tempsOOC": "120",
+        "Amende": "10.000"
+    },{
+        "article": "§4131.",
+        "label": "Parjure devant le Conseil Aggravée.",
+        "tempsIC": "7",
+        "typeTempsIC": "ans",
+        "tempsOOC": "150",
+        "Amende": "15.000"
+    },{
+        "article": "§4141.",
+        "label": "L'obstruction à une commission d'enquête.",
+        "tempsIC": "6",
+        "typeTempsIC": "mois",
+        "tempsOOC": "60",
+        "Amende": "10.000"
+    },{
+        "article": "§4151.",
+        "label": "L'atteinte au suffrage.",
+        "tempsIC": "7",
+        "typeTempsIC": "ans",
+        "tempsOOC": "150",
+        "Amende": "10.000"
+    },{
+        "article": "§4151.",
+        "label": "L'atteinte au suffrage Aggravée.",
+        "tempsIC": "10",
+        "typeTempsIC": "ans",
+        "tempsOOC": "180",
+        "Amende": "20.000"
+    }
+]

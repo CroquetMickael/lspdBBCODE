@@ -1,0 +1,451 @@
+[
+    {
+        "article": "231-2.",
+        "label": "Agression au premier degré.",
+        "tempsIC": "7",
+        "typeTempsIC": "ans",
+        "tempsOOC": "2",
+        "Amende": "10.000"
+    },{
+        "article": "231-3.",
+        "label": "Agression au deuxième degré.",
+        "tempsIC": "3",
+        "typeTempsIC": "ans",
+        "tempsOOC": "2",
+        "Amende": "7.500"
+    },{
+        "article": "231-4.",
+        "label": "Agression au troisième degré.",
+        "tempsIC": "6",
+        "typeTempsIC": "mois",
+        "tempsOOC": "1",
+        "Amende": "3.500"
+    },{
+        "article": "231-5.",
+        "label": "Agression sexuelle.",
+        "tempsIC": "7",
+        "typeTempsIC": "ans",
+        "tempsOOC": "2",
+        "Amende": "10.000"
+    },{
+        "article": "231-6.",
+        "label": "Mise en danger de la vie d'autrui.",
+        "tempsIC": "7",
+        "typeTempsIC": "ans",
+        "tempsOOC": "2",
+        "Amende": "7.500"
+    },{
+        "article": "231-7.",
+        "label": "Incitation au suicide.",
+        "tempsIC": "3",
+        "typeTempsIC": "ans",
+        "tempsOOC": "120",
+        "Amende": "5.000"
+    },{
+        "article": "231-8.",
+        "label": "Non-assistance à personne en danger.",
+        "tempsIC": "3",
+        "typeTempsIC": "ans",
+        "tempsOOC": "120",
+        "Amende": "5.000"
+    },{
+        "article": "232-1.",
+        "label": "Délit d'atteinte à la vie religieuse.",
+        "tempsIC": "6",
+        "typeTempsIC": "mois",
+        "tempsOOC": "60",
+        "Amende": "3.500"
+    },{
+        "article": "233-1.",
+        "label": "Comportement obscène.",
+        "tempsIC": "6",
+        "typeTempsIC": "mois",
+        "tempsOOC": "60",
+        "Amende": "3.500"
+    },{
+        "article": "233-2.",
+        "label": "Participation à une maison de débauche (= proxénétisme sans contrainte).",
+        "tempsIC": "3",
+        "typeTempsIC": "ans",
+        "tempsOOC": "120",
+        "Amende": "15.000"
+    },{
+        "article": "233-3.",
+        "label": "Prostitution.",
+        "tempsIC": "3",
+        "typeTempsIC": "mois",
+        "tempsOOC": "45",
+        "Amende": "3.500"
+    },{
+        "article": "233-4.",
+        "label": "Jeux d'argent sans autorisation municipale.",
+        "tempsIC": "3",
+        "typeTempsIC": "mois",
+        "tempsOOC": "45",
+        "Amende": "10.000"
+    },{
+        "article": "233-6.",
+        "label": "Sévices sur animaux.",
+        "tempsIC": "1",
+        "typeTempsIC": "an",
+        "tempsOOC": "90",
+        "Amende": "3.000"
+    },{
+        "article": "234-1.",
+        "label": "Négligence parentale.",
+        "tempsIC": "3",
+        "typeTempsIC": "ans",
+        "tempsOOC": "120",
+        "Amende": "7.500"
+    },{
+        "article": "234-3.",
+        "label": "Abus de confiance.",
+        "tempsIC": "3",
+        "typeTempsIC": "ans",
+        "tempsOOC": "120",
+        "Amende": "10.000"
+    },{
+        "article": "235-1.",
+        "label": "Menace. Avec arme.",
+        "tempsIC": "3",
+        "typeTempsIC": "ans",
+        "tempsOOC": "120",
+        "Amende": "7.500"
+    },{
+        "article": "235-1-2.",
+        "label": "Menace. Sans arme.",
+        "tempsIC": "6",
+        "typeTempsIC": "mois",
+        "tempsOOC": "60",
+        "Amende": "5.000"
+    },{
+        "article": "235-3.",
+        "label": "Diffamation.",
+        "tempsIC": "3",
+        "typeTempsIC": "mois",
+        "tempsOOC": "45",
+        "Amende": "5.000"
+    },{
+        "article": "235-4.",
+        "label": "Violation de la vie privée.",
+        "tempsIC": "1",
+        "typeTempsIC": "an",
+        "tempsOOC": "90",
+        "Amende": "5.000"
+    },{
+        "article": "235-5.",
+        "label": "Harcèlement moral.",
+        "tempsIC": "6",
+        "typeTempsIC": "mois",
+        "tempsOOC": "60",
+        "Amende": "3.500"
+    },{
+        "article": "236-1.",
+        "label": "Atteinte à la tranquillité d'une assemblée publique.",
+        "tempsIC": "6",
+        "typeTempsIC": "mois",
+        "tempsOOC": "60",
+        "Amende": "3.500"
+    },{
+        "article": "236-2.",
+        "label": "Trouble à la tranquillité publique.",
+        "tempsIC": "3",
+        "typeTempsIC": "mois",
+        "tempsOOC": "45",
+        "Amende": "3.500"
+    },{
+        "article": "236-3.",
+        "label": "Attroupement illégal.",
+        "tempsIC": "6",
+        "typeTempsIC": "mois",
+        "tempsOOC": "60",
+        "Amende": "5.000"
+    },{
+        "article": "237-3.",
+        "label": "Vol au premier degré.",
+        "tempsIC": "3",
+        "typeTempsIC": "ans",
+        "tempsOOC": "120",
+        "Amende": "10.000"
+    },{
+        "article": "237-3.",
+        "label": "Vol au premier degré.",
+        "tempsIC": "3",
+        "typeTempsIC": "ans",
+        "tempsOOC": "120",
+        "Amende": "10.000"
+    },{
+        "article": "237-4.",
+        "label": "Vol au deuxième degré.",
+        "tempsIC": "1",
+        "typeTempsIC": "an",
+        "tempsOOC": "90",
+        "Amende": "7.500"
+    },{
+        "article": "237-5.",
+        "label": "Vol au troisième degré.",
+        "tempsIC": "6",
+        "typeTempsIC": "mois",
+        "tempsOOC": "60",
+        "Amende": "5.000"
+    },{
+        "article": "237-6.",
+        "label": "Cambriolage.",
+        "tempsIC": "3",
+        "typeTempsIC": "ans",
+        "tempsOOC": "120",
+        "Amende": "7.500"
+    },{
+        "article": "237-7.",
+        "label": "Altération de la propriété.",
+        "tempsIC": "3",
+        "typeTempsIC": "mois",
+        "tempsOOC": "45",
+        "Amende": "3.500"
+    },{
+        "article": "237-8.",
+        "label": "Destruction de la propriété.",
+        "tempsIC": "6",
+        "typeTempsIC": "mois",
+        "tempsOOC": "60",
+        "Amende": "5.000"
+    },{
+        "article": "237-9.",
+        "label": "Extorsion au second degré.",
+        "tempsIC": "7",
+        "typeTempsIC": "ans",
+        "tempsOOC": "150",
+        "Amende": "10.000"
+    },{
+        "article": "237-10.",
+        "label": "Extorsion au troisième degré.",
+        "tempsIC": "3",
+        "typeTempsIC": "ans",
+        "tempsOOC": "120",
+        "Amende": "10.000"
+    },{
+        "article": "237-11.",
+        "label": "Intrusion.",
+        "tempsIC": "3",
+        "typeTempsIC": "mois",
+        "tempsOOC": "45",
+        "Amende": "3.500"
+    },{
+        "article": "238-1.",
+        "label": "Faux.",
+        "tempsIC": "7",
+        "typeTempsIC": "ans",
+        "tempsOOC": "150",
+        "Amende": "10.000"
+    },{
+        "article": "238-2.",
+        "label": "Contrefaçon de sceau.",
+        "tempsIC": "7",
+        "typeTempsIC": "ans",
+        "tempsOOC": "150",
+        "Amende": "15.000"
+    },{
+        "article": "238-3.",
+        "label": "Faux public.",
+        "tempsIC": "7",
+        "typeTempsIC": "ans",
+        "tempsOOC": "150",
+        "Amende": "15.000"
+    },{
+        "article": "238-4.",
+        "label": "Faux privé.",
+        "tempsIC": "7",
+        "typeTempsIC": "ans",
+        "tempsOOC": "150",
+        "Amende": "15.000"
+    },{
+        "article": "238-5.",
+        "label": "Duplication de carte de crédit.",
+        "tempsIC": "7",
+        "typeTempsIC": "ans",
+        "tempsOOC": "150",
+        "Amende": "15.000"
+    },{
+        "article": "238-6.",
+        "label": "Usurpation d'identité.",
+        "tempsIC": "3",
+        "typeTempsIC": "ans",
+        "tempsOOC": "120",
+        "Amende": "10.000"
+    },{
+        "article": "239-1.",
+        "label": "Corruption.",
+        "tempsIC": "7",
+        "typeTempsIC": "ans",
+        "tempsOOC": "150",
+        "Amende": "10.000"
+    },{
+        "article": "239-2.",
+        "label": "Détournement de fonds.",
+        "tempsIC": "7",
+        "typeTempsIC": "ans",
+        "tempsOOC": "150",
+        "Amende": "20.000"
+    },{
+        "article": "239-3.",
+        "label": "Abus de pouvoir.",
+        "tempsIC": "3",
+        "typeTempsIC": "ans",
+        "tempsOOC": "120",
+        "Amende": "10.000"
+    },{
+        "article": "239-4.",
+        "label": "Atteinte aux données classifiées.",
+        "tempsIC": "7",
+        "typeTempsIC": "ans",
+        "tempsOOC": "150",
+        "Amende": "10.000"
+    },{
+        "article": "239-5.",
+        "label": "Escroquerie.",
+        "tempsIC": "3",
+        "typeTempsIC": "ans",
+        "tempsOOC": "120",
+        "Amende": "10.000"
+    },{
+        "article": "2310-1.",
+        "label": "Piratage informatique.",
+        "tempsIC": "3",
+        "typeTempsIC": "ans",
+        "tempsOOC": "120",
+        "Amende": "10.000"
+    },{
+        "article": "2310-2.",
+        "label": "Destruction de données informatiques.",
+        "tempsIC": "7",
+        "typeTempsIC": "ans",
+        "tempsOOC": "150",
+        "Amende": "10.000"
+    },{
+        "article": "2310-3.",
+        "label": "Vol de données informatiques.",
+        "tempsIC": "1",
+        "typeTempsIC": "an",
+        "tempsOOC": "90",
+        "Amende": "10.000"
+    },{
+        "article": "2310-4.",
+        "label": "Violation d'identité numérique.",
+        "tempsIC": "3",
+        "typeTempsIC": "ans",
+        "tempsOOC": "120",
+        "Amende": "10.000"
+    },{
+        "article": "2311-1.",
+        "label": "Refus d'obtempérer. Non aggravé",
+        "tempsIC": "6",
+        "typeTempsIC": "mois",
+        "tempsOOC": "60",
+        "Amende": "3.500"
+    },{
+        "article": "2311-1-2.",
+        "label": "Refus d'obtempérer. Aggravé (en véhicule)",
+        "tempsIC": "6",
+        "typeTempsIC": "mois",
+        "tempsOOC": "60",
+        "Amende": "8.000"
+    },{
+        "article": "2311-2.",
+        "label": "Délit de fuite.",
+        "tempsIC": "6",
+        "typeTempsIC": "mois",
+        "tempsOOC": "60",
+        "Amende": "5.000"
+    },{
+        "article": "2311-3.",
+        "label": "Évasion.",
+        "tempsIC": "3",
+        "typeTempsIC": "ans",
+        "tempsOOC": "120",
+        "Amende": "7.500"
+    },{
+        "article": "2311-4.",
+        "label": "Refus d'identification.",
+        "tempsIC": "3",
+        "typeTempsIC": "mois",
+        "tempsOOC": "45",
+        "Amende": "3.500"
+    },{
+        "article": "2311-5.",
+        "label": "Parjure.",
+        "tempsIC": "7",
+        "typeTempsIC": "ans",
+        "tempsOOC": "150",
+        "Amende": "10.000"
+    },{
+        "article": "2311-6.",
+        "label": "Insubordination à une injonction judiciaire.",
+        "tempsIC": "7",
+        "typeTempsIC": "ans",
+        "tempsOOC": "150",
+        "Amende": "15.000"
+    },{
+        "article": "2311-7.",
+        "label": "Entrave à la justice.",
+        "tempsIC": "7",
+        "typeTempsIC": "ans",
+        "tempsOOC": "150",
+        "Amende": "10.000"
+    },{
+        "article": "2311-8.",
+        "label": "Entrave aux services publics.",
+        "tempsIC": "6",
+        "typeTempsIC": "mois",
+        "tempsOOC": "60",
+        "Amende": "3.500"
+    },{
+        "article": "2311-9.",
+        "label": "Atteinte aux preuves.",
+        "tempsIC": "7",
+        "typeTempsIC": "ans",
+        "tempsOOC": "150",
+        "Amende": "10.000"
+    },{
+        "article": "2311-10.",
+        "label": "Perturbation de services publics.",
+        "tempsIC": "3",
+        "typeTempsIC": "mois",
+        "tempsOOC": "45",
+        "Amende": "3.500"
+    },{
+        "article": "2311-11.",
+        "label": "Usurpation des pouvoirs publics.",
+        "tempsIC": "7",
+        "typeTempsIC": "ans",
+        "tempsOOC": "150",
+        "Amende": "10.000"
+    },{
+        "article": "2311-12.",
+        "label": "Non respect des délais de payement.",
+        "tempsIC": "6",
+        "typeTempsIC": "mois",
+        "tempsOOC": "60",
+        "Amende": "2.000"
+    },{
+        "article": "2312-1.",
+        "label": "Recel.",
+        "tempsIC": "3",
+        "typeTempsIC": "ans",
+        "tempsOOC": "120",
+        "Amende": "10.000"
+    },{
+        "article": "243-1.",
+        "label": "Outrage à la Cour.",
+        "tempsIC": "3",
+        "typeTempsIC": "mois",
+        "tempsOOC": "45",
+        "Amende": "5.000"
+    },{
+        "article": "243-2.",
+        "label": "Outrage à dépositaire de l'autorité publique.",
+        "tempsIC": "3",
+        "typeTempsIC": "mois",
+        "tempsOOC": "45",
+        "Amende": "3.500"
+    }
+]

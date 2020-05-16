@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { Header } from "./Header";
 import { ModalContainer } from "../Component/Modal/Modal.container";
 import { ModalContext } from "../Component/Context/ModalContext";

@@ -11,7 +11,6 @@ import { SaisieComponent } from "../Pages/Saisie/Saisie.component";
 import { TirComponent } from "../Pages/Tir/Tir.component";
 import { SabotComponent } from "../Pages/Sabot/Sabot.component";
 import { FourriereComponent } from "../Pages/Fourriere/Fourriere.component";
-
 const RouterPage = (
   props: { pageComponent: JSX.Element } & RouteComponentProps
 ) => props.pageComponent;
