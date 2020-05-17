@@ -29,7 +29,9 @@ const RPTVolComponent = (props: any) => {
     setFirstName: userValues.setFirstName,
     setLastName: userValues.setLastName,
     firstName: userValues.firstName,
-    lastName: userValues.lastName
+    lastName: userValues.lastName,
+    signature: userValues.signature,
+    setSignature: userValues.setSignature
   };
   
   useEffect(() => {

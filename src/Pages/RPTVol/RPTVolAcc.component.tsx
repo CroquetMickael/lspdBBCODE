@@ -31,6 +31,15 @@ const RPTVolAccComponent = (props: any) => (
           onChange={(e: any) => props.setLastName(e.target.value)}
         />
       </div>
+      <div className="ml-4">
+          <InputComponent
+            placeholder="Signature du rapport"
+            type="text"
+            border={true}
+            value={props.signature}
+            onChange={(e: any) => props.setSignature(e.target.value)}
+          />
+        </div>
       <div className="py-1 ml-4">
         <select className="py-2 shadow" onChange={(e: any) => props.setType(e.target.value)}>
           <option value="ASTRO">ASTRO</option>

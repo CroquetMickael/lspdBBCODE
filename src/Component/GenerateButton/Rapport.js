@@ -10,7 +10,7 @@ function generateRapportPatrouille(elements, code, setter) {
 [b]Contexte[/b]:
 ${code}
 [right]
-[b]Signature[/b] ${elements.firstName}[/right]
+[b]Signature[/b]  ${elements.signature}[/right]
 </div></div>`;
   setter(Code);
 }
@@ -29,7 +29,7 @@ function generateRapportVol(elements, code, setter) {
 ${code}
 [b]État de l'appareil/remarques[/b]:${elements.etat}
 
-[right][b]Signature[/b]${elements.firstName}[/right]
+[right][b]Signature[/b]  ${elements.signature}[/right]
 </div>
 </div></div>
 `;
@@ -140,7 +140,7 @@ ${code}
 <div style="margin: 0 50px;text-align:right;">
 Le ${elements.date},
 [b]Signature.[/b]
-${elements.firstName}
+${elements.signature}
 </div>
 
 </div>
@@ -257,7 +257,7 @@ ${elements.type === "NONE" ? `[X] Aucune blessure` : "[ ] Aucune blessure"}
   Le ${elements.date},
   
   [b]Signature.[/b]
-  ${elements.firstName}
+  ${elements.signature}
   
   </div>
   

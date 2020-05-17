@@ -151,7 +151,9 @@ const DetentionComponent = (props: any) => {
     setFirstName: userValues.setFirstName,
     setLastName: userValues.setLastName,
     firstName: userValues.firstName,
-    lastName: userValues.lastName,
+    lastName: userValues.lastName,    
+    signature: userValues.signature,
+    setSignature: userValues.setSignature
   };
 
   useEffect(() => {
@@ -217,7 +219,7 @@ const DetentionComponent = (props: any) => {
             : peineTotalAmende}
           $ d'amende et {peineTotalTempsOOC} minutes
         </p>
-        <p className="py-1">
+        <p className="py-1 ">
           Rappel: Plus de 70 ans de peine IC équivaut à un CK
         </p>
       </div>

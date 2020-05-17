@@ -10,10 +10,11 @@ const UserProvider = (props: UserProps) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [currentDate, setCurrentDate] = useState(Intl.DateTimeFormat('fr-FR').format(Date.now()))
+  const [signature, setSignature] = useState("");
 
   return (
     <UserContext.Provider
-      value={{ firstName, setFirstName, lastName, setLastName, currentDate, setCurrentDate }}
+      value={{ firstName, setFirstName, lastName, setLastName, currentDate, setCurrentDate, signature, setSignature }}
     >
       {props.children}
     </UserContext.Provider>

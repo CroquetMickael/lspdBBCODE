@@ -33,6 +33,15 @@ const DetentionAccComponent = (props: any) => (
             onChange={(e: any) => props.setLastName(e.target.value)}
           />
         </div>
+        <div className="ml-4">
+          <InputComponent
+            placeholder="Signature du rapport"
+            type="text"
+            border={true}
+            value={props.signature}
+            onChange={(e: any) => props.setSignature(e.target.value)}
+          />
+        </div>
       </div>
       <div className="w-full mx-4 mb-2">Identité et droit</div>
       <div className="flex w-full">

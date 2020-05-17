@@ -58,6 +58,8 @@ const TirComponent = (props: any) => {
     setLastName: userValues.setLastName,
     firstName: userValues.firstName,
     lastName: userValues.lastName,
+    signature: userValues.signature,
+    setSignature: userValues.setSignature
   };
 
   useEffect(() => {

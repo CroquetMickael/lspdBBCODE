@@ -33,13 +33,21 @@ const TirAccComponent = (props: any) => (
             onChange={(e: any) => props.setLastName(e.target.value)}
           />
         </div>
-
         <div className="ml-4">
           <InputComponent
             placeholder="Rang et affectation"
             type="text"
             border={true}
             onChange={(e: any) => props.setRangAffec(e.target.value)}
+          />
+        </div>
+        <div className="ml-4">
+          <InputComponent
+            placeholder="Signature du rapport"
+            type="text"
+            border={true}
+            value={props.signature}
+            onChange={(e: any) => props.setSignature(e.target.value)}
           />
         </div>
       </div>
