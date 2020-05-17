@@ -1,7 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Accordeon } from "../../Component/Accordeon";
-import { EditorState, ContentState } from "draft-js";
-import { HtmlEditor } from "../../Component/Editor/Editor.component";
 import { ModalContext } from "../../Component/Context/ModalContext";
 import { GenerateButtonComponent } from "../../Component/GenerateButton/GenerateButton.container";
 import { UserContext } from "../../Component/Context/UserContext";
@@ -12,10 +10,8 @@ import { InputComponent } from "../../Component/Input.component";
 import bigDecimal from "js-big-decimal";
 
 const DetentionComponent = (props: any) => {
-  const [editorState, setEditorState] = useState<any>(
-    EditorState.createWithContent(
-      ContentState.createFromText(`[b]Charges retenues:[/b]`)
-    )
+  const [textAeraValue, setTextAeraValue] = useState(
+    `[b]Charges retenues:[/b]`
   );
   const ModalValues = useContext(ModalContext);
   const userValues = useContext(UserContext);
@@ -43,6 +39,7 @@ const DetentionComponent = (props: any) => {
       );
       setPeineTotalAmende(calcul);
     });
+
     let result = Selected.sort((a: ObjectPeine, b: ObjectPeine) => {
       if (a.tempsOOC > b.tempsOOC && a.Amende > b.Amende) {
         return -1;
@@ -59,7 +56,11 @@ const DetentionComponent = (props: any) => {
     } else {
       setPeineTotalTempsOOC(peineTotalTempsOOC + parseInt(result[0].tempsOOC));
     }
-
+    let text = "[b]Charges retenues:[/b]\n";
+    Selected.map((element: ObjectPeine) => {
+      return (text += `${element.article} - ${element.label} ${element.tempsIC} ${element.typeTempsIC} et ${element.Amende}$ d'amende\n`);
+    });
+    setTextAeraValue(text);
     setPeineSelected(Selected);
     setSearch("");
     setResultSearch([]);
@@ -75,12 +76,12 @@ const DetentionComponent = (props: any) => {
         )
       )
     );
+
     Selected.forEach((element, index) => {
       if (element.article === peineSelect.article) {
         Selected.splice(index, 1);
       }
     });
-
     let result = Selected.sort((a: ObjectPeine, b: ObjectPeine) => {
       if (a.tempsOOC > b.tempsOOC && a.Amende > b.Amende) {
         return -1;
@@ -94,11 +95,17 @@ const DetentionComponent = (props: any) => {
       setPeineTotalTempsOOC(
         parseInt(result[0].tempsOOC) + parseInt(result[1].tempsOOC)
       );
-    } else if (result.length === 1) {
-      setPeineTotalTempsOOC(peineTotalTempsOOC - parseInt(result[0].tempsOOC));
     } else {
       setPeineTotalTempsOOC(0);
     }
+    if (result.length === 1) {
+      setPeineTotalTempsOOC(peineTotalTempsOOC - parseInt(result[0].tempsOOC));
+    }
+    let text = "[b]Charges retenues:[/b]\n";
+    Selected.map((element: ObjectPeine) => {
+      return (text += `${element.article} - ${element.label} ${element.tempsIC} ${element.typeTempsIC} et ${element.Amende}$ d'amende\n`);
+    });
+    setTextAeraValue(text);
     setPeineSelected(Selected);
     setSearch("");
     setResultSearch([]);
@@ -125,7 +132,7 @@ const DetentionComponent = (props: any) => {
     setNature,
     suspectName,
     setSuspectName,
-    code: editorState,
+    code: textAeraValue,
     toggleModal: ModalValues.toggleModal,
     date: userValues.currentDate,
     setDate: userValues.setCurrentDate,
@@ -166,49 +173,61 @@ const DetentionComponent = (props: any) => {
           value={search}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => searching(e)}
         />
+        {resultSearch.length !== 0 && (
+          <div className="absolute flex flex-col w-full h-64 overflow-y-auto bg-white shadow">
+            {resultSearch.map((result: ObjectPeine, index: number) => {
+              return (
+                <div
+                  key={index}
+                  className="py-2 cursor-pointer hover:bg-gray-300"
+                  onClick={() => SelectPeine(result)}
+                >
+                  {result.article} - {result.label}
+                </div>
+              );
+            })}
+          </div>
+        )}
       </div>
-      {resultSearch.length !== 0 && (
-        <div className="absolute flex flex-col w-full h-64 mt-32 overflow-y-auto bg-white shadow">
-          {resultSearch.map((result: ObjectPeine, index: number) => {
+
+      {peineSelected.length !== 0 && (
+        <div className="w-full h-64 overflow-y-auto shadow">
+          {peineSelected.map((result: ObjectPeine, index: number) => {
             return (
-              <div
-                key={index}
-                className="py-2 cursor-pointer hover:bg-gray-300"
-                onClick={() => SelectPeine(result)}
-              >
-                {result.article} - {result.label}
+              <div key={index} className="py-2">
+                <button
+                  className="px-4 mx-2 font-semibold bg-transparent border rounded hover:border-red-500 hover:bg-red-500 hover:text-white hover:border-transparent"
+                  onClick={() => RemovePeine(result, index)}
+                >
+                  X
+                </button>
+                {result.article} - {result.label} {result.tempsIC}{" "}
+                {result.typeTempsIC} et {result.Amende}$ d'amende{" "}
               </div>
             );
           })}
         </div>
       )}
-      <div className="flex flex-col w-full h-64 mt-8 overflow-y-auto">
-        {peineSelected.map((result: ObjectPeine, index: number) => {
-          return (
-            <div key={index} className="py-2">
-              <button
-                className="px-4 mx-2 font-semibold bg-transparent border rounded hover:border-red-500 hover:bg-red-500 hover:text-white hover:border-transparent"
-                onClick={() => RemovePeine(result, index)}
-              >
-                X
-              </button>
-              {result.article} - {result.label} {result.tempsIC}{" "}
-              {result.typeTempsIC} et {result.Amende}$ d'amende{" "}
-            </div>
-          );
-        })}
-      </div>
-      <div>        <p className="py-4">
+      <div>
+        {" "}
+        <p className="py-1">
           Peine à mettre en /juger :{" "}
-          {parseFloat(peineTotalAmende) > parseFloat("20.000") ? "20.000" : peineTotalAmende}$ d'amende
-          et {peineTotalTempsOOC} minutes
+          {parseFloat(peineTotalAmende) > parseFloat("20.000")
+            ? "20.000"
+            : peineTotalAmende}
+          $ d'amende et {peineTotalTempsOOC} minutes
         </p>
-        <p className="py-4">
+        <p className="py-1">
           Rappel: Plus de 70 ans de peine IC équivaut à un CK
-        </p></div>
-      <div className="flex flex-col w-full h-full">
+        </p>
+      </div>
+      <div className="flex flex-col w-full">
         <div className="w-full my-4">Charges retenues: </div>
-        <HtmlEditor editorState={editorState} setEditorState={setEditorState} />
+        <textarea
+          className="h-64 p-2 mb-2 shadow textAera"
+          value={textAeraValue}
+          onChange={(e) => setTextAeraValue(e.target.value)}
+        ></textarea>
       </div>
       <GenerateButtonComponent rapportType="DET" {...propsToSend} />
     </PageLayout>
