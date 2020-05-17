@@ -4,35 +4,35 @@
         "label": "Agression au premier degré.",
         "tempsIC": "7",
         "typeTempsIC": "ans",
-        "tempsOOC": "2",
+        "tempsOOC": "150",
         "Amende": "10.000"
     },{
         "article": "231-3.",
         "label": "Agression au deuxième degré.",
         "tempsIC": "3",
         "typeTempsIC": "ans",
-        "tempsOOC": "2",
+        "tempsOOC": "120",
         "Amende": "7.500"
     },{
         "article": "231-4.",
         "label": "Agression au troisième degré.",
         "tempsIC": "6",
         "typeTempsIC": "mois",
-        "tempsOOC": "1",
+        "tempsOOC": "60",
         "Amende": "3.500"
     },{
         "article": "231-5.",
         "label": "Agression sexuelle.",
         "tempsIC": "7",
         "typeTempsIC": "ans",
-        "tempsOOC": "2",
+        "tempsOOC": "150",
         "Amende": "10.000"
     },{
         "article": "231-6.",
         "label": "Mise en danger de la vie d'autrui.",
         "tempsIC": "7",
         "typeTempsIC": "ans",
-        "tempsOOC": "2",
+        "tempsOOC": "120",
         "Amende": "7.500"
     },{
         "article": "231-7.",

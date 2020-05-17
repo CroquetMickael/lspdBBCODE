@@ -230,7 +230,10 @@ const DetentionComponent = (props: any) => {
           {parseFloat(peineTotalAmende) > parseFloat("20.000")
             ? "20.000"
             : peineTotalAmende}
-          $ d'amende et {peineTotalTempsOOC} minutes
+          $ d'amende et {peineTotalTempsOOC} minutes</p>
+          <p className="py-1">/juger [id] {peineTotalTempsOOC} {parseFloat(peineTotalAmende) > parseFloat("20.000")
+            ? "20000"
+            : parseInt(peineTotalAmende)}
         </p>
         <p className="py-1 ">
           Rappel: Plus de 70 ans de peine IC équivaut à un CK
