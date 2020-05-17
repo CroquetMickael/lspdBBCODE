@@ -127,11 +127,12 @@ ${
     : "[ ] Autre, précisez ci-contre:"
 }
 
-${code}
+
 
 
 </div>
 <div style="height: auto; text-align: center; padding:6px;background-color: #003964; color: white ;font-size:17px;padding: 20px 40px;margin: 0 50px;box-shadow: 0px 0px 1px #003964;">[b]INSTRUCTION JUDICIAIRE[/b]</div><div style="padding: 40px;background-color:#ffffff;margin: 0 50px;box-shadow: 0px 0px 1px #b1b2b2;">
+${code}
 [size=10][color=grey](( A remplir si [b]OPTION 2.[/b] dans le cadre d'une [url=https://www.leroleplay.fr/viewtopic.php?id=43875]demande d'accusation[/url]. ))[/color][/size]
 [b]Référence de la demande d'accusation[/b]: 
 
