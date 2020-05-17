@@ -12,7 +12,7 @@ const Header = () => {
         <hr className="hidden my-4 sm:block" />
         <h1 className="hidden text-2xl text-white sm:block">LSPD BBCODE GENERATOR</h1>
       </div>
-      <nav className="flex flex-wrap items-center justify-between w-full p-6">
+      <nav className="flex flex-wrap items-center justify-between w-full p-2">
         <p className="block text-white sm:hidden">LSPD BBCODE GENERATOR</p>
         <div className="block lg:hidden">
           <button
