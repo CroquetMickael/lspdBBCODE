@@ -41,10 +41,10 @@ const DetentionComponent = (props: any) => {
     });
 
     let result = Selected.sort((a: ObjectPeine, b: ObjectPeine) => {
-      if (a.tempsOOC > b.tempsOOC && a.Amende > b.Amende) {
+      if (a.tempsOOC > b.tempsOOC) {
         return -1;
       }
-      if (a.tempsOOC < b.tempsOOC && a.Amende > b.Amende) {
+      if (a.tempsOOC < b.tempsOOC) {
         return 1;
       }
       return 0;
@@ -56,6 +56,7 @@ const DetentionComponent = (props: any) => {
     } else {
       setPeineTotalTempsOOC(peineTotalTempsOOC + parseInt(result[0].tempsOOC));
     }
+
     let text = "[b]Charges retenues:[/b]\n";
     Selected.map((element: ObjectPeine) => {
       return (text += `${element.article} - ${element.label} ${element.tempsIC} ${element.typeTempsIC} et ${element.Amende}$ d'amende\n`);
@@ -77,19 +78,28 @@ const DetentionComponent = (props: any) => {
       )
     );
 
-    Selected.forEach((element, index) => {
-      if (element.article === peineSelect.article) {
-        Selected.splice(index, 1);
-      }
-    });
     let result = Selected.sort((a: ObjectPeine, b: ObjectPeine) => {
-      if (a.tempsOOC > b.tempsOOC && a.Amende > b.Amende) {
+      if (a.tempsOOC > b.tempsOOC) {
         return -1;
       }
-      if (a.tempsOOC < b.tempsOOC && a.Amende > b.Amende) {
+      if (a.tempsOOC < b.tempsOOC) {
         return 1;
       }
       return 0;
+    });
+    let peineRetirer: ObjectPeine = {
+      tempsOOC: "",
+      Amende: "",
+      article: "",
+      label: "",
+      tempsIC: "",
+      typeTempsIC: "",
+    };
+    Selected.forEach((element, index) => {
+      if (element.article === peineSelect.article) {
+        Selected.splice(index, 1);
+        peineRetirer = element;
+      }
     });
     if (result.length > 1) {
       setPeineTotalTempsOOC(
@@ -99,8 +109,11 @@ const DetentionComponent = (props: any) => {
       setPeineTotalTempsOOC(0);
     }
     if (result.length === 1) {
-      setPeineTotalTempsOOC(peineTotalTempsOOC - parseInt(result[0].tempsOOC));
+      setPeineTotalTempsOOC(
+        peineTotalTempsOOC - parseInt(peineRetirer.tempsOOC)
+      );
     }
+
     let text = "[b]Charges retenues:[/b]\n";
     Selected.map((element: ObjectPeine) => {
       return (text += `${element.article} - ${element.label} ${element.tempsIC} ${element.typeTempsIC} et ${element.Amende}$ d'amende\n`);
@@ -151,9 +164,9 @@ const DetentionComponent = (props: any) => {
     setFirstName: userValues.setFirstName,
     setLastName: userValues.setLastName,
     firstName: userValues.firstName,
-    lastName: userValues.lastName,    
+    lastName: userValues.lastName,
     signature: userValues.signature,
-    setSignature: userValues.setSignature
+    setSignature: userValues.setSignature,
   };
 
   useEffect(() => {
