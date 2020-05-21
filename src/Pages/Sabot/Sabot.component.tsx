@@ -51,6 +51,7 @@ const SabotComponent = (props: any) => {
     setLastName: userValues.setLastName,
     firstName: userValues.firstName,
     lastName: userValues.lastName,
+    setTitlePost: ModalValues.setTitlePost
   };
 
   useEffect(() => {

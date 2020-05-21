@@ -31,7 +31,8 @@ const RPTVolComponent = (props: any) => {
     firstName: userValues.firstName,
     lastName: userValues.lastName,
     signature: userValues.signature,
-    setSignature: userValues.setSignature
+    setSignature: userValues.setSignature,
+    setTitlePost: ModalValues.setTitlePost
   };
   
   useEffect(() => {

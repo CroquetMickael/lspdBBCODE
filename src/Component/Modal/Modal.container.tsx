@@ -8,6 +8,7 @@ interface ModalProps {
   bbCode: string;
   link: string;
   show: boolean;
+  titlePost: string;
 }
 
 const ModalContainer: FunctionComponent<ModalProps> = (props: ModalProps) => {

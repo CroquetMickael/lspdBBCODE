@@ -167,6 +167,7 @@ const DetentionComponent = (props: any) => {
     lastName: userValues.lastName,
     signature: userValues.signature,
     setSignature: userValues.setSignature,
+    setTitlePost: ModalValues.setTitlePost
   };
 
   useEffect(() => {

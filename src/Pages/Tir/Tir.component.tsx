@@ -12,10 +12,6 @@ const TirComponent = (props: any) => {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
   const ModalValues = useContext(ModalContext);
   const userValues = useContext(UserContext);
-
-  const [date, setDate] = useState<string>(
-    Intl.DateTimeFormat("en-US").format(Date.now())
-  );
   const [rangAffec, setRangAffec] = useState<string>("");
   const [superviseur, setSuperviseur] = useState<string>("");
   const [temoin, setTemoin] = useState<string>("");
@@ -30,8 +26,8 @@ const TirComponent = (props: any) => {
   const propsToSend = {
     code: editorState,
     toggleModal: ModalValues.toggleModal,
-    date,
-    setDate,
+    date: userValues.currentDate,
+    setDate: userValues.setCurrentDate,
     rangAffec,
     setRangAffec,
     superviseur,
@@ -59,7 +55,8 @@ const TirComponent = (props: any) => {
     firstName: userValues.firstName,
     lastName: userValues.lastName,
     signature: userValues.signature,
-    setSignature: userValues.setSignature
+    setSignature: userValues.setSignature,
+    setTitlePost: ModalValues.setTitlePost
   };
 
   useEffect(() => {

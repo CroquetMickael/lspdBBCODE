@@ -11,12 +11,13 @@ interface ModalProps {
 const ModalContext = React.createContext<any>(null);
 
 const ModalProvider = (props: ModalProps) => {
-    const [modalOpen, setModalOpen] = useState(false);
-    const toggleModal = () => setModalOpen(!modalOpen);
-    const [bbCode, setBBCode] = useState("");
-    const [link, setLink] = useState("");
-    const [show, setShow] = useState(true);
-    
+  const [modalOpen, setModalOpen] = useState(false);
+  const toggleModal = () => setModalOpen(!modalOpen);
+  const [bbCode, setBBCode] = useState("");
+  const [link, setLink] = useState("");
+  const [show, setShow] = useState(true);
+  const [titlePost, setTitlePost] = useState("");
+
   return (
     <ModalContext.Provider
       value={{
@@ -27,7 +28,9 @@ const ModalProvider = (props: ModalProps) => {
         setShow,
         setLink,
         bbCode,
-        setBBCode
+        setBBCode,
+        titlePost,
+        setTitlePost,
       }}
     >
       {props.children}

@@ -10,13 +10,13 @@ const Accordeon = (props: Accordeon) => {
   const [isCollapse, setIsCollapse] = useState(false);
   const ToggleIsCollapse = () => setIsCollapse(!isCollapse);
   return (
-    <div className="shadow w-full">
+    <div className="w-full shadow">
         <div
-          className="flex justify-between items-center p-5 pl-8 pr-8 cursor-pointer select-none w-full"
+          className="flex items-center justify-between w-full p-5 pl-8 pr-8 cursor-pointer select-none"
           onClick={ToggleIsCollapse}
         >
-          <span className="text-indigo font-thin text-xl">{props.title}</span>
-          <div className="rounded-full border border-grey w-7 h-7 flex items-center justify-center">
+          <span className="text-xl font-thin text-indigo">{props.title}</span>
+          <div className="flex items-center justify-center border rounded-full border-grey w-7 h-7">
             <svg
               aria-hidden="true"
               className=""

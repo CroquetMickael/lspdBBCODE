@@ -82,6 +82,7 @@ const SaisieComponent = (props: any) => {
     setFirstName: userValues.setFirstName,
     setLastName: userValues.setLastName,
     firstName: userValues.firstName,
+    setTitlePost: ModalValues.setTitlePost
   };
 
   useEffect(() => {

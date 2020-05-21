@@ -70,6 +70,9 @@ ${code}
 }
 
 function generateFormDetention(elements, code, setter) {
+  elements.setTitlePost(
+    `Titre du sujet : ${elements.suspectName} (${elements.date})`
+  );
   const Code = `
   <div style="border: 1px solid #000000; background-image: url(https://nsa38.casimages.com/img/2015/11/07/151107050411686728.png); background-repeat:repeat-y; background-color: #fafafa; padding-left: 40px;">
 
@@ -198,6 +201,11 @@ ${elements.log}
 }
 
 function generateTir(elements, code, setter) {
+  elements.setTitlePost(
+    `Titre du sujet : Déclaration de tirs - ${elements.firstName.toUpperCase()} ${
+      elements.lastName
+    } (${elements.date})`
+  );
   const Code = `<div style="border: 1px solid #000000; background-image: url(https://nsa38.casimages.com/img/2015/11/07/151107050411686728.png); background-repeat:repeat-y; background-color: #fafafa; padding-left: 40px;">
 
   <div style="margin: 0 50px;text-align:center;">
@@ -268,6 +276,9 @@ ${elements.type === "NONE" ? `[X] Aucune blessure` : "[ ] Aucune blessure"}
 }
 
 function generateSabot(elements, code, setter) {
+  elements.setTitlePost(
+    `Titre du sujet : (Placement d'un sabot) ${elements.modeleVeh} - ${elements.plaqueVeh} (${elements.date})`
+  );
   const Code = `<div style="background-color: white; color: black; padding: 13px; border: 1px solid black; box-shadow: 0px 0px 2px #F2F2F2; border-top-radius: 3px; width:100%; text-align: left;margin:auto;width:100%">
   <center>[img]https://i.servimg.com/u/f74/19/84/45/72/i81a1u10.png[/img]</center>
   
@@ -310,6 +321,9 @@ function generateSabot(elements, code, setter) {
 }
 
 function generateFourriere(elements, code, setter) {
+  elements.setTitlePost(
+    `Titre du sujet : (Placement en fourrière) ${elements.modeleVeh} - ${elements.plaqueVeh} (${elements.date})`
+  );
   const Code = `<div style="background-color: white; color: black; padding: 13px; border: 1px solid black; box-shadow: 0px 0px 2px #F2F2F2; border-top-radius: 3px; width:100%; text-align: left;margin:auto;width:100%">
   <center>[img]https://i.servimg.com/u/f74/19/84/45/72/i81a1u10.png[/img]</center>
   
@@ -349,8 +363,8 @@ function generateFourriere(elements, code, setter) {
   setter(Code);
 }
 
-
 export function generate(type, elements, code, setter) {
+  elements.setTitlePost("");
   switch (type) {
     case "RAPT":
       generateRapportPatrouille(elements, code, setter);
@@ -371,10 +385,10 @@ export function generate(type, elements, code, setter) {
       generateTir(elements, code, setter);
       break;
     case "SABOT":
-        generateSabot(elements, code, setter);
-        break;
+      generateSabot(elements, code, setter);
+      break;
     case "FOUR":
-      generateFourriere(elements,code,setter)
+      generateFourriere(elements, code, setter);
       break;
     default:
       break;

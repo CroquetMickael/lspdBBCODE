@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 
 const ModalComponent = (props: any) => {
   const textAreaRef = useRef<HTMLTextAreaElement>(null);
-  const [copySuccess, setCopySuccess] = useState("Copier");
+  const [copySuccess, setCopySuccess] = useState("Copier le code");
 
   function copyToClipboard(e: any) {
     textAreaRef.current?.select();
@@ -10,9 +10,9 @@ const ModalComponent = (props: any) => {
     // This is just personal preference.
     // I prefer to not show the the whole text area selected.
     e.target.focus();
-    setCopySuccess("Copie effectué :)")
+    setCopySuccess("Copie du code effectué :)")
     setTimeout(() => {
-      setCopySuccess("Copier")
+      setCopySuccess("Copier le code")
     },2000)
   }
 
@@ -45,14 +45,15 @@ const ModalComponent = (props: any) => {
               X
             </div>
           </div>
-          <hr />
+          <hr className="py-2" />
+          <p className="py-2">{props.titlePost}</p>
           <textarea
             ref={textAreaRef}
-            className="w-full h-64"
+            className="w-full h-64 border"
             readOnly={true}
             value={props.bbCode}
           ></textarea>
-          <hr className="py-2" />
+          
           <div className="flex flex-col w-full">
           {
               /* Logical shortcut for only displaying the 

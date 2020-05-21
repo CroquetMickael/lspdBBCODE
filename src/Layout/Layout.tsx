@@ -20,6 +20,7 @@ const Layout = (props: any) => {
           title="Code génére"
           link={modalValues.link}
           show={modalValues.show}
+          titlePost={modalValues.titlePost}
         />
       </div>
     </>
