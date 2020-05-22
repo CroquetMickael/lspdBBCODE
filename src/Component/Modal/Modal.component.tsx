@@ -10,10 +10,10 @@ const ModalComponent = (props: any) => {
     // This is just personal preference.
     // I prefer to not show the the whole text area selected.
     e.target.focus();
-    setCopySuccess("Copie du code effectué :)")
+    setCopySuccess("Copie du code effectué :)");
     setTimeout(() => {
-      setCopySuccess("Copier le code")
-    },2000)
+      setCopySuccess("Copier le code");
+    }, 2000);
   }
 
   return (
@@ -47,28 +47,25 @@ const ModalComponent = (props: any) => {
           </div>
           <hr className="py-2" />
           <p className="py-2">{props.titlePost}</p>
+          <iframe title="iframefofo" className="hidden" src={props.link} />
           <textarea
             ref={textAreaRef}
             className="w-full h-64 border"
             readOnly={true}
             value={props.bbCode}
           ></textarea>
-          
           <div className="flex flex-col w-full">
-          {
-              /* Logical shortcut for only displaying the 
-               button if the copy command exists */
-              document.queryCommandSupported("copy") && (
-                <div className="w-full text-center">
-                  <button
-                    onClick={copyToClipboard}
-                    className={`w-full px-4 py-2 my-2 font-semibold text-blue-700 bg-transparent border border-blue-500 rounded hover:bg-blue-500 hover:text-white hover:border-transparent`}
-                  >
-                    {copySuccess}
-                  </button>
-                </div>
-              )
-            }
+            {document.queryCommandSupported("copy") && (
+              <div className="w-full text-center">
+                <button
+                  onClick={copyToClipboard}
+                  className={`w-full px-4 py-2 my-2 font-semibold text-blue-700 bg-transparent border border-blue-500 rounded hover:bg-blue-500 hover:text-white hover:border-transparent`}
+                >
+                  {copySuccess}
+                </button>
+              </div>
+            )}
+
             {props.show && (
               <div className="w-full text-center">
                 <a href={props.link} target="_blank" rel="noopener noreferrer">

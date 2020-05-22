@@ -44,6 +44,7 @@ const RPTPatrouilleAccComponent = (props: any) => (
         <select className="py-2 shadow" onChange={(e: any) => props.setType(e.target.value)}>
           <option value="Incident">Incident</option>
           <option value="Rapport de patrouille">Rapport de patrouille</option>
+          <option value="Arrestation">Arrestation</option>
         </select>
       </div>
       <div className="ml-4">
