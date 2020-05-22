@@ -36,7 +36,7 @@ const Accordeon = (props: Accordeon) => {
           </div>
         </div>
         <div
-          className={`text-grey-darkest ease-in-out delay-75 transition duration-300 overflow-hidden ${
+          className={`bg-white text-grey-darkest ease-in-out shadow absolute delay-75 z-20 transition duration-300 overflow-hidden ${
             isCollapse ? "h-auto" : "h-0 "
           }`}
         >

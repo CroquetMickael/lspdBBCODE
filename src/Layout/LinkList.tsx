@@ -33,6 +33,10 @@ const links = [
   {
     href: "/Fourriere",
     libelle: "Placement en fourriere",
+  },
+  {
+    href: "/Probatoire",
+    libelle: "Evaluation probatoire ",
   }
 ];
 

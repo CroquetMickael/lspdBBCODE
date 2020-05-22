@@ -11,6 +11,7 @@ import { SaisieComponent } from "../Pages/Saisie/Saisie.component";
 import { TirComponent } from "../Pages/Tir/Tir.component";
 import { SabotComponent } from "../Pages/Sabot/Sabot.component";
 import { FourriereComponent } from "../Pages/Fourriere/Fourriere.component";
+import { ProbatoireComponent } from "../Pages/Probatoire/Probatoire.component";
 const RouterPage = (
   props: { pageComponent: JSX.Element } & RouteComponentProps
 ) => props.pageComponent;
@@ -39,6 +40,10 @@ const AppRouter = () => (
           <RouterPage
             path="/Fourriere"
             pageComponent={<FourriereComponent />}
+          />
+           <RouterPage
+            path="/Probatoire"
+            pageComponent={<ProbatoireComponent />}
           />
         </Router>
       </UserProvider>
