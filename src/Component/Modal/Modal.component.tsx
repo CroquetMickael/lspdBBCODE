@@ -69,7 +69,7 @@ const ModalComponent = (props: any) => {
                 readOnly={true}
                 value={props.titlePost}
               ></input>
-              <button className="px-4 py-2 my-2 font-semibold text-blue-700 bg-transparent border border-blue-500 rounded hover:bg-blue-500 hover:text-white hover:border-transparent" onClick={copyTitleToClipboard}>{copyTitleSuccess}</button>
+              <button className="px-4 ml-2 font-semibold text-blue-700 bg-transparent border border-blue-500 rounded hover:bg-blue-500 hover:text-white hover:border-transparent" onClick={copyTitleToClipboard}>{copyTitleSuccess}</button>
             </p>
           )}
 
