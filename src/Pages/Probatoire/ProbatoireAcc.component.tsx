@@ -29,7 +29,7 @@ const ProbatoireAccComponent = (props: any) => (
             placeholder="Grade"
             type="text"
             border={true}
-            value={props.signature}
+            value={props.grade}
             onChange={(e: any) => props.setGrade(e.target.value)}
           />
         </div>
