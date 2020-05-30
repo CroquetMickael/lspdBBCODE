@@ -1,16 +1,16 @@
 import React from "react";
 import { Router, RouteComponentProps } from "@reach/router";
-import { RPTPatrouilleComponent } from "../Pages/Patrouille/RPTPatrouille.component";
+import { RPTPatrouilleComponent } from "../Pages/Rapport/Patrouille/RPTPatrouille.component";
 import { Layout } from "../Layout/Layout";
 import { UserProvider } from "../Component/Context/UserContext";
 import { ModalProvider } from "../Component/Context/ModalContext";
-import { RPTVolComponent } from "../Pages/RPTVol/RPTVol.component";
-import { RPTPatrouilleIndiaComponent } from "../Pages/RPTPatrouilleIndia/RPTPatrouilleIndia.component";
-import { DetentionComponent } from "../Pages/Detention/Detention.component";
-import { SaisieComponent } from "../Pages/Saisie/Saisie.component";
-import { TirComponent } from "../Pages/Tir/Tir.component";
-import { SabotComponent } from "../Pages/Sabot/Sabot.component";
-import { FourriereComponent } from "../Pages/Fourriere/Fourriere.component";
+import { RPTVolComponent } from "../Pages/CTD/RPTVol/RPTVol.component";
+import { RPTPatrouilleIndiaComponent } from "../Pages/Metropolitan/RPTPatrouilleIndia/RPTPatrouilleIndia.component";
+import { DetentionComponent } from "../Pages/Justice/Detention/Detention.component";
+import { SaisieComponent } from "../Pages/Rapport/Saisie/Saisie.component";
+import { TirComponent } from "../Pages/Rapport/Tir/Tir.component";
+import { SabotComponent } from "../Pages/CTD/Sabot/Sabot.component";
+import { FourriereComponent } from "../Pages/CTD/Fourriere/Fourriere.component";
 import { ProbatoireComponent } from "../Pages/Probatoire/Probatoire.component";
 const RouterPage = (
   props: { pageComponent: JSX.Element } & RouteComponentProps
@@ -41,7 +41,7 @@ const AppRouter = () => (
             path="/Fourriere"
             pageComponent={<FourriereComponent />}
           />
-           <RouterPage
+          <RouterPage
             path="/Probatoire"
             pageComponent={<ProbatoireComponent />}
           />

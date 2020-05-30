@@ -1,6 +1,6 @@
 import React from "react";
-import { InputComponent } from "../../Component/Input.component";
-import { ToggleButtonComponent } from "../../Component/ToggleButton.component";
+import { InputComponent } from "@component/Input.component";
+import { ToggleButtonComponent } from "@component/ToggleButton.component";
 
 interface RPTPatrouilleProps {
   Officers: string;

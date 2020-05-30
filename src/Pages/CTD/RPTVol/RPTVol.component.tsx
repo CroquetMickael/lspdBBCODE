@@ -1,24 +1,23 @@
 import React, { useState, useContext, useEffect } from "react";
-import { Accordeon } from "../../Component/Accordeon";
+import { Accordeon } from "@component/Accordeon";
 import { EditorState } from "draft-js";
-import { HtmlEditor } from "../../Component/Editor/Editor.component";
-import { ModalContext } from "../../Component/Context/ModalContext";
-import { GenerateButtonComponent } from "../../Component/GenerateButton/GenerateButton.container";
-import { UserContext } from "../../Component/Context/UserContext";
-import { RPTPatrouilleAccComponent } from "./RPTPatrouilleAcc.component";
-import { PageLayout } from "../../Layout/PageLayout";
+import { HtmlEditor } from "@component/Editor/Editor.component";
+import { ModalContext } from "@component/Context/ModalContext";
+import { GenerateButtonComponent } from "@component/GenerateButton/GenerateButton.container";
+import { UserContext } from "@component/Context/UserContext";
+import { RPTVolAccComponent } from "./RPTVolAcc.component";
+import { PageLayout } from "../../../Layout/PageLayout";
 
-const RPTPatrouilleComponent = (props: any) => {
+const RPTVolComponent = (props: any) => {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
   const ModalValues = useContext(ModalContext);
   const userValues = useContext(UserContext);
-
-  const [Officers, setOfficers] = useState<string>("");
-  const [Type, setType] = useState<string>("Incident");
+  const [etat, setEtat] = useState<string>("");
+  const [Type, setType] = useState<string>("Rapport de patrouille");
 
   const propsToSend = {
-    Officers,
-    setOfficers,
+    etat,
+    setEtat,
     code: editorState,
     toggleModal: ModalValues.toggleModal,
     date: userValues.currentDate,
@@ -35,25 +34,24 @@ const RPTPatrouilleComponent = (props: any) => {
     setSignature: userValues.setSignature,
     setTitlePost: ModalValues.setTitlePost
   };
-
+  
   useEffect(() => {
-    ModalValues.setShow(true);
-    ModalValues.setLink("https://lspd-online.forumactif.com/f11-rapports-personnels");
+    ModalValues.setShow(false);
   })
 
-  
+
   return (
     <PageLayout>
       <Accordeon title="Information">
-        <RPTPatrouilleAccComponent {...propsToSend} />
+        <RPTVolAccComponent {...propsToSend} />
       </Accordeon>
       <div className="flex flex-col w-full h-full">
-      <div className="w-full my-4">Contextes : </div>
+      <div className="w-full my-4">Interventions menées: </div>
         <HtmlEditor editorState={editorState} setEditorState={setEditorState} />
       </div>
-      <GenerateButtonComponent rapportType="RAPT" {...propsToSend} />
+      <GenerateButtonComponent rapportType="RVOL" {...propsToSend} />
     </PageLayout>
   );
 };
 
-export { RPTPatrouilleComponent };
+export { RPTVolComponent };

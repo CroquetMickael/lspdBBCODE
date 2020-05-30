@@ -1,5 +1,5 @@
 import React from "react";
-import { InputComponent } from "../../Component/Input.component"
+import { InputComponent } from "@component/Input.component"
 
 interface RPTPatrouilleProps {
   Officers: string;
@@ -10,7 +10,7 @@ interface RPTPatrouilleProps {
   setType: () => void;
 }
 
-const SabotAccComponent = (props: any) => (
+const FourriereAccComponent = (props: any) => (
   <form className="w-full">
     <div className="flex flex-wrap justify-between w-full mb-6">
     <div className="w-full mx-4 mb-2">Information sur l'officier</div>
@@ -76,14 +76,6 @@ const SabotAccComponent = (props: any) => (
             onChange={(e: any) => props.setProprio(e.target.value)}
           />
         </div>
-        <div className="ml-4">
-          <InputComponent
-            placeholder="Lien de la photo"
-            type="text"
-            border={true}
-            onChange={(e: any) => props.setPhotoLink(e.target.value)}
-          />
-        </div>
       </div>
       <div className="w-full mx-4 mb-2">Informations Supplémentaires</div>
       <div className="flex w-full">
@@ -109,4 +101,4 @@ const SabotAccComponent = (props: any) => (
   </form>
 );
 
-export { SabotAccComponent };
+export { FourriereAccComponent };

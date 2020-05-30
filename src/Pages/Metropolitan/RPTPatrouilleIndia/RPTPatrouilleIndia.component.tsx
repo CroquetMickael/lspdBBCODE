@@ -1,12 +1,12 @@
 import React, { useState, useContext, useEffect } from "react";
-import { Accordeon } from "../../Component/Accordeon";
+import { Accordeon } from "@component/Accordeon";
 import { EditorState, ContentState } from "draft-js";
-import { HtmlEditor } from "../../Component/Editor/Editor.component";
-import { ModalContext } from "../../Component/Context/ModalContext";
-import { GenerateButtonComponent } from "../../Component/GenerateButton/GenerateButton.container";
-import { UserContext } from "../../Component/Context/UserContext";
+import { HtmlEditor } from "@component/Editor/Editor.component";
+import { ModalContext } from "@component/Context/ModalContext";
+import { GenerateButtonComponent } from "@component/GenerateButton/GenerateButton.container";
+import { UserContext } from "@component/Context/UserContext";
 import { RPTPatrouilleIndiaAccComponent } from "./RPTPatrouilleIndiaAcc.component";
-import { PageLayout } from "../../Layout/PageLayout";
+import { PageLayout } from "../../../Layout/PageLayout";
 
 const RPTPatrouilleIndiaComponent = (props: any) => {
   const [editorState, setEditorState] = useState(EditorState.createWithContent(ContentState.createFromText(`[b]Interventions effectuées :[/b] 

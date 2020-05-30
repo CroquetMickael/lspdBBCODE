@@ -1,5 +1,5 @@
 import React from "react";
-import { InputComponent } from "../../Component/Input.component"
+import { InputComponent } from "@component/Input.component"
 
 interface RPTPatrouilleProps {
   Officers: string;

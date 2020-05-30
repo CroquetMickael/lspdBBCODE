@@ -1,14 +1,14 @@
 import React, { useState, useContext, useEffect } from "react";
-import { Accordeon } from "../../Component/Accordeon";
+import { Accordeon } from "@component/Accordeon";
 import { EditorState } from "draft-js";
-import { HtmlEditor } from "../../Component/Editor/Editor.component";
-import { ModalContext } from "../../Component/Context/ModalContext";
-import { GenerateButtonComponent } from "../../Component/GenerateButton/GenerateButton.container";
-import { UserContext } from "../../Component/Context/UserContext";
-import { FourriereAccComponent } from "./FourriereAcc.component";
-import { PageLayout } from "../../Layout/PageLayout";
+import { HtmlEditor } from "@component/Editor/Editor.component";
+import { ModalContext } from "@component/Context/ModalContext";
+import { GenerateButtonComponent } from "@component/GenerateButton/GenerateButton.container";
+import { UserContext } from "@component/Context/UserContext";
+import { SabotAccComponent } from "./SabotAcc.component";
+import { PageLayout } from "../../../Layout/PageLayout";
 
-const FourriereComponent = (props: any) => {
+const SabotComponent = (props: any) => {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
   const ModalValues = useContext(ModalContext);
   const userValues = useContext(UserContext);
@@ -20,6 +20,7 @@ const FourriereComponent = (props: any) => {
   const [modeleVeh, setModeleVeh] = useState<string>("");
   const [plaqueVeh, setPlaqueVeh] = useState<string>("");
   const [proprio, setProprio] = useState<string>("");
+  const [photoLink, setPhotoLink] = useState<string>("");
 
   const [raison, setRaison] = useState<string>("");
 
@@ -40,6 +41,8 @@ const FourriereComponent = (props: any) => {
     setModeleVeh,
     plaqueVeh,
     setPlaqueVeh,
+    photoLink,
+    setPhotoLink,
     raison,
     setRaison,
     bbCode: ModalValues.bbCode,
@@ -61,15 +64,15 @@ const FourriereComponent = (props: any) => {
   return (
     <PageLayout>
       <Accordeon title="Information">
-        <FourriereAccComponent {...propsToSend} />
+        <SabotAccComponent {...propsToSend} />
       </Accordeon>
       <div className="flex flex-col w-full h-full">
         <div className="w-full my-4">Commentaire à ajouter : </div>
         <HtmlEditor editorState={editorState} setEditorState={setEditorState} />
       </div>
-      <GenerateButtonComponent rapportType="FOUR" {...propsToSend} />
+      <GenerateButtonComponent rapportType="SABOT" {...propsToSend} />
     </PageLayout>
   );
 };
 
-export { FourriereComponent };
+export { SabotComponent };

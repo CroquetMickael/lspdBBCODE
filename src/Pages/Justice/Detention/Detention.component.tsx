@@ -1,12 +1,12 @@
 import React, { useState, useContext, useEffect } from "react";
-import { Accordeon } from "../../Component/Accordeon";
-import { ModalContext } from "../../Component/Context/ModalContext";
-import { GenerateButtonComponent } from "../../Component/GenerateButton/GenerateButton.container";
-import { UserContext } from "../../Component/Context/UserContext";
+import { Accordeon } from "@component/Accordeon";
+import { ModalContext } from "@component/Context/ModalContext";
+import { GenerateButtonComponent } from "@component/GenerateButton/GenerateButton.container";
+import { UserContext } from "@component/Context/UserContext";
 import { DetentionAccComponent } from "./DetentionAcc.component";
-import { PageLayout } from "../../Layout/PageLayout";
-import { peine, ObjectPeine } from "../../Peine/peine";
-import { InputComponent } from "../../Component/Input.component";
+import { PageLayout } from "../../../Layout/PageLayout";
+import { peine, ObjectPeine } from "../../../Peine/peine";
+import { InputComponent } from "@component/Input.component";
 import bigDecimal from "js-big-decimal";
 
 const DetentionComponent = (props: any) => {
