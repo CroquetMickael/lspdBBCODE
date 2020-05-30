@@ -190,7 +190,7 @@ const DetentionComponent = (props: any) => {
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => searching(e)}
         />
         {resultSearch.length !== 0 && (
-          <div className="absolute flex flex-col w-full h-64 overflow-y-auto bg-white shadow">
+          <div className="absolute flex flex-col w-full z-20 h-64 overflow-y-auto bg-white shadow">
             {resultSearch.map((result: ObjectPeine, index: number) => {
               return (
                 <div

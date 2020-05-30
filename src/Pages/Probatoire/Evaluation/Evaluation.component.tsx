@@ -5,28 +5,28 @@ import { HtmlEditor } from "@component/Editor/Editor.component";
 import { ModalContext } from "@component/Context/ModalContext";
 import { GenerateButtonComponent } from "@component/GenerateButton/GenerateButton.container";
 import { UserContext } from "@component/Context/UserContext";
-import { ProbatoireAccComponent } from "./ProbatoireAcc.component";
-import { PageLayout } from "../../Layout/PageLayout";
+import { EvaluationAccComponent } from "./EvaluationAcccomponent";
+import { PageLayout } from "../../../Layout/PageLayout";
 
-const ProbatoireComponent = (props: any) => {
+const EvaluationComponent = (props: any) => {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
   const ModalValues = useContext(ModalContext);
   const userValues = useContext(UserContext);
 
   //IC
   const [probatoire, setProbatoire] = useState<string>("");
-  const [comRadio, setComRadio] = useState<string>("NONE");
-  const [conProc, setConProc] = useState<string>("NONE");
-  const [comportement, setComportement] = useState<string>("NONE");
-  const [conduite, setConduite] = useState<string>("NONE");
-  const [AvisG, setAvisG] = useState<string>("NONE");
+  const [comRadio, setComRadio] = useState<string>("XGOOD");
+  const [conProc, setConProc] = useState<string>("XGOOD");
+  const [comportement, setComportement] = useState<string>("XGOOD");
+  const [conduite, setConduite] = useState<string>("XGOOD");
+  const [AvisG, setAvisG] = useState<string>("XGOOD");
   const [incident, setIncident] = useState<String>("");
   const [grade, setGrade] = useState<string>("");
 
   //OOC
-  const [expresOOC, setExpresOOC] = useState<string>("NONE");
-  const [emotionOOC, setEmotionOOC] = useState<string>("NONE");
-  const [evolutionOOC, setEvolutionOOC] = useState<string>("NONE");
+  const [expresOOC, setExpresOOC] = useState<string>("XGOOD");
+  const [emotionOOC, setEmotionOOC] = useState<string>("XGOOD");
+  const [evolutionOOC, setEvolutionOOC] = useState<string>("XGOOD");
   const [remarqueOOC, setRemarqueOOC] = useState<string>("");
 
   const propsToSend = {
@@ -80,7 +80,7 @@ const ProbatoireComponent = (props: any) => {
     <PageLayout>
       <div className="w-full">
         <Accordeon title="Information">
-          <ProbatoireAccComponent {...propsToSend} />
+          <EvaluationAccComponent {...propsToSend} />
         </Accordeon>
       </div>
       <div className="flex flex-col w-full h-full">
@@ -92,4 +92,4 @@ const ProbatoireComponent = (props: any) => {
   );
 };
 
-export { ProbatoireComponent };
+export { EvaluationComponent };

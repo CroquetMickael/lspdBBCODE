@@ -14,28 +14,6 @@ ${code}
 </div></div>`;
   setter(Code);
 }
-
-function generateRapportVol(elements, code, setter) {
-  const Code = `
-  <style> .noa_suivi_fond {width: 80%,background-color: #f2f2f2;color: black;border: 1px solid grey;padding: 20px;text-align:left;}</style><div align="center"><div class="noa_suivi_fond">
-[center][img(150px,150px)]https://i.gyazo.com/e1e62e5f6132392f92d8c140e88fbf48.png[/img][/center]
-<br />
-[center][size=18][b]RAPPORT DE VOL - OPÉRATEUR ${elements.lastName} ${elements.firstName}[/b][/size][/center]
-
-<div style="width: 100%;color: black;padding: 10px;background-color: white;border: 1px solid black;">
-[b]Date et et tranche horaire du vol[/b]: ${elements.date}
-[b]Nature du vol[/b]: ${elements.type}
-[b]Interventions menées[/b]:
-${code}
-[b]État de l'appareil/remarques[/b]:${elements.etat}
-
-[right][b]Signature[/b]  ${elements.signature}[/right]
-</div>
-</div></div>
-`;
-  setter(Code);
-}
-
 function generateRapportPatrouilleIndia(elements, code, setter) {
   const Code = `
   [table style="border-collapse:collapse;background-color:black;border-style:solid;border-width:1px;color:black;font-size:12px;font-family:arial;" align="center" width="100%"]
@@ -91,25 +69,25 @@ function generateFormDetention(elements, code, setter) {
 [b]❯ A COMPLÉTER SI LE SUSPECT A SUBIT UN INTERROGATOIRE[/b].
 
 ${
-  elements.miranda
-    ? "[X] L'AVERTISSEMENT MIRANDA A BIEN ÉTÉ LU AVANT L'INTERROGATOIRE."
-    : "[ ] L'AVERTISSEMENT MIRANDA A BIEN ÉTÉ LU AVANT L'INTERROGATOIRE."
-}
+    elements.miranda
+      ? "[X] L'AVERTISSEMENT MIRANDA A BIEN ÉTÉ LU AVANT L'INTERROGATOIRE."
+      : "[ ] L'AVERTISSEMENT MIRANDA A BIEN ÉTÉ LU AVANT L'INTERROGATOIRE."
+    }
 
 [b]Le suspect a été assisté d'un conseiller juridique ?[/b]
 
 ${
-  elements.conseil
-    ? `[X] Oui, précisez l'identité du conseiller: ${elements.conseilName}
+    elements.conseil
+      ? `[X] Oui, précisez l'identité du conseiller: ${elements.conseilName}
 [] NON.`
-    : `[] Oui, précisez l'identité du conseiller:
+      : `[] Oui, précisez l'identité du conseiller:
 [X] NON.`
-}
+    }
 
 
 [b]Remarques sur l'interrogatoire (suspect coopératif/droit au silence...):[/b] ${
     elements.remarque
-  }
+    }
 
 [b]❯ A COMPLÉTER SI LE SUSPECT A UTILISER SON DROIT A UN APPEL TÉLÉPHONIQUE[/b].
 
@@ -118,17 +96,17 @@ ${
 [b]Nature de la personne contactée:[/b]
 
 ${
-  elements.nature === "JUR"
-    ? "[X] Conseiller juridique"
-    : "[ ] Conseiller juridique"
-}
+    elements.nature === "JUR"
+      ? "[X] Conseiller juridique"
+      : "[ ] Conseiller juridique"
+    }
 ${elements.nature === "EMP" ? "[X] Employeur" : "[ ] Employeur"}
 ${elements.nature === "PRO" ? "[X] Proche" : "[ ] Proche"}
 ${
-  elements.nature === "AUT"
-    ? `[X] Autre, précisez ci-contre: ${elements.contactPersonne}`
-    : "[ ] Autre, précisez ci-contre:"
-}
+    elements.nature === "AUT"
+      ? `[X] Autre, précisez ci-contre: ${elements.contactPersonne}`
+      : "[ ] Autre, précisez ci-contre:"
+    }
 
 
 
@@ -203,7 +181,7 @@ ${elements.log}
 function generateTir(elements, code, setter) {
   elements.setTitlePost(
     `Déclaration de tirs - ${elements.firstName.toUpperCase()} ${
-      elements.lastName
+    elements.lastName
     } (${elements.date})`
   );
   const Code = `<div style="border: 1px solid #000000; background-image: url(https://nsa38.casimages.com/img/2015/11/07/151107050411686728.png); background-repeat:repeat-y; background-color: #fafafa; padding-left: 40px;">
@@ -219,7 +197,7 @@ function generateTir(elements, code, setter) {
   
   [b]Nom et prénom(s) de l'employé[/b]: ${elements.firstName} ${
     elements.lastName
-  }
+    }
   
   [b]Rang et affectation lors de l'usage[/b]: ${elements.rangAffec}
   
@@ -248,10 +226,10 @@ function generateTir(elements, code, setter) {
 ${elements.type === "DEC" ? "[X] Décédé" : "[ ] Décédé"}
 ${elements.type === "GRAVE" ? "[X] Blessures graves" : "[ ] Blessures graves"}
 ${
-  elements.type === "SUPP"
-    ? "[X] Blessures superficielles"
-    : "[ ] Blessures superficielles"
-}
+    elements.type === "SUPP"
+      ? "[X] Blessures superficielles"
+      : "[ ] Blessures superficielles"
+    }
 ${elements.type === "NONE" ? `[X] Aucune blessure` : "[ ] Aucune blessure"}
   
   
@@ -373,7 +351,7 @@ function generateProbatoire(elements, code, setter) {
   
   [b]Nom de l'officier formateur ainsi que son grade: [/b] ${elements.grade} ${
     elements.firstName
-  } ${elements.lastName}
+    } ${elements.lastName}
   
   [b]Selon une patrouille effectuée le:[/b] ${elements.date}
   
@@ -382,80 +360,80 @@ function generateProbatoire(elements, code, setter) {
   [size=13][b]A. [u]Communications radios:[/u][/b][/size]
 
 ${
-  elements.comRadio === "XGOOD"
-    ? "[X] S'exprime parfaitement en radio tout en étant clair, court et concis."
-    : "[-] S'exprime parfaitement en radio tout en étant clair, court et concis."
-}
+    elements.comRadio === "XGOOD"
+      ? "[X] S'exprime parfaitement en radio tout en étant clair, court et concis."
+      : "[-] S'exprime parfaitement en radio tout en étant clair, court et concis."
+    }
 ${
-  elements.comRadio === "GOOD"
-    ? "[X] S'exprime bien en radio."
-    : "[-] S'exprime bien en radio."
-}
+    elements.comRadio === "GOOD"
+      ? "[X] S'exprime bien en radio."
+      : "[-] S'exprime bien en radio."
+    }
 ${
-  elements.comRadio === "MGOOD"
-    ? "[X] S'exprime en radio avec difficultés."
-    : "[-] S'exprime en radio avec difficultés."
-}
+    elements.comRadio === "MGOOD"
+      ? "[X] S'exprime en radio avec difficultés."
+      : "[-] S'exprime en radio avec difficultés."
+    }
 ${
-  elements.comRadio === "NGOOD"
-    ? "[X] Communications radios non-acquises."
-    : "[-] Communications radios non-acquises."
-}
+    elements.comRadio === "NGOOD"
+      ? "[X] Communications radios non-acquises."
+      : "[-] Communications radios non-acquises."
+    }
 ${elements.comRadio === "NONE" ? `[X] Non-évalué.` : "[-] Non-évalué."}
   
 [size=13][b]B. [u]Connaissance sur les procédures:[/u][/b][/size]
 ${
-  elements.conProc === "XGOOD"
-    ? "[X] Les procédures ont été acquises et parfaitement utilisées durant la patrouille."
-    : "[-] Les procédures ont été acquises et parfaitement utilisées durant la patrouille."
-}
+    elements.conProc === "XGOOD"
+      ? "[X] Les procédures ont été acquises et parfaitement utilisées durant la patrouille."
+      : "[-] Les procédures ont été acquises et parfaitement utilisées durant la patrouille."
+    }
 ${
-  elements.conProc === "GOOD"
-    ? "[X] Les procédures ont été acquises mais mal utilisées."
-    : "[-] Les procédures ont été acquises mais mal utilisées."
-}
+    elements.conProc === "GOOD"
+      ? "[X] Les procédures ont été acquises mais mal utilisées."
+      : "[-] Les procédures ont été acquises mais mal utilisées."
+    }
 ${
-  elements.conProc === "MGOOD"
-    ? "[X] Les procédures sont à revoir."
-    : "[-] Les procédures sont à revoir."
-}
+    elements.conProc === "MGOOD"
+      ? "[X] Les procédures sont à revoir."
+      : "[-] Les procédures sont à revoir."
+    }
 ${
-  elements.conProc === "NGOOD"
-    ? "[X] Aucune connaissance des procédures."
-    : "[-] Aucune connaissance des procédures."
-}
+    elements.conProc === "NGOOD"
+      ? "[X] Aucune connaissance des procédures."
+      : "[-] Aucune connaissance des procédures."
+    }
 ${elements.conProc === "NONE" ? `[X] Non-évalué.` : "[-] Non-évalué."}
   
 
 [size=13][b]C. [u]Comportement durant la patrouille:[/u][/b][/size]
 ${
-  elements.comportement === "XGOOD"
-    ? "[X] L'officier-probatoire est dynamique et il veut apprendre."
-    : "[-] L'officier-probatoire est dynamique et il veut apprendre."
-}
+    elements.comportement === "XGOOD"
+      ? "[X] L'officier-probatoire est dynamique et il veut apprendre."
+      : "[-] L'officier-probatoire est dynamique et il veut apprendre."
+    }
 ${
-  elements.comportement === "NONE"
-    ? "[X] L'officier-probatoire a un comportement neutre et passif."
-    : "[-] L'officier-probatoire a un comportement neutre et passif."
-}
+    elements.comportement === "NONE"
+      ? "[X] L'officier-probatoire a un comportement neutre et passif."
+      : "[-] L'officier-probatoire a un comportement neutre et passif."
+    }
 ${
-  elements.comportement === "NGOOD"
-    ? "[X] L'officier-probatoire a un comportement inacceptable."
-    : "[-] L'officier-probatoire a un comportement inacceptable."
-}
+    elements.comportement === "NGOOD"
+      ? "[X] L'officier-probatoire a un comportement inacceptable."
+      : "[-] L'officier-probatoire a un comportement inacceptable."
+    }
   
   
 [size=13][b]D. [u]Conduite du véhicule:[/u][/b][/size]
 ${
-  elements.conduite === "XGOOD"
-    ? "[X] Conduite parfaite durant diverses situations."
-    : "[-] Conduite parfaite durant diverses situations."
-}
+    elements.conduite === "XGOOD"
+      ? "[X] Conduite parfaite durant diverses situations."
+      : "[-] Conduite parfaite durant diverses situations."
+    }
 ${
-  elements.conduite === "NGOOD"
-    ? "[X] Conduite à revoir."
-    : "[-] Conduite à revoir."
-}
+    elements.conduite === "NGOOD"
+      ? "[X] Conduite à revoir."
+      : "[-] Conduite à revoir."
+    }
 ${elements.conduite === "NONE" ? "[X] Non-évalué." : "[-] Non-évalué."}
   
 [size=13][b]E. [u]Avis général:[/u][/b][/size]
@@ -510,14 +488,108 @@ ${elements.evolutionOOC === "NONE" ? "[X] Non-évalué." : "  [-] Non-évalué."
   setter(Code);
 }
 
+const generateAutoEvaluation = (elements, code, setter) => {
+  const Code = `<div style="background-color: white; color: black; padding: 13px; border: 1px solid black; box-shadow: 0px 0px 2px #F2F2F2; border-top-radius: 3px; width:90%; text-align: left;margin:auto;width:70%">
+  <center>[img]https://i.servimg.com/u/f74/19/84/45/72/i81a1u10.png[/img]
+  
+  [size=16][b]AUTO-ÉVALUATION - CARNET[/b][/size]</center>
+  
+  [b]Nom de l'officier en probation: [/b] ${elements.firstName} ${elements.lastName}
+  
+  [b]Nom du second officier probatoire, si Adam: [/b] ${elements.probatoire2}
+  
+  [b]Selon une patrouille effectuée le:[/b] ${elements.date}
+  
+  [size=16][b][u]Auto-évaluation:[/u][/b][/size]
+  Les difficultés mentionnées seront revues par un officier supérieur ultérieurement. Le fait d'indiquer une difficulté permet de revoir les lacunes plus rapidement et sert ainsi la formation de l'officier probatoire.
+  
+  [size=13][b]1. Difficultés rencontrées:[/b][/size]
+  
+  [quote][i]Rapports d'incidents survenus durant la patrouille; hésitations sur une procédure (...).[/i]
+  ${elements.incident}
+  [/quote]
+  
+  [size=13][b]2. Rapport:[/b][/size]
+  
+  [quote][i]Rapport de patrouille signé situant le contexte.[/i]
+  ${code}
+  [/quote]
+  
+  [hr]
+  
+  </div>`
+  setter(Code);
+}
+
+const generateDeploiementCTD = (elements, code, setter) => {
+  const Code = `[table style="background-color:white;color:black;font-family:Arial;font-size:12px;" align="center" width="100%|50"]
+  [tr style=][td style="padding:25px;"][size=18][b]• RAPPORT DE DÉPLOIEMENT - DIVISION CENTRALE DU TRAFIC[/b][/size]
+  
+  [u][b]DATE, TRANCHE HORAIRE DE LA PATROUILLE ET SECTEUR DE LA PATROUILLE :[/b][/u] ${elements.date} - ${elements.heureDebut} à ${elements.heureFin} - Secteur ${elements.secteur}
+  [u][b]UNITÉ DÉPLOYÉE :[/b][/u] ${elements.type === "TOMS" ? "TOM (sérigraphiée)" : `${elements.type}`}
+  
+  [u][b]ACTIONS MENÉES :[/b][/u]
+  ${elements.actions}
+  [u][b]COMMENTAIRE A AJOUTER :[/b][/u]
+  ${code}
+
+  
+  
+  
+  [i]${elements.signature}[/i][/td]
+  [/tr]
+  [/table]`
+  setter(Code);
+}
+
+const generateMandat = (elements, code, setter) => {
+  const Code = `<div style="border: 1px solid #000000; background-image: url(https://nsa38.casimages.com/img/2015/11/07/151107050411686728.png); background-repeat:repeat-y; background-color: #fafafa; padding-left: 40px;">
+
+  <div style="margin: 0 50px;text-align:center;">
+  [img]https://i.servimg.com/u/f62/15/10/04/98/14094910.png[/img]
+  
+  [size=26][b]DÉPARTEMENT DE POLICE DE LOS SANTOS[/b][/size]
+  [size=22]DEMANDE DE MANDAT[/size]
+  
+  </div>
+  
+  <div style="height: auto; text-align: center; padding:6px;background-color: #003964; color: white ;font-size:17px;padding: 20px 40px;margin: 0 50px;box-shadow: 0px 0px 1px #003964;">[b]INFORMATIONS[/b]</div><div style="padding: 40px;background-color:#ffffff;margin: 0 50px;box-shadow: 0px 0px 1px #b1b2b2;">
+  [b]Nom et prénom(s) de l'employé[/b]: ${elements.firstName} ${elements.lastName}
+  [b]Date et heure des faits[/b] (sauf enquête): ${elements.dateFait}
+  [b]Type de mandat demandé[/b]: ${elements.type}
+  </div>
+  
+  <div style="height: auto; text-align: center; padding:6px;background-color: #003964; color: white ;font-size:17px;padding: 20px 40px;margin: 0 50px;box-shadow: 0px 0px 1px #003964;">[b]SUSPECT CONCERNÉ[/b]</div><div style="padding: 40px;background-color:#ffffff;margin: 0 50px;box-shadow: 0px 0px 1px #b1b2b2;">
+  [b]Identité du suspect[/b]: ${elements.suspectName}
+  [b]Lieu de résidence[/b]: ${elements.residence}
+  </div>
+  
+  <div style="height: auto; text-align: center; padding:6px;background-color: #003964; color: white ;font-size:17px;padding: 20px 40px;margin: 0 50px;box-shadow: 0px 0px 1px #003964;">[b]CONTEXTE[/b]</div><div style="padding: 40px;background-color:#ffffff;margin: 0 50px;box-shadow: 0px 0px 1px #b1b2b2;">
+  
+  </div>
+  
+  <div style="height: auto; text-align: center; padding:6px;background-color: #003964; color: white ;font-size:17px;padding: 20px 40px;margin: 0 50px;box-shadow: 0px 0px 1px #003964;">[b]ÉLÉMENTS À CHARGE[/b]</div><div style="padding: 40px;background-color:#ffffff;margin: 0 50px;box-shadow: 0px 0px 1px #b1b2b2;">
+  
+  </div>
+  
+  <div style="margin: 0 50px;text-align:right;">
+  Le ${elements.date},
+  [b]Signature.[/b]
+  ${elements.signature}
+  </div>
+  
+  </div>`
+  setter(Code);
+}
+
 export function generate(type, elements, code, setter) {
   elements.setTitlePost("");
   switch (type) {
     case "RAPT":
       generateRapportPatrouille(elements, code, setter);
       break;
-    case "RVOL":
-      generateRapportVol(elements, code, setter);
+    case "CTDDPL":
+      generateDeploiementCTD(elements, code, setter);
       break;
     case "RAPTINDIA":
       generateRapportPatrouilleIndia(elements, code, setter);
@@ -539,6 +611,9 @@ export function generate(type, elements, code, setter) {
       break;
     case "PROB":
       generateProbatoire(elements, code, setter);
+      break;
+    case "PROBAUTO":
+      generateAutoEvaluation(elements, code, setter);
       break;
     default:
       break;

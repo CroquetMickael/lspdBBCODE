@@ -5,25 +5,26 @@ import { HtmlEditor } from "@component/Editor/Editor.component";
 import { ModalContext } from "@component/Context/ModalContext";
 import { GenerateButtonComponent } from "@component/GenerateButton/GenerateButton.container";
 import { UserContext } from "@component/Context/UserContext";
-import { RPTVolAccComponent } from "./RPTVolAcc.component";
+import { AutoEvaluationAccComponent } from "./AutoEvaluationAcc.component";
 import { PageLayout } from "../../../Layout/PageLayout";
 
-const RPTVolComponent = (props: any) => {
+const AutoEvaluationComponent = (props: any) => {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
   const ModalValues = useContext(ModalContext);
   const userValues = useContext(UserContext);
-  const [etat, setEtat] = useState<string>("");
-  const [Type, setType] = useState<string>("Rapport de patrouille");
+
+  const [probatoire2, setProbatoire2] = useState<string>("");
+  const [incident, setIncident] = useState<string>("");
 
   const propsToSend = {
-    etat,
-    setEtat,
+    probatoire2,
+    setProbatoire2,
     code: editorState,
     toggleModal: ModalValues.toggleModal,
     date: userValues.currentDate,
     setDate: userValues.setCurrentDate,
-    Type,
-    setType,
+    incident,
+    setIncident,
     bbCode: ModalValues.bbCode,
     setBBCode: ModalValues.setBBCode,
     setFirstName: userValues.setFirstName,
@@ -32,26 +33,38 @@ const RPTVolComponent = (props: any) => {
     lastName: userValues.lastName,
     signature: userValues.signature,
     setSignature: userValues.setSignature,
-    setTitlePost: ModalValues.setTitlePost
+    setTitlePost: ModalValues.setTitlePost,
   };
-  
-  useEffect(() => {
-    ModalValues.setShow(false);
-  })
 
+  useEffect(() => {
+    ModalValues.setShow(true);
+    ModalValues.setLink(
+      "https://lspd-online.forumactif.com/f43-carnets-de-probation"
+    );
+  });
 
   return (
     <PageLayout>
       <Accordeon title="Information">
-        <RPTVolAccComponent {...propsToSend} />
+        <AutoEvaluationAccComponent {...propsToSend} />
       </Accordeon>
       <div className="flex flex-col w-full h-full">
-      <div className="w-full my-4">Interventions menées: </div>
+        <div className="w-full my-4">
+          Rapports d'incidents survenus durant la patrouille; hésitations sur
+          une procédure
+        </div>
+        <textarea
+          className="w-full shadow border" 
+          onChange={(e: any) => setIncident(e.target.value)}
+        />
+        <div className="w-full my-4">
+          Rapport de patrouille signé situant le contexte. :{" "}
+        </div>
         <HtmlEditor editorState={editorState} setEditorState={setEditorState} />
       </div>
-      <GenerateButtonComponent rapportType="RVOL" {...propsToSend} />
+      <GenerateButtonComponent rapportType="PROBAUTO" {...propsToSend} />
     </PageLayout>
   );
 };
 
-export { RPTVolComponent };
+export { AutoEvaluationComponent };

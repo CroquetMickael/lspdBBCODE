@@ -1,7 +1,7 @@
 import React from "react";
 import { InputComponent } from "@component/Input.component";
 
-const ProbatoireAccComponent = (props: any) => (
+const EvaluationAccComponent = (props: any) => (
   <form className="w-full">
     <div className="flex flex-wrap justify-between w-full mb-6">
       <div className="w-full mx-4 mb-2">Information sur l'officier</div>
@@ -221,4 +221,4 @@ const ProbatoireAccComponent = (props: any) => (
   </form>
 );
 
-export { ProbatoireAccComponent };
+export { EvaluationAccComponent };

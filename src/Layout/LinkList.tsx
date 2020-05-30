@@ -7,8 +7,8 @@ const links = [
     libelle: "Rapport de patrouille",
   },
   {
-    href: "/rapportVolSOB",
-    libelle: "Rapport de vol SOB",
+    href: "/DeploiementCTD",
+    libelle: "Deploiement CTD",
   },
   {
     href: "/rapportPatrouilleIndia",
@@ -37,6 +37,10 @@ const links = [
   {
     href: "/Probatoire",
     libelle: "Evaluation probatoire ",
+  },
+  {
+    href: "/AutoEvaluationProbatoire",
+    libelle: "Auto-evaluation probatoire ",
   }
 ];
 
