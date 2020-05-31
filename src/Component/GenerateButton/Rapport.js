@@ -48,9 +48,7 @@ ${code}
 }
 
 function generateFormDetention(elements, code, setter) {
-  elements.setTitlePost(
-    `${elements.suspectName} (${elements.date})`
-  );
+  elements.setTitlePost(`${elements.suspectName} (${elements.date})`);
   const Code = `
   <div style="border: 1px solid #000000; background-image: url(https://nsa38.casimages.com/img/2015/11/07/151107050411686728.png); background-repeat:repeat-y; background-color: #fafafa; padding-left: 40px;">
 
@@ -69,25 +67,25 @@ function generateFormDetention(elements, code, setter) {
 [b]❯ A COMPLÉTER SI LE SUSPECT A SUBIT UN INTERROGATOIRE[/b].
 
 ${
-    elements.miranda
-      ? "[X] L'AVERTISSEMENT MIRANDA A BIEN ÉTÉ LU AVANT L'INTERROGATOIRE."
-      : "[ ] L'AVERTISSEMENT MIRANDA A BIEN ÉTÉ LU AVANT L'INTERROGATOIRE."
-    }
+  elements.miranda
+    ? "[X] L'AVERTISSEMENT MIRANDA A BIEN ÉTÉ LU AVANT L'INTERROGATOIRE."
+    : "[ ] L'AVERTISSEMENT MIRANDA A BIEN ÉTÉ LU AVANT L'INTERROGATOIRE."
+}
 
 [b]Le suspect a été assisté d'un conseiller juridique ?[/b]
 
 ${
-    elements.conseil
-      ? `[X] Oui, précisez l'identité du conseiller: ${elements.conseilName}
+  elements.conseil
+    ? `[X] Oui, précisez l'identité du conseiller: ${elements.conseilName}
 [] NON.`
-      : `[] Oui, précisez l'identité du conseiller:
+    : `[] Oui, précisez l'identité du conseiller:
 [X] NON.`
-    }
+}
 
 
 [b]Remarques sur l'interrogatoire (suspect coopératif/droit au silence...):[/b] ${
     elements.remarque
-    }
+  }
 
 [b]❯ A COMPLÉTER SI LE SUSPECT A UTILISER SON DROIT A UN APPEL TÉLÉPHONIQUE[/b].
 
@@ -96,17 +94,17 @@ ${
 [b]Nature de la personne contactée:[/b]
 
 ${
-    elements.nature === "JUR"
-      ? "[X] Conseiller juridique"
-      : "[ ] Conseiller juridique"
-    }
+  elements.nature === "JUR"
+    ? "[X] Conseiller juridique"
+    : "[ ] Conseiller juridique"
+}
 ${elements.nature === "EMP" ? "[X] Employeur" : "[ ] Employeur"}
 ${elements.nature === "PRO" ? "[X] Proche" : "[ ] Proche"}
 ${
-    elements.nature === "AUT"
-      ? `[X] Autre, précisez ci-contre: ${elements.contactPersonne}`
-      : "[ ] Autre, précisez ci-contre:"
-    }
+  elements.nature === "AUT"
+    ? `[X] Autre, précisez ci-contre: ${elements.contactPersonne}`
+    : "[ ] Autre, précisez ci-contre:"
+}
 
 
 
@@ -181,7 +179,7 @@ ${elements.log}
 function generateTir(elements, code, setter) {
   elements.setTitlePost(
     `Déclaration de tirs - ${elements.firstName.toUpperCase()} ${
-    elements.lastName
+      elements.lastName
     } (${elements.date})`
   );
   const Code = `<div style="border: 1px solid #000000; background-image: url(https://nsa38.casimages.com/img/2015/11/07/151107050411686728.png); background-repeat:repeat-y; background-color: #fafafa; padding-left: 40px;">
@@ -197,7 +195,7 @@ function generateTir(elements, code, setter) {
   
   [b]Nom et prénom(s) de l'employé[/b]: ${elements.firstName} ${
     elements.lastName
-    }
+  }
   
   [b]Rang et affectation lors de l'usage[/b]: ${elements.rangAffec}
   
@@ -226,10 +224,10 @@ function generateTir(elements, code, setter) {
 ${elements.type === "DEC" ? "[X] Décédé" : "[ ] Décédé"}
 ${elements.type === "GRAVE" ? "[X] Blessures graves" : "[ ] Blessures graves"}
 ${
-    elements.type === "SUPP"
-      ? "[X] Blessures superficielles"
-      : "[ ] Blessures superficielles"
-    }
+  elements.type === "SUPP"
+    ? "[X] Blessures superficielles"
+    : "[ ] Blessures superficielles"
+}
 ${elements.type === "NONE" ? `[X] Aucune blessure` : "[ ] Aucune blessure"}
   
   
@@ -351,7 +349,7 @@ function generateProbatoire(elements, code, setter) {
   
   [b]Nom de l'officier formateur ainsi que son grade: [/b] ${elements.grade} ${
     elements.firstName
-    } ${elements.lastName}
+  } ${elements.lastName}
   
   [b]Selon une patrouille effectuée le:[/b] ${elements.date}
   
@@ -360,80 +358,80 @@ function generateProbatoire(elements, code, setter) {
   [size=13][b]A. [u]Communications radios:[/u][/b][/size]
 
 ${
-    elements.comRadio === "XGOOD"
-      ? "[X] S'exprime parfaitement en radio tout en étant clair, court et concis."
-      : "[-] S'exprime parfaitement en radio tout en étant clair, court et concis."
-    }
+  elements.comRadio === "XGOOD"
+    ? "[X] S'exprime parfaitement en radio tout en étant clair, court et concis."
+    : "[-] S'exprime parfaitement en radio tout en étant clair, court et concis."
+}
 ${
-    elements.comRadio === "GOOD"
-      ? "[X] S'exprime bien en radio."
-      : "[-] S'exprime bien en radio."
-    }
+  elements.comRadio === "GOOD"
+    ? "[X] S'exprime bien en radio."
+    : "[-] S'exprime bien en radio."
+}
 ${
-    elements.comRadio === "MGOOD"
-      ? "[X] S'exprime en radio avec difficultés."
-      : "[-] S'exprime en radio avec difficultés."
-    }
+  elements.comRadio === "MGOOD"
+    ? "[X] S'exprime en radio avec difficultés."
+    : "[-] S'exprime en radio avec difficultés."
+}
 ${
-    elements.comRadio === "NGOOD"
-      ? "[X] Communications radios non-acquises."
-      : "[-] Communications radios non-acquises."
-    }
+  elements.comRadio === "NGOOD"
+    ? "[X] Communications radios non-acquises."
+    : "[-] Communications radios non-acquises."
+}
 ${elements.comRadio === "NONE" ? `[X] Non-évalué.` : "[-] Non-évalué."}
   
 [size=13][b]B. [u]Connaissance sur les procédures:[/u][/b][/size]
 ${
-    elements.conProc === "XGOOD"
-      ? "[X] Les procédures ont été acquises et parfaitement utilisées durant la patrouille."
-      : "[-] Les procédures ont été acquises et parfaitement utilisées durant la patrouille."
-    }
+  elements.conProc === "XGOOD"
+    ? "[X] Les procédures ont été acquises et parfaitement utilisées durant la patrouille."
+    : "[-] Les procédures ont été acquises et parfaitement utilisées durant la patrouille."
+}
 ${
-    elements.conProc === "GOOD"
-      ? "[X] Les procédures ont été acquises mais mal utilisées."
-      : "[-] Les procédures ont été acquises mais mal utilisées."
-    }
+  elements.conProc === "GOOD"
+    ? "[X] Les procédures ont été acquises mais mal utilisées."
+    : "[-] Les procédures ont été acquises mais mal utilisées."
+}
 ${
-    elements.conProc === "MGOOD"
-      ? "[X] Les procédures sont à revoir."
-      : "[-] Les procédures sont à revoir."
-    }
+  elements.conProc === "MGOOD"
+    ? "[X] Les procédures sont à revoir."
+    : "[-] Les procédures sont à revoir."
+}
 ${
-    elements.conProc === "NGOOD"
-      ? "[X] Aucune connaissance des procédures."
-      : "[-] Aucune connaissance des procédures."
-    }
+  elements.conProc === "NGOOD"
+    ? "[X] Aucune connaissance des procédures."
+    : "[-] Aucune connaissance des procédures."
+}
 ${elements.conProc === "NONE" ? `[X] Non-évalué.` : "[-] Non-évalué."}
   
 
 [size=13][b]C. [u]Comportement durant la patrouille:[/u][/b][/size]
 ${
-    elements.comportement === "XGOOD"
-      ? "[X] L'officier-probatoire est dynamique et il veut apprendre."
-      : "[-] L'officier-probatoire est dynamique et il veut apprendre."
-    }
+  elements.comportement === "XGOOD"
+    ? "[X] L'officier-probatoire est dynamique et il veut apprendre."
+    : "[-] L'officier-probatoire est dynamique et il veut apprendre."
+}
 ${
-    elements.comportement === "NONE"
-      ? "[X] L'officier-probatoire a un comportement neutre et passif."
-      : "[-] L'officier-probatoire a un comportement neutre et passif."
-    }
+  elements.comportement === "NONE"
+    ? "[X] L'officier-probatoire a un comportement neutre et passif."
+    : "[-] L'officier-probatoire a un comportement neutre et passif."
+}
 ${
-    elements.comportement === "NGOOD"
-      ? "[X] L'officier-probatoire a un comportement inacceptable."
-      : "[-] L'officier-probatoire a un comportement inacceptable."
-    }
+  elements.comportement === "NGOOD"
+    ? "[X] L'officier-probatoire a un comportement inacceptable."
+    : "[-] L'officier-probatoire a un comportement inacceptable."
+}
   
   
 [size=13][b]D. [u]Conduite du véhicule:[/u][/b][/size]
 ${
-    elements.conduite === "XGOOD"
-      ? "[X] Conduite parfaite durant diverses situations."
-      : "[-] Conduite parfaite durant diverses situations."
-    }
+  elements.conduite === "XGOOD"
+    ? "[X] Conduite parfaite durant diverses situations."
+    : "[-] Conduite parfaite durant diverses situations."
+}
 ${
-    elements.conduite === "NGOOD"
-      ? "[X] Conduite à revoir."
-      : "[-] Conduite à revoir."
-    }
+  elements.conduite === "NGOOD"
+    ? "[X] Conduite à revoir."
+    : "[-] Conduite à revoir."
+}
 ${elements.conduite === "NONE" ? "[X] Non-évalué." : "[-] Non-évalué."}
   
 [size=13][b]E. [u]Avis général:[/u][/b][/size]
@@ -458,15 +456,39 @@ ${elements.AvisG === "NONE" ? "[X] Neutre." : "  [-] Neutre."}
   
   [spoiler="OOC"]
   [b]A. Expressions du personnage:[/b]
-${elements.expresOOC === "XGOOD" ? "[X] Sait parfaitement animer une conversation." : "[-] Sait parfaitement animer une conversation."}
-${elements.expresOOC === "GOOD" ? "[X] Participe à une conversation sans pour autant l'animer." : "[-] Participe à une conversation sans pour autant l'animer."}
-${elements.expresOOC === "NGOOD" ? "[X] Reste passif, silencieux." : "[-] Reste passif, silencieux."}
+${
+  elements.expresOOC === "XGOOD"
+    ? "[X] Sait parfaitement animer une conversation."
+    : "[-] Sait parfaitement animer une conversation."
+}
+${
+  elements.expresOOC === "GOOD"
+    ? "[X] Participe à une conversation sans pour autant l'animer."
+    : "[-] Participe à une conversation sans pour autant l'animer."
+}
+${
+  elements.expresOOC === "NGOOD"
+    ? "[X] Reste passif, silencieux."
+    : "[-] Reste passif, silencieux."
+}
 ${elements.expresOOC === "NONE" ? "[X] Non-évalué." : "  [-] Non-évalué."}
   
   [b]B. Émotions du personnage  (/me, /do, /ame...):[/b]
-${elements.emotionOOC === "XGOOD" ? "[X] Sait régulièrement mettre en avant les émotions de son personnage." : "[-] Sait régulièrement mettre en avant les émotions de son personnage."}
-${elements.emotionOOC === "GOOD" ? "[X] Sait parfois mettre en avant les émotions de son personnage (peut mieux faire)." : "[-] Sait parfois mettre en avant les émotions de son personnage (peut mieux faire)."}
-${elements.emotionOOC === "MGOOD" ? "[X] Ne sait que très peu mettre en avant son personnage, ou pas de manière assez détaillée." : "[-] Ne sait que très peu mettre en avant son personnage, ou pas de manière assez détaillée."}
+${
+  elements.emotionOOC === "XGOOD"
+    ? "[X] Sait régulièrement mettre en avant les émotions de son personnage."
+    : "[-] Sait régulièrement mettre en avant les émotions de son personnage."
+}
+${
+  elements.emotionOOC === "GOOD"
+    ? "[X] Sait parfois mettre en avant les émotions de son personnage (peut mieux faire)."
+    : "[-] Sait parfois mettre en avant les émotions de son personnage (peut mieux faire)."
+}
+${
+  elements.emotionOOC === "MGOOD"
+    ? "[X] Ne sait que très peu mettre en avant son personnage, ou pas de manière assez détaillée."
+    : "[-] Ne sait que très peu mettre en avant son personnage, ou pas de manière assez détaillée."
+}
 ${elements.emotionOOC === "NGOOD" ? "[X] Néant." : "[-] Néant."}
 ${elements.emotionOOC === "NONE" ? "[X] Non-évalué." : "  [-] Non-évalué."}
   
@@ -476,9 +498,21 @@ ${elements.emotionOOC === "NONE" ? "[X] Non-évalué." : "  [-] Non-évalué."}
   
   La justification de cette notation doit être détaillée dans les remarques.[/size]
 
-${elements.evolutionOOC === "XGOOD" ? "[X] Évolution en accord avec les attentes." : "[-] Évolution en accord avec les attentes."}
-${elements.evolutionOOC === "GOOD" ? "[X] Évolution correcte, mais peut mieux faire." : "[-] Évolution correcte, mais peut mieux faire."}
-${elements.evolutionOOC === "NGOOD" ? "[X] Évolution mal jouée." : "[-] Évolution mal jouée."}
+${
+  elements.evolutionOOC === "XGOOD"
+    ? "[X] Évolution en accord avec les attentes."
+    : "[-] Évolution en accord avec les attentes."
+}
+${
+  elements.evolutionOOC === "GOOD"
+    ? "[X] Évolution correcte, mais peut mieux faire."
+    : "[-] Évolution correcte, mais peut mieux faire."
+}
+${
+  elements.evolutionOOC === "NGOOD"
+    ? "[X] Évolution mal jouée."
+    : "[-] Évolution mal jouée."
+}
 ${elements.evolutionOOC === "NONE" ? "[X] Non-évalué." : "  [-] Non-évalué."}
   
   [b]D. Remarques[/b]
@@ -517,16 +551,22 @@ const generateAutoEvaluation = (elements, code, setter) => {
   
   [hr]
   
-  </div>`
+  </div>`;
   setter(Code);
-}
+};
 
 const generateDeploiementCTD = (elements, code, setter) => {
   const Code = `[table style="background-color:white;color:black;font-family:Arial;font-size:12px;" align="center" width="100%|50"]
   [tr style=][td style="padding:25px;"][size=18][b]• RAPPORT DE DÉPLOIEMENT - DIVISION CENTRALE DU TRAFIC[/b][/size]
   
-  [u][b]DATE, TRANCHE HORAIRE DE LA PATROUILLE ET SECTEUR DE LA PATROUILLE :[/b][/u] ${elements.date} - ${elements.heureDebut} à ${elements.heureFin} - Secteur ${elements.secteur}
-  [u][b]UNITÉ DÉPLOYÉE :[/b][/u] ${elements.type === "TOMS" ? "TOM (sérigraphiée)" : `${elements.type}`}
+  [u][b]DATE, TRANCHE HORAIRE DE LA PATROUILLE ET SECTEUR DE LA PATROUILLE :[/b][/u] ${
+    elements.date
+  } - ${elements.heureDebut} à ${elements.heureFin} - Secteur ${
+    elements.secteur
+  }
+  [u][b]UNITÉ DÉPLOYÉE :[/b][/u] ${
+    elements.type === "TOMS" ? "TOM (sérigraphiée)" : `${elements.type}`
+  }
   
   [u][b]ACTIONS MENÉES :[/b][/u]
   ${elements.actions}
@@ -538,11 +578,12 @@ const generateDeploiementCTD = (elements, code, setter) => {
   
   [i]${elements.signature}[/i][/td]
   [/tr]
-  [/table]`
+  [/table]`;
   setter(Code);
-}
+};
 
 const generateMandat = (elements, code, setter) => {
+  elements.setTitlePost(`${elements.suspectName} (${elements.type})`);
   const Code = `<div style="border: 1px solid #000000; background-image: url(https://nsa38.casimages.com/img/2015/11/07/151107050411686728.png); background-repeat:repeat-y; background-color: #fafafa; padding-left: 40px;">
 
   <div style="margin: 0 50px;text-align:center;">
@@ -561,27 +602,56 @@ const generateMandat = (elements, code, setter) => {
   
   <div style="height: auto; text-align: center; padding:6px;background-color: #003964; color: white ;font-size:17px;padding: 20px 40px;margin: 0 50px;box-shadow: 0px 0px 1px #003964;">[b]SUSPECT CONCERNÉ[/b]</div><div style="padding: 40px;background-color:#ffffff;margin: 0 50px;box-shadow: 0px 0px 1px #b1b2b2;">
   [b]Identité du suspect[/b]: ${elements.suspectName}
-  [b]Lieu de résidence[/b]: ${elements.residence}
+  [b]Lieu de résidence[/b]: ${elements.lieu}
   </div>
   
   <div style="height: auto; text-align: center; padding:6px;background-color: #003964; color: white ;font-size:17px;padding: 20px 40px;margin: 0 50px;box-shadow: 0px 0px 1px #003964;">[b]CONTEXTE[/b]</div><div style="padding: 40px;background-color:#ffffff;margin: 0 50px;box-shadow: 0px 0px 1px #b1b2b2;">
-  
+  ${code}
   </div>
   
   <div style="height: auto; text-align: center; padding:6px;background-color: #003964; color: white ;font-size:17px;padding: 20px 40px;margin: 0 50px;box-shadow: 0px 0px 1px #003964;">[b]ÉLÉMENTS À CHARGE[/b]</div><div style="padding: 40px;background-color:#ffffff;margin: 0 50px;box-shadow: 0px 0px 1px #b1b2b2;">
-  
+  ${elements.charge}
   </div>
   
   <div style="margin: 0 50px;text-align:right;">
   Le ${elements.date},
-  [b]Signature.[/b]
-  ${elements.signature}
+  [b]${elements.signature}[/b]
   </div>
   
-  </div>`
+  </div>`;
   setter(Code);
-}
+};
 
+const generateContravention = (elements, code, setter) => {
+  const Code = `<style> .philadidature {width:80%;border-top: 4px solid darkblue; font-family: 'Arial'; box-shadow: 0px 0px 2px black; background:white; padding:15px; }</style><br><center><div class="philadidature"><div style="float:left">[img(200px,200px)]https://2img.net/image.noelshack.com/fichiers/2019/26/7/1561926894-logo-td.png[/img]</div>
+
+
+
+  [center][size=22][b]DÉPARTEMENT DE POLICE[/b][/size]
+  [size=15]CENTRAL TRAFFIC DIVISION
+  [/size][/center]
+  
+  
+  
+  [left]<h2>RAPPORT DE CONTRAVENTIONS</h2>[/left]
+  
+  [left][b]Prénom et NOM:[/b] ${elements.firstName} ${elements.lastName}
+  [b]Grade et échelon:[/b] ${elements.Grade}
+  
+  [b]Nom de la personne réceptionné:[/b] ${elements.personne}
+  [b]Contravention donné:[/b][i]${elements.contravention}[/i]
+  [b]Lieu du contrôle:[/b] ${elements.lieu}
+  
+  
+  
+  [/left]
+  [right][b]${elements.date}[/b][/right]
+  [right][b]${elements.signature}[/b][/right]
+  </div>
+  
+  [spoiler="Preuve contravention"]${code}[/spoiler]`;
+  setter(Code);
+};
 export function generate(type, elements, code, setter) {
   elements.setTitlePost("");
   switch (type) {
@@ -590,6 +660,9 @@ export function generate(type, elements, code, setter) {
       break;
     case "CTDDPL":
       generateDeploiementCTD(elements, code, setter);
+      break;
+    case "CONTRAV":
+      generateContravention(elements, code, setter);
       break;
     case "RAPTINDIA":
       generateRapportPatrouilleIndia(elements, code, setter);
@@ -611,6 +684,9 @@ export function generate(type, elements, code, setter) {
       break;
     case "PROB":
       generateProbatoire(elements, code, setter);
+      break;
+    case "MANDAT":
+      generateMandat(elements, code, setter);
       break;
     case "PROBAUTO":
       generateAutoEvaluation(elements, code, setter);

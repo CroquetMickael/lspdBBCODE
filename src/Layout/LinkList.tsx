@@ -36,11 +36,19 @@ const links = [
   },
   {
     href: "/Probatoire",
-    libelle: "Evaluation probatoire ",
+    libelle: "Evaluation probatoire",
+  },
+  {
+    href: "/Mandat",
+    libelle: "Demande de mandat",
   },
   {
     href: "/AutoEvaluationProbatoire",
-    libelle: "Auto-evaluation probatoire ",
+    libelle: "Auto-evaluation probatoire",
+  },
+  {
+    href: "/ContraventionCTD",
+    libelle: "Rapport contravention CTD"
   }
 ];
 

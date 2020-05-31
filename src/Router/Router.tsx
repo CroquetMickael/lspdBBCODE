@@ -13,6 +13,8 @@ import { FourriereComponent } from "../Pages/CTD/Fourriere/Fourriere.component";
 import { EvaluationComponent } from "../Pages/Probatoire/Evaluation/Evaluation.component";
 import { AutoEvaluationComponent } from "../Pages/Probatoire/AutoEvaluation/AutoEvaluation.component";
 import { DeploiementCTD } from "../Pages/CTD/Deploiement/Deploiement.component";
+import { ContraventionComponent } from "../Pages/CTD/Contravention/Contravention.component";
+import { MandatComponent } from "../Pages/Justice/Mandat/Mandat.component";
 const RouterPage = (
   props: { pageComponent: JSX.Element } & RouteComponentProps
 ) => props.pageComponent;
@@ -50,6 +52,11 @@ const AppRouter = () => (
             path="/DeploiementCTD"
             pageComponent={<DeploiementCTD />}
           />
+          <RouterPage
+            path="/ContraventionCTD"
+            pageComponent={<ContraventionComponent />}
+          />
+          <RouterPage path="/Mandat" pageComponent={<MandatComponent />} />
         </Router>
       </UserProvider>
     </Layout>
