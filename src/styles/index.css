@@ -1,11 +1,15 @@
 /* purgecss start ignore */
 @import "tailwindcss/base";
 @import "tailwindcss/components";
+@import "tailwindcss/utilities";
 /* purgecss end ignore */
 
-@import "tailwindcss/utilities";
+
 
 .textAera {
-    height: 49vh;
-    position: relative;
+    height: 35vh;
+}
+
+.dropdown:hover > .dropdown-content {
+	display: block;
 }

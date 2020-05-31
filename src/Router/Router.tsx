@@ -23,7 +23,7 @@ const AppRouter = () => (
   <ModalProvider>
     <Layout>
       <UserProvider>
-        <Router className="h-full">
+        <Router className="z-20 h-full">
           <RouterPage path="/" pageComponent={<RPTPatrouilleComponent />} />
           <RouterPage
             path="/rapportPatrouilleIndia"
