@@ -15,7 +15,7 @@ const InputComponent = (props: InputProps) => (
     } focus:border-blue-500 py-2`}
   >
     <input
-      className="appearance-none bg-transparent border-none w-full text-gray-800 mr-3 py-1 px-2 leading-tight focus:outline-none"
+      className="w-full px-2 py-1 mr-3 leading-tight text-gray-800 bg-transparent border-none appearance-none focus:outline-none"
       type={props.type}
       placeholder={props.placeholder}
       onChange={props.onChange}
