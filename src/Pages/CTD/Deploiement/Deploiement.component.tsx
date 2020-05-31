@@ -60,7 +60,7 @@ const DeploiementCTD = (props: any) => {
       <div className="flex flex-col w-full h-full">
         <div className="w-full my-4">Actions menées</div>
         <textarea
-          className="w-full shadow border"
+          className="h-64 border border-black resize-none"
           onChange={(e: any) => setActions(e.target.value)}
         />
         <div className="w-full my-4">Commentaire à ajouter</div>

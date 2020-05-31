@@ -20,6 +20,7 @@ const InputComponent = (props: InputProps) => (
       placeholder={props.placeholder}
       onChange={props.onChange}
       value={props.value}
+      autoComplete="on"
       onKeyDown={e => {
         if (e.key === "Enter") {
           if (props.onKeyDown !== undefined) {

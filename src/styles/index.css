@@ -15,3 +15,7 @@ input[type="text"]::placeholder{
 .dropdown:hover > .dropdown-content {
 	display: block;
 }
+textarea {
+    @apply border;
+    @apply border-black;
+}

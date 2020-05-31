@@ -1,5 +1,5 @@
 import React from "react";
-import { InputComponent } from "@component/Input.component"
+import { InputComponent } from "@component/Input.component";
 
 interface RPTPatrouilleProps {
   Officers: string;
@@ -33,28 +33,29 @@ const RPTPatrouilleIndiaAccComponent = (props: any) => (
       </div>
       <div className="ml-4">
         <InputComponent
+          placeholder="Signature du rapport"
+          type="text"
+          border={true}
+          value={props.signature}
+          onChange={(e: any) => props.setSignature(e.target.value)}
+        />
+      </div>
+      <div className="ml-4">
+        <InputComponent
           placeholder="Véhicule"
           type="text"
           border={true}
           onChange={(e: any) => props.setVehicle(e.target.value)}
         />
       </div>
-      <div className="ml-4">
+      <div className="ml-4 mr-4">
         <InputComponent
-          placeholder="Opérateurs présents"
+          placeholder="Date"
           type="text"
           border={true}
-          onChange={(e: any) => props.setOperators(e.target.value)}
+          value={props.date}
+          onChange={(e: any) => props.setDate(e.target.value)}
         />
-      </div>
-      <div className="ml-4 mr-4">
-      <InputComponent
-            placeholder="Date"
-            type="text"
-            border={true}
-            value={props.date}
-            onChange={(e: any) => props.setDate(e.target.value)}
-          />
       </div>
       <div className="ml-4 mr-4">
         <InputComponent
@@ -72,6 +73,13 @@ const RPTPatrouilleIndiaAccComponent = (props: any) => (
           onChange={(e: any) => props.setHeureFin(e.target.value)}
         />
       </div>
+    </div>
+    <div className="w-full">
+      Opérateurs présents
+      <textarea
+        className="w-full h-64 border border-black resize-none"
+        onChange={(e: any) => props.setOperators(e.target.value)}
+      />
     </div>
   </form>
 );

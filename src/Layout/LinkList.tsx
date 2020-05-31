@@ -41,7 +41,15 @@ const links = {
   Metropolitan: [
     {
       href: "/rapportPatrouilleIndia",
-      libelle: "Rapport de patrouille INDIA",
+      libelle: "Rapport assistance aux patrouilles",
+    },
+    {
+      href: "/ExecutionMandat",
+      libelle: "Rapport d'exécution de mandat",
+    },
+    {
+      href: "/Intervention",
+      libelle: "Rapport d'intervention tactique",
     }
   ],
   Rapport: [
