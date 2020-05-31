@@ -67,7 +67,7 @@ const LinkList = () => (
       <button className="block w-full mt-4 mr-4 text-gray-600 lg:inline-block lg:mt-0 hover:text-white">
         <span>Rapport CTD</span>
       </button>
-      <ul className="absolute z-20 hidden p-4 pt-1 text-gray-700 bg-blue-800 rounded dropdown-content">
+      <ul className="absolute z-20 hidden w-64 p-4 pt-1 text-gray-700 bg-blue-800 rounded dropdown-content">
       {links.CTD.map((link, index: number) => (
       <Match path={link.href} key={index}>
         {(match) => (
@@ -88,7 +88,7 @@ const LinkList = () => (
       <button className="block w-full mt-4 mr-4 text-gray-600 lg:inline-block lg:mt-0 hover:text-white">
         <span>Rapport pour les probatoires</span>
       </button>
-      <ul className="absolute z-20 hidden p-4 pt-1 text-gray-700 bg-blue-800 rounded dropdown-content">
+      <ul className="absolute z-20 hidden w-64 p-4 pt-1 text-gray-700 bg-blue-800 rounded dropdown-content">
       {links.Probatoire.map((link, index: number) => (
       <Match path={link.href} key={index}>
         {(match) => (
@@ -109,7 +109,7 @@ const LinkList = () => (
       <button className="block w-full mt-4 mr-4 text-gray-600 lg:inline-block lg:mt-0 hover:text-white">
         <span>Rapport d'officier</span>
       </button>
-      <ul className="absolute z-20 hidden p-4 pt-1 text-gray-700 bg-blue-800 rounded dropdown-content">
+      <ul className="absolute z-20 hidden w-64 p-4 pt-2 text-gray-700 bg-blue-800 rounded dropdown-content">
       {links.Rapport.map((link, index: number) => (
       <Match path={link.href} key={index}>
         {(match) => (
@@ -130,7 +130,7 @@ const LinkList = () => (
       <button className="block w-full mt-4 mr-4 text-gray-600 lg:inline-block lg:mt-0 hover:text-white">
         <span>Rapport de la metropolitan</span>
       </button>
-      <ul className="absolute z-20 hidden p-4 pt-1 text-gray-700 bg-blue-800 rounded dropdown-content">
+      <ul className="absolute z-20 hidden w-64 p-4 pt-1 text-gray-700 bg-blue-800 rounded dropdown-content">
       {links.Metropolitan.map((link, index: number) => (
       <Match path={link.href} key={index}>
         {(match) => (
@@ -151,7 +151,7 @@ const LinkList = () => (
       <button className="block w-full mt-4 mr-4 text-gray-600 lg:inline-block lg:mt-0 hover:text-white">
         <span>Rapport justice</span>
       </button>
-      <ul className="absolute z-20 hidden p-4 pt-1 text-gray-700 bg-blue-800 rounded dropdown-content">
+      <ul className="absolute z-20 hidden w-64 p-4 pt-1 text-gray-700 bg-blue-800 rounded dropdown-content">
       {links.Justice.map((link, index: number) => (
       <Match path={link.href} key={index}>
         {(match) => (
