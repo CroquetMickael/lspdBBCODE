@@ -167,7 +167,7 @@ const DetentionComponent = (props: any) => {
     lastName: userValues.lastName,
     signature: userValues.signature,
     setSignature: userValues.setSignature,
-    setTitlePost: ModalValues.setTitlePost
+    setTitlePost: ModalValues.setTitlePost,
   };
 
   useEffect(() => {
@@ -189,23 +189,24 @@ const DetentionComponent = (props: any) => {
           value={search}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => searching(e)}
         />
-        {resultSearch.length !== 0 && (
-          <div className="absolute flex flex-col w-full z-20 h-64 overflow-y-auto bg-white shadow">
-            {resultSearch.map((result: ObjectPeine, index: number) => {
-              return (
-                <div
-                  key={index}
-                  className="py-2 cursor-pointer hover:bg-gray-300"
-                  onClick={() => SelectPeine(result)}
-                >
-                  {result.article} - {result.label}
-                </div>
-              );
-            })}
-          </div>
-        )}
+        <div className="relative">
+          {resultSearch.length !== 0 && (
+            <div className="absolute z-10 flex flex-col w-full h-64 overflow-y-auto bg-white shadow">
+              {resultSearch.map((result: ObjectPeine, index: number) => {
+                return (
+                  <div
+                    key={index}
+                    className="py-2 cursor-pointer hover:bg-gray-300"
+                    onClick={() => SelectPeine(result)}
+                  >
+                    {result.article} - {result.label}
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </div>
       </div>
-
       {peineSelected.length !== 0 && (
         <div className="w-full h-64 overflow-y-auto shadow">
           {peineSelected.map((result: ObjectPeine, index: number) => {
@@ -231,10 +232,13 @@ const DetentionComponent = (props: any) => {
           {parseFloat(peineTotalAmende) > parseFloat("20.000")
             ? "20.000"
             : peineTotalAmende}
-          $ d'amende et {peineTotalTempsOOC} minutes</p>
-          <p className="py-1">/juger [id] {peineTotalTempsOOC} {parseFloat(peineTotalAmende) > parseFloat("20.000")
+          $ d'amende et {peineTotalTempsOOC} minutes
+        </p>
+        <p className="py-1">
+          /juger [id] {peineTotalTempsOOC}{" "}
+          {parseFloat(peineTotalAmende) > parseFloat("20.000")
             ? "20000"
-            : parseFloat(peineTotalAmende)*1000}
+            : parseFloat(peineTotalAmende) * 1000}
         </p>
         <p className="py-1 ">
           Rappel: Plus de 70 ans de peine IC équivaut à un CK
