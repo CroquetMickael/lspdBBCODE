@@ -412,12 +412,12 @@ ${
     : "[-] L'officier-probatoire est dynamique et il veut apprendre."
 }
 ${
-  elements.comportement === "NONE"
+  elements.comportement === "NGOOD"
     ? "[X] L'officier-probatoire a un comportement neutre et passif."
     : "[-] L'officier-probatoire a un comportement neutre et passif."
 }
 ${
-  elements.comportement === "NGOOD"
+  elements.comportement === "NONE"
     ? "[X] L'officier-probatoire a un comportement inacceptable."
     : "[-] L'officier-probatoire a un comportement inacceptable."
 }

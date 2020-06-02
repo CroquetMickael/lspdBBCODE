@@ -199,7 +199,7 @@ const EvaluationAccComponent = (props: any) => (
           </div>
           <select
             className="py-2 shadow"
-            onChange={(e: any) => props.setEmotionOOC(e.target.value)}
+            onChange={(e: any) => props.setEvolutionOOC(e.target.value)}
           >
             <option value="XGOOD">Évolution en accord avec les attentes</option>
             <option value="GOOD">
