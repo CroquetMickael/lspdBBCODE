@@ -1,11 +1,11 @@
 import React from "react";
-import { generate } from "./Rapport";
+import { generate } from "./GenerateRapport";
 import draftToHtml from "draftjs-to-html";
 import { convertToRaw } from "draft-js";
 
 const GenerateButtonComponent = (props: any) => {
   const GenerateElement = () => {
-    if(props.rapportType === "DET"){
+    if(props.rapportType === "DET" || props.rapportType === "MEA"){
       generate(props.rapportType, props, props.code, props.setBBCode);
       props.toggleModal();
     } else {

@@ -17,6 +17,8 @@ import { ContraventionComponent } from "../Pages/CTD/Contravention/Contravention
 import { MandatComponent } from "../Pages/Justice/Mandat/Mandat.component";
 import { ExecutionMandatComponent } from "../Pages/Metropolitan/ExecutionMandat/ExecutionMandat.component";
 import { InterventionComponent } from "../Pages/Metropolitan/InterventionTactique/Intervention.component";
+import { EmailComponent } from "../Pages/Autre/Email/Email.component";
+import {MEAComponent} from "../Pages/Justice/Mise en accusation/MEA.component"
 const RouterPage = (
   props: { pageComponent: JSX.Element } & RouteComponentProps
 ) => props.pageComponent;
@@ -67,6 +69,8 @@ const AppRouter = () => (
             path="/Intervention"
             pageComponent={<InterventionComponent />}
           />
+          <RouterPage path="/email" pageComponent={<EmailComponent />} />
+          <RouterPage path="/mea" pageComponent={<MEAComponent />} />
         </Router>
       </UserProvider>
     </Layout>

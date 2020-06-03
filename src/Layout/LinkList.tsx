@@ -23,6 +23,10 @@ const links = {
       libelle: "Demande de mandat",
     },
     {
+      href: "/mea",
+      libelle: "Mise en accusation",
+    },
+    {
       href: "/EnregistrementDetention",
       libelle: "Enregistrement en détention",
     },
@@ -66,6 +70,12 @@ const links = {
       href: "/Tir",
       libelle: "Rapport de tir en service",
     },
+  ],
+  Autre: [
+    {
+      href: "/email",
+      libelle: "Email interne"
+    }
   ]
 }
 
@@ -161,6 +171,27 @@ const LinkList = () => (
       </button>
       <ul className="absolute z-20 hidden w-64 p-4 pt-1 text-gray-700 bg-blue-800 rounded dropdown-content">
       {links.Justice.map((link, index: number) => (
+      <Match path={link.href} key={index}>
+        {(match) => (
+          <Link
+            to={link.href}
+            className={`block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4 ${
+              match.match ? "text-white" : "text-gray-600"
+            }`}
+          >
+            {link.libelle}
+          </Link>
+        )}
+      </Match>
+    ))}
+      </ul>
+    </div>
+    <div className="relative inline-block dropdown">
+      <button className="block w-full mt-4 mr-4 text-gray-600 lg:inline-block lg:mt-0 hover:text-white">
+        <span>Autre</span>
+      </button>
+      <ul className="absolute z-20 hidden w-64 p-4 pt-1 text-gray-700 bg-blue-800 rounded dropdown-content">
+      {links.Autre.map((link, index: number) => (
       <Match path={link.href} key={index}>
         {(match) => (
           <Link
