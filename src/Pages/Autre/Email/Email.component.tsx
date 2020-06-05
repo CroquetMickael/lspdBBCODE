@@ -12,7 +12,7 @@ const EmailComponent = (props: any) => {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
   const ModalValues = useContext(ModalContext);
   const userValues = useContext(UserContext);
-
+  const [grade, setGrade] = useState<string>("");
   const [nomReceveur, setNomReceveur] = useState<string>("");
   const [prenomReceveur, setPrenomReceveur] = useState<string>("");
   const [gradeReceveur, setGradeReceveur] = useState<string>("");
@@ -31,6 +31,8 @@ const EmailComponent = (props: any) => {
     setObjetEmail,
     gradeReceveur,
     setGradeReceveur,
+    grade,
+    setGrade,
     bbCode: ModalValues.bbCode,
     setBBCode: ModalValues.setBBCode,
     setFirstName: userValues.setFirstName,

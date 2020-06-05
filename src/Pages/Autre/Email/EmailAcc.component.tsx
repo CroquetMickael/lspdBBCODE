@@ -33,6 +33,14 @@ const EmailAccComponent = (props: any) => (
       </div>
       <div className="ml-4">
         <InputComponent
+          placeholder="Grade"
+          type="text"
+          border={true}
+          onChange={(e: any) => props.setGrade(e.target.value)}
+        />
+      </div>
+      <div className="ml-4">
+        <InputComponent
           placeholder="Prénom du receveur"
           type="text"
           border={true}
