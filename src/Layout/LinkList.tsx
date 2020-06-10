@@ -91,7 +91,7 @@ const links = {
       libelle: "Prise en charge (WIP)"
     },{
       href: "/plainteVierge",
-      libelle: "Message vierge"
+      libelle: "Réponse message vierge"
     },
     {
       href: "/plainteCSS",
