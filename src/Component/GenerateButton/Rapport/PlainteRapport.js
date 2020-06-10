@@ -286,6 +286,27 @@ function generatePlainteAR(setter) {
     `;
     setter(Code);
   }
+
+  function generatePlainteDo(code, setter) {
+    const Code = `[background=#0a3d62][center][size=5][color=white]Investigations[/color][/size]
+    [color=#ffffff]_[/color][/center][/background][background=#e4e4e4]
+    
+    [spoiler=Précisions OOC]Salutations,
+    Les questions posées dans ce post sont des /DO. Nous rappelons qu'[b]il est obligatoire de répondre aux /DO[/b]. Ne pas le faire est une infraction au règlement peut entraîner un report et des sanctions. [b]Mentir en /DO (y-compris par omission) est également interdit[/b] et peut entraîner, là encore, des sanctions en OOC.
+    
+    Si vous pensez qu'un joueur a méta ou autre, n'hésitez pas à le préciser en OOC (si possible en spoiler). Mais nous ne sommes pas admins, si un joueur ment dans ses /DO il faudra s'arranger avec lui ou bien faire appel au staff.
+    
+    Merci de bien penser à répondre aux /DO, avec fair-play et honnêteté. Nous effectuons régulièrement des demandes de logs aux admins pour vérifier qu'on ne nous ment pas.
+    
+    Bon jeu à vous !
+    [/spoiler]
+    
+    [color=#af74b5][b]${code}[/b][/color]
+    
+    [right][b]BUREAU DES INVESTIGATIONS[/b]
+    DIVISION D'ENQUÊTE[/right][/background]`;
+    setter(Code);
+  }
   
   
   export {
@@ -294,6 +315,7 @@ function generatePlainteAR(setter) {
     generatePlainteResoluCI,
     generatePlainteCSS,
     generatePlainteResoluMEA,
-    generatePlainteVierge
+    generatePlainteVierge,
+    generatePlainteDo
   };
   

@@ -104,6 +104,10 @@ const links = {
     {
       href: "/plainteMEA",
       libelle: "Affaire résolue MEA"
+    },
+    {
+      href: "/plaintedo",
+      libelle: "Enquête /DO"
     }
   ]
 }

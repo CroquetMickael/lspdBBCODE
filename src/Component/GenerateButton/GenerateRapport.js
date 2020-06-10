@@ -31,7 +31,8 @@ import {
   generatePlainteResoluCI,
   generatePlainteCSS,
   generatePlainteResoluMEA,
-  generatePlainteVierge
+  generatePlainteVierge,
+  generatePlainteDo,
 } from "./Rapport/PlainteRapport";
 
 export function generate(type, elements, code, setter) {
@@ -92,16 +93,19 @@ export function generate(type, elements, code, setter) {
       generatePlainteAI(setter);
       break;
     case "PLAINTEVIERGE":
-      generatePlainteVierge(elements,code,setter);
+      generatePlainteVierge(elements, code, setter);
       break;
     case "PLAINTERCI":
       generatePlainteResoluCI(setter);
       break;
-      case "PLAINTERMEA":
-        generatePlainteResoluMEA(elements, setter);
-        break;
+    case "PLAINTERMEA":
+      generatePlainteResoluMEA(elements, setter);
+      break;
+    case "PLAINTEDO":
+      generatePlainteDo(code, setter);
+      break;
     case "PLAINTECSS":
-      generatePlainteCSS(elements,setter);
+      generatePlainteCSS(elements, setter);
       break;
     default:
       break;
