@@ -32,7 +32,7 @@ const PlainteCSSComponent = (props: any) => {
     <PageLayout>
             <div className="w-full my-8">
         <InputComponent
-          placeholder="Detail"
+          placeholder="Précisions éventuelles sur le motif du classement (mettre entre parenthèse)"
           type="text"
           border={true}
           onChange={(e: any) => setDetail(e.target.value)}
