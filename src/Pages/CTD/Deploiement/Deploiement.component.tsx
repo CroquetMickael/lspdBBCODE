@@ -48,7 +48,7 @@ const DeploiementCTD = (props: any) => {
   useEffect(() => {
     ModalValues.setShow(true);
     ModalValues.setLink(
-      "https://lspd-online.forumactif.com/f46-section-interne"
+      "https://lspd-online.forumactif.com/post?f=46&mode=newtopic"
     );
   });
 

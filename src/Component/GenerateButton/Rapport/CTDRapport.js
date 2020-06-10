@@ -87,6 +87,9 @@ function generateFourriere(elements, code, setter) {
 }
 
 const generateDeploiementCTD = (elements, code, setter) => {
+  elements.setTitlePost(
+    `(Rapport de déploiement) ${elements.firstName.toUpperCase()} - ${elements.type} (${elements.date})`
+  );
   const Code = `[table style="background-color:white;color:black;font-family:Arial;font-size:12px;" align="center" width="100%|50"]
     [tr style=][td style="padding:25px;"][size=18][b]• RAPPORT DE DÉPLOIEMENT - DIVISION CENTRALE DU TRAFIC[/b][/size]
     
@@ -114,6 +117,9 @@ const generateDeploiementCTD = (elements, code, setter) => {
 };
 
 const generateContravention = (elements, code, setter) => {
+  elements.setTitlePost(
+    `(Rapport de contravention) ${elements.personne.toUpperCase()} - ${elements.contravention} (${elements.date})`
+  );
   const Code = `<style> .philadidature {width:80%;border-top: 4px solid darkblue; font-family: 'Arial'; box-shadow: 0px 0px 2px black; background:white; padding:15px; }</style><br><center><div class="philadidature"><div style="float:left">[img(200px,200px)]https://2img.net/image.noelshack.com/fichiers/2019/26/7/1561926894-logo-td.png[/img]</div>
   
   

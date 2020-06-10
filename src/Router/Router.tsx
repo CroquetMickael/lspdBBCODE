@@ -19,6 +19,12 @@ import { ExecutionMandatComponent } from "../Pages/Metropolitan/ExecutionMandat/
 import { InterventionComponent } from "../Pages/Metropolitan/InterventionTactique/Intervention.component";
 import { EmailComponent } from "../Pages/Autre/Email/Email.component";
 import {MEAComponent} from "../Pages/Justice/Mise en accusation/MEA.component"
+import { PlainteARComponent } from "../Pages/Plainte/Nondyna/PlainteAR";
+import { PlainteAIComponent } from "../Pages/Plainte/Nondyna/PlainteAI";
+import { PlainteResoluCIComponent } from "../Pages/Plainte/Nondyna/PlainteResoluCI";
+import { PlainteCSSComponent } from "../Pages/Plainte/ClassementSansSuite/ClassementSansSuite";
+import { PlainteResolueMEAComponent } from "../Pages/Plainte/ResoluMEA/ResolueMEA";
+import { PlainteViergeComponent } from "../Pages/Plainte/Plainte Vierge/PlainteVierge";
 const RouterPage = (
   props: { pageComponent: JSX.Element } & RouteComponentProps
 ) => props.pageComponent;
@@ -71,6 +77,12 @@ const AppRouter = () => (
           />
           <RouterPage path="/email" pageComponent={<EmailComponent />} />
           <RouterPage path="/mea" pageComponent={<MEAComponent />} />
+          <RouterPage path="/plainteAR" pageComponent={<PlainteARComponent />} />
+          <RouterPage path="/plainteAI" pageComponent={<PlainteAIComponent />} />
+          <RouterPage path="/plainteRCI" pageComponent={<PlainteResoluCIComponent />} />
+          <RouterPage path="/plainteCSS" pageComponent={<PlainteCSSComponent/>}/>
+          <RouterPage path="/plainteMEA" pageComponent={<PlainteResolueMEAComponent/>}/>
+          <RouterPage path="/plainteVierge" pageComponent={<PlainteViergeComponent/>}/>
         </Router>
       </UserProvider>
     </Layout>

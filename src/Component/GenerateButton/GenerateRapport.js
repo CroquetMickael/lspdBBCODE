@@ -25,6 +25,14 @@ import {
   generateProbatoire,
 } from "./Rapport/ProbatoireRapport";
 import { generateEmail } from "./Rapport/OtherRapport";
+import {
+  generatePlainteAR,
+  generatePlainteAI,
+  generatePlainteResoluCI,
+  generatePlainteCSS,
+  generatePlainteResoluMEA,
+  generatePlainteVierge
+} from "./Rapport/PlainteRapport";
 
 export function generate(type, elements, code, setter) {
   elements.setTitlePost("");
@@ -75,7 +83,25 @@ export function generate(type, elements, code, setter) {
       generateEmail(elements, code, setter);
       break;
     case "MEA":
-      generateMEA (elements, code, setter);
+      generateMEA(elements, code, setter);
+      break;
+    case "PLAINTEAR":
+      generatePlainteAR(setter);
+      break;
+    case "PLAINTEAI":
+      generatePlainteAI(setter);
+      break;
+    case "PLAINTEVIERGE":
+      generatePlainteVierge(elements,code,setter);
+      break;
+    case "PLAINTERCI":
+      generatePlainteResoluCI(setter);
+      break;
+      case "PLAINTERMEA":
+        generatePlainteResoluMEA(elements, setter);
+        break;
+    case "PLAINTECSS":
+      generatePlainteCSS(elements,setter);
       break;
     default:
       break;
