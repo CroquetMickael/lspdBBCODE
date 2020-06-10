@@ -91,7 +91,7 @@ const links = {
       libelle: "Prise en charge (WIP)"
     },{
       href: "/plainteVierge",
-      libelle: "Réponse message vierge"
+      libelle: "Courrier vierge"
     },
     {
       href: "/plainteCSS",
@@ -221,7 +221,7 @@ const LinkList = () => (
     </div>
     <div className="relative inline-block dropdown">
       <button className="block w-full mt-4 mr-4 text-gray-600 lg:inline-block lg:mt-0 hover:text-white">
-        <span>Plainte</span>
+        <span>Plainte (Forum LRP)</span>
       </button>
       <ul className="absolute z-20 hidden w-64 p-4 pt-1 text-gray-700 bg-blue-800 rounded dropdown-content">
       {links.Plainte.map((link, index: number) => (
