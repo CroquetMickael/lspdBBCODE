@@ -160,7 +160,7 @@ function generatePlainteAR(setter) {
     
     [justify][img]https://cdn.discordapp.com/attachments/664886940667084851/705820869376606259/unknown.png[/img][size=3][color=black]Madame, Monsieur,[/color][/size][/justify]
     [justify][img]https://cdn.discordapp.com/attachments/664886940667084851/705820869376606259/unknown.png[/img][size=3][color=black]La division d'enquête du bureau des investigations vous informe que votre plainte a été classée sans suite.[/color][/size][/justify]
-    [justify][img]https://cdn.discordapp.com/attachments/664886940667084851/705820869376606259/unknown.png[/img][size=3][color=black]Votre plainte a été classée sans suite pour le motif suivant : ${elements.motif}[/color][/size][/justify]
+    [justify][img]https://cdn.discordapp.com/attachments/664886940667084851/705820869376606259/unknown.png[/img][size=3][color=black]Votre plainte a été classée sans suite pour le motif suivant : [b]${elements.motif}[/b] ${elements.detail}[/color][/size][/justify]
     
     [spoiler=Motifs de classement][center][size=3][color=black]Pour votre parfaite information, selon notre codification les différents motifs de classement sans suites sont :
     

@@ -3,6 +3,7 @@ import { EditorState, ContentState } from "draft-js";
 import { ModalContext } from "@component/Context/ModalContext";
 import { GenerateButtonComponent } from "@component/GenerateButton/GenerateButton.container";
 import { PageLayout } from "../../../Layout/PageLayout";
+import { InputComponent } from "@component/Input.component";
 
 const PlainteCSSComponent = (props: any) => {
   const [editorState, setEditorState] = useState(
@@ -10,12 +11,13 @@ const PlainteCSSComponent = (props: any) => {
   );
   const ModalValues = useContext(ModalContext);
   const [motif, setMotif] = useState("MOTIF A – Formalisme non respecté");
-
+  const [detail, setDetail] = useState("");
   const propsToSend = {
     code: editorState,
     setTitlePost: ModalValues.setTitlePost,
     toggleModal: ModalValues.toggleModal,
     setBBCode: ModalValues.setBBCode,
+    detail,
     motif
   };
 
@@ -28,6 +30,14 @@ const PlainteCSSComponent = (props: any) => {
 
   return (
     <PageLayout>
+            <div className="w-full my-8">
+        <InputComponent
+          placeholder="Detail"
+          type="text"
+          border={true}
+          onChange={(e: any) => setDetail(e.target.value)}
+        />
+      </div>
         <select className="my-8 border border-black">
             <option value="MOTIF A – Formalisme non respecté">MOTIF A – Formalisme non respecté</option>
             <option value="MOTIF B – Faits non punissables">MOTIF B – Faits non punissables</option>

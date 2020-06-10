@@ -80,11 +80,11 @@ const links = {
   Plainte: [
     {
       href: "/plainteAR",
-      libelle: "Accuser de reception"
+      libelle: "Accuser de réception"
     },
     {
       href: "/plainteAI",
-      libelle: "Accuser de reception AI"
+      libelle: "Transmission aux AI"
     },
     {
       href: "/plainteCharge",
@@ -99,7 +99,7 @@ const links = {
     },
     {
       href: "/plainteRCI",
-      libelle: "Affaire résolue CI"
+      libelle: "Affaire résolue CI (suspect /juger)"
     },
     {
       href: "/plainteMEA",
