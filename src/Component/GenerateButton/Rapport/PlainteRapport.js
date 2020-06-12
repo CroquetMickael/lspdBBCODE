@@ -1,5 +1,5 @@
 function generatePlainteAR(setter) {
-    const Code = `
+  const Code = `
     [background=#0a3d62][img]https://www.upload.ee/image/11854268/BI_DE_en-t_te.png[/img][/background][box=black]
 
     [center][size=5][color=black]Prise en charge de la plainte[/color][/size]
@@ -54,11 +54,11 @@ function generatePlainteAR(setter) {
     [/box]
     
     `;
-    setter(Code);
-  }
+  setter(Code);
+}
 
-  function generatePlainteAI(setter) {
-    const Code = `[background=#0a3d62][img]https://www.upload.ee/image/11854268/BI_DE_en-t_te.png[/img][/background][box=black]
+function generatePlainteAI(setter) {
+  const Code = `[background=#0a3d62][img]https://www.upload.ee/image/11854268/BI_DE_en-t_te.png[/img][/background][box=black]
 
     [center][size=5][color=black]Compétence des affaires internes[/color][/size]
     ___________________________________[/center]
@@ -115,11 +115,11 @@ function generatePlainteAR(setter) {
     
     [/box]
     `;
-    setter(Code);
-  }
+  setter(Code);
+}
 
-  function generatePlainteResoluCI(setter) {
-    const Code = `[background=#0a3d62][img]https://www.upload.ee/image/11854268/BI_DE_en-t_te.png[/img][/background][box=black]
+function generatePlainteResoluCI(setter) {
+  const Code = `[background=#0a3d62][img]https://www.upload.ee/image/11854268/BI_DE_en-t_te.png[/img][/background][box=black]
 
     [center][size=5][color=black]Affaire résolue[/color][/size]
     ___________________________________[/center]
@@ -147,12 +147,11 @@ function generatePlainteAR(setter) {
     
     [/box]
     `;
-    setter(Code);
-  }
+  setter(Code);
+}
 
-  
-  function generatePlainteCSS(elements, setter) {
-    const Code = `[background=#0a3d62][img]https://www.upload.ee/image/11854268/BI_DE_en-t_te.png[/img][/background][box=black]
+function generatePlainteCSS(elements, setter) {
+  const Code = `[background=#0a3d62][img]https://www.upload.ee/image/11854268/BI_DE_en-t_te.png[/img][/background][box=black]
 
     [center][size=5][color=black]Classement sans suite[/color][/size]
     ___________________________________[/center]
@@ -231,13 +230,19 @@ function generatePlainteAR(setter) {
     
     [/box]
     `;
-    setter(Code);
-  }
-  
-  function generatePlainteVierge(elements,code, setter) {
-    let modifiedCode = code.split("<p>").join("[justify][img]https://cdn.discordapp.com/attachments/664886940667084851/705820869376606259/unknown.png[/img][size=3][color=black]");
-    modifiedCode = modifiedCode.split("</p>").join("[/color][/size][/justify][/spoiler]");
-    const Code = `[background=#0a3d62][img]https://www.upload.ee/image/11854268/BI_DE_en-t_te.png[/img][/background][box=black]
+  setter(Code);
+}
+
+function generatePlainteVierge(elements, code, setter) {
+  let modifiedCode = code
+    .split("<p>")
+    .join(
+      "[justify][img]https://cdn.discordapp.com/attachments/664886940667084851/705820869376606259/unknown.png[/img][size=3][color=black]"
+    );
+  modifiedCode = modifiedCode
+    .split("</p>")
+    .join("[/color][/size][/justify][/spoiler]");
+  const Code = `[background=#0a3d62][img]https://www.upload.ee/image/11854268/BI_DE_en-t_te.png[/img][/background][box=black]
 
     [center][size=5][color=black]${elements.titre}[/color][/size]
     ___________________________________[/center]
@@ -250,11 +255,11 @@ function generatePlainteAR(setter) {
     [right]${elements.signature}[/right]
     [/box]
     `;
-    setter(Code);
-  }
+  setter(Code);
+}
 
-  function generatePlainteResoluMEA(elements, setter) {
-    const Code = `[background=#0a3d62][img]https://www.upload.ee/image/11854268/BI_DE_en-t_te.png[/img][/background][box=black]
+function generatePlainteResoluMEA(elements, setter) {
+  const Code = `[background=#0a3d62][img]https://www.upload.ee/image/11854268/BI_DE_en-t_te.png[/img][/background][box=black]
 
     [center][size=5][color=black]Affaire résolue[/color][/size]
     ___________________________________[/center]
@@ -284,11 +289,11 @@ function generatePlainteAR(setter) {
     [/box]
     
     `;
-    setter(Code);
-  }
+  setter(Code);
+}
 
-  function generatePlainteDo(code, setter) {
-    const Code = `[background=#0a3d62][center][size=5][color=white]Investigations[/color][/size]
+function generatePlainteDo(code, setter) {
+  const Code = `[background=#0a3d62][center][size=5][color=white]Investigations[/color][/size]
     [color=#ffffff]_[/color][/center][/background][background=#e4e4e4]
     
     [spoiler=Précisions OOC]Salutations,
@@ -305,17 +310,41 @@ function generatePlainteAR(setter) {
     
     [right][b]BUREAU DES INVESTIGATIONS[/b]
     DIVISION D'ENQUÊTE[/right][/background]`;
-    setter(Code);
-  }
-  
-  
-  export {
-    generatePlainteAR,
-    generatePlainteAI,
-    generatePlainteResoluCI,
-    generatePlainteCSS,
-    generatePlainteResoluMEA,
-    generatePlainteVierge,
-    generatePlainteDo
-  };
-  
+  setter(Code);
+}
+
+function generatePlainteAffec(elements, setter) {
+  const Code = `[background=#0a3d62][img]https://www.upload.ee/image/11854268/BI_DE_en-t_te.png[/img][/background][box=black]
+
+    [center][size=5][color=black]Enquêteur affecté à la plainte[/color][/size]
+    ___________________________________[/center]
+    
+    
+    [justify][img]https://cdn.discordapp.com/attachments/664886940667084851/705820869376606259/unknown.png[/img][size=3][color=black]Madame, Monsieur,[/color][/size][/justify]
+    [justify][img]https://cdn.discordapp.com/attachments/664886940667084851/705820869376606259/unknown.png[/img][size=3][color=black]Nous vous informons que le commandement du bureau des investigations a affecté l'affaire vous concernant à un enquêteur de la division d'enquête.[/color][/size][/justify]
+    [justify][img]https://cdn.discordapp.com/attachments/664886940667084851/705820869376606259/unknown.png[/img][size=3][color=black]L'enquêteur aura peut être besoin de vous contacter, merci donc de demeurer joignable et de nous informer de tout changement d'adresse ou de numéro de téléphone.[/color][/size][/justify]
+    ${
+      elements.showEnqueteur
+        ? `[justify][img]https://cdn.discordapp.com/attachments/664886940667084851/705820869376606259/unknown.png[/img][size=3][color=black]L'enquêteur désigné est: ${elements.enqueteur}[b][/b].[/color][/size][/justify]`
+        : ""
+    } 
+    ${
+      elements.showNumber
+        ? `[justify][img]https://cdn.discordapp.com/attachments/664886940667084851/705820869376606259/unknown.png[/img][size=3][color=black]Vous pouvez joindre l'enquêteur en l'appelant ou lui écrivant à ce numéro: [b]${elements.number}[/b]. Toutefois nous vous rappelons qu'en cas d'urgence il convient de faire le 911 et non ce numéro.[/color][/size][/justify]`
+        : ""
+    } 
+    [justify][img]https://cdn.discordapp.com/attachments/664886940667084851/705820869376606259/unknown.png[/img][size=3][color=black]N'hésitez pas à nous écrire ou bien à consulter [url=https://lspd-online.forumactif.com/]notre site internet[/url] pour obtenir davantage d'informations sur notre Département.[/color][/size][/justify]
+    [/box]`;
+  setter(Code);
+}
+
+export {
+  generatePlainteAR,
+  generatePlainteAI,
+  generatePlainteResoluCI,
+  generatePlainteCSS,
+  generatePlainteResoluMEA,
+  generatePlainteVierge,
+  generatePlainteDo,
+  generatePlainteAffec,
+};

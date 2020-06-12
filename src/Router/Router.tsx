@@ -26,6 +26,7 @@ import { PlainteCSSComponent } from "../Pages/Plainte/ClassementSansSuite";
 import { PlainteResolueMEAComponent } from "../Pages/Plainte/ResolueMEA";
 import { PlainteViergeComponent } from "../Pages/Plainte/PlainteVierge";
 import { PlainteReponseDoComponent } from "../Pages/Plainte/ReponseDo";
+import { PlainteAffectationComponent } from "../Pages/Plainte/Affectation";
 const RouterPage = (
   props: { pageComponent: JSX.Element } & RouteComponentProps
 ) => props.pageComponent;
@@ -105,6 +106,10 @@ const AppRouter = () => (
           <RouterPage
             path="/plaintedo"
             pageComponent={<PlainteReponseDoComponent />}
+          />
+            <RouterPage
+            path="/plainteCharge"
+            pageComponent={<PlainteAffectationComponent />}
           />
         </Router>
       </UserProvider>

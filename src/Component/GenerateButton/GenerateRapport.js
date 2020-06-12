@@ -33,6 +33,7 @@ import {
   generatePlainteResoluMEA,
   generatePlainteVierge,
   generatePlainteDo,
+  generatePlainteAffec,
 } from "./Rapport/PlainteRapport";
 
 export function generate(type, elements, code, setter) {
@@ -106,6 +107,9 @@ export function generate(type, elements, code, setter) {
       break;
     case "PLAINTECSS":
       generatePlainteCSS(elements, setter);
+      break;
+    case "PLAINTEAFFEC":
+      generatePlainteAffec(elements, setter);
       break;
     default:
       break;
