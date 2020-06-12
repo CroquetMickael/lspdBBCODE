@@ -230,19 +230,13 @@ function generatePlainteCSS(elements, setter) {
     
     [/box]
     `;
-  setter(Code);
-}
-
-function generatePlainteVierge(elements, code, setter) {
-  let modifiedCode = code
-    .split("<p>")
-    .join(
-      "[justify][img]https://cdn.discordapp.com/attachments/664886940667084851/705820869376606259/unknown.png[/img][size=3][color=black]"
-    );
-  modifiedCode = modifiedCode
-    .split("</p>")
-    .join("[/color][/size][/justify][/spoiler]");
-  const Code = `[background=#0a3d62][img]https://www.upload.ee/image/11854268/BI_DE_en-t_te.png[/img][/background][box=black]
+    setter(Code);
+  }
+  
+  function generatePlainteVierge(elements,code, setter) {
+    let modifiedCode = code.split("<p>").join("[justify][img]https://cdn.discordapp.com/attachments/664886940667084851/705820869376606259/unknown.png[/img][size=3][color=black]");
+    modifiedCode = modifiedCode.split("</p>").join("[/color][/size][/justify]");
+    const Code = `[background=#0a3d62][img]https://www.upload.ee/image/11854268/BI_DE_en-t_te.png[/img][/background][box=black]
 
     [center][size=5][color=black]${elements.titre}[/color][/size]
     ___________________________________[/center]
