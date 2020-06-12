@@ -317,21 +317,21 @@ function generatePlainteAffec(elements, setter) {
     ___________________________________[/center]
     
     
-    [justify][img]https://cdn.discordapp.com/attachments/664886940667084851/705820869376606259/unknown.png[/img][size=3][color=black]Madame, Monsieur,[/color][/size][/justify]
-    [justify][img]https://cdn.discordapp.com/attachments/664886940667084851/705820869376606259/unknown.png[/img][size=3][color=black]Nous vous informons que le commandement du bureau des investigations a affecté l'affaire vous concernant à un enquêteur de la division d'enquête.[/color][/size][/justify]
-    [justify][img]https://cdn.discordapp.com/attachments/664886940667084851/705820869376606259/unknown.png[/img][size=3][color=black]L'enquêteur aura peut être besoin de vous contacter, merci donc de demeurer joignable et de nous informer de tout changement d'adresse ou de numéro de téléphone.[/color][/size][/justify]
-    ${
-      elements.showEnqueteur
-        ? `[justify][img]https://cdn.discordapp.com/attachments/664886940667084851/705820869376606259/unknown.png[/img][size=3][color=black]L'enquêteur désigné est: ${elements.enqueteur}[b][/b].[/color][/size][/justify]`
-        : ""
-    } 
-    ${
-      elements.showNumber
-        ? `[justify][img]https://cdn.discordapp.com/attachments/664886940667084851/705820869376606259/unknown.png[/img][size=3][color=black]Vous pouvez joindre l'enquêteur en l'appelant ou lui écrivant à ce numéro: [b]${elements.number}[/b]. Toutefois nous vous rappelons qu'en cas d'urgence il convient de faire le 911 et non ce numéro.[/color][/size][/justify]`
-        : ""
-    } 
-    [justify][img]https://cdn.discordapp.com/attachments/664886940667084851/705820869376606259/unknown.png[/img][size=3][color=black]N'hésitez pas à nous écrire ou bien à consulter [url=https://lspd-online.forumactif.com/]notre site internet[/url] pour obtenir davantage d'informations sur notre Département.[/color][/size][/justify]
-    [/box]`;
+[justify][img]https://cdn.discordapp.com/attachments/664886940667084851/705820869376606259/unknown.png[/img][size=3][color=black]Madame, Monsieur,[/color][/size][/justify]
+[justify][img]https://cdn.discordapp.com/attachments/664886940667084851/705820869376606259/unknown.png[/img][size=3][color=black]Nous vous informons que le commandement du bureau des investigations a affecté l'affaire vous concernant à un enquêteur de la division d'enquête.[/color][/size][/justify]
+[justify][img]https://cdn.discordapp.com/attachments/664886940667084851/705820869376606259/unknown.png[/img][size=3][color=black]L'enquêteur aura peut être besoin de vous contacter, merci donc de demeurer joignable et de nous informer de tout changement d'adresse ou de numéro de téléphone.[/color][/size][/justify]
+${
+  elements.showEnqueteur
+    ? `[justify][img]https://cdn.discordapp.com/attachments/664886940667084851/705820869376606259/unknown.png[/img][size=3][color=black]L'enquêteur désigné est: ${elements.enqueteur}[b][/b].[/color][/size][/justify]`
+    : ""
+} 
+${
+  elements.showNumber
+    ? `[justify][img]https://cdn.discordapp.com/attachments/664886940667084851/705820869376606259/unknown.png[/img][size=3][color=black]Vous pouvez joindre l'enquêteur en l'appelant ou lui écrivant à ce numéro: [b]${elements.number}[/b]. Toutefois nous vous rappelons qu'en cas d'urgence il convient de faire le 911 et non ce numéro.[/color][/size][/justify]`
+    : ""
+} 
+[justify][img]https://cdn.discordapp.com/attachments/664886940667084851/705820869376606259/unknown.png[/img][size=3][color=black]N'hésitez pas à nous écrire ou bien à consulter [url=https://lspd-online.forumactif.com/]notre site internet[/url] pour obtenir davantage d'informations sur notre Département.[/color][/size][/justify]
+[/box]`;
   setter(Code);
 }
 
