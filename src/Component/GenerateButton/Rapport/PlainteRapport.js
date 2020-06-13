@@ -365,7 +365,7 @@ ${
   
   
 [size=3] [b]2.[/b] IDENTITÉ DU CONCERNÉ[/size]
-[b]Pseudo LRP :[/b] ${elements.suspectOOC}
+(( [b]Pseudo LRP :[/b] ${elements.suspectOOC} ))
 [b]Nom :[/b] ${elements.suspectName}
 [b]Prénom :[/b] ${elements.suspectLastName}
 [b]Lieu de résidence actuelle :[/b] ${elements.suspectLieu}
