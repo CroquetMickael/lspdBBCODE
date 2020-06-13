@@ -94,7 +94,7 @@ const PeineContainer = (props: any) => {
       );
     }
 
-    let text = "[b]Charges retenues:[/b]\n";
+    let text = props.text;
     Selected.map((element: ObjectPeine) => {
       return (text += `${element.article} - ${element.label} ${element.tempsIC} ${element.typeTempsIC} et ${element.Amende}$ d'amende\n`);
     });
@@ -124,7 +124,8 @@ const PeineContainer = (props: any) => {
     SelectPeine,
     RemovePeine,
     resultSearch,
-    search: props.search
+    search: props.search,
+    placeholder: props.placeholder,
   };
 
   return <PeineComponent {...PropsToSend} />;

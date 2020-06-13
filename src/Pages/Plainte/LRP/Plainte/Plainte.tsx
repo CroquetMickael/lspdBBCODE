@@ -102,6 +102,7 @@ const PlainteComponent = (props: any) => {
         {...propsToSend}
         textAeraValue={accusation}
         setTextAeraValue={setAccusation}
+        placeholder="Chercher la ou les infractions (possible d'en ajouter plusieurs)"
         text={""}
       />
       <div className="flex flex-col w-full h-full">

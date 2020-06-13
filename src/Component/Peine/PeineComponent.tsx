@@ -5,7 +5,7 @@ import { ObjectPeine } from "Peine/peine";
 const PeineComponent = (props: any) => (
     <div className="w-full">
       <InputComponent
-        placeholder="Chercher la peine"
+        placeholder={props.placeholder}
         type="text"
         border={true}
         value={props.search}
