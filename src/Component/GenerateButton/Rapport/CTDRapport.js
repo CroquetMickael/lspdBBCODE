@@ -136,7 +136,7 @@ const generateContravention = (elements, code, setter) => {
     [b]Grade et échelon:[/b] ${elements.Grade}
     
     [b]Nom de la personne réceptionné:[/b] ${elements.personne}
-    [b]Contravention donné:[/b][i]${elements.contravention}[/i]
+    [b]Contravention donné:[/b] ${elements.contravention}
     [b]Lieu du contrôle:[/b] ${elements.lieu}
     
     
