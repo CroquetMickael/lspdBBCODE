@@ -369,7 +369,7 @@ ${elements.accusation}
 
 ${code}  
 
-${elements.preuve}
+[spoiler=PREUVES RETENUES]${elements.preuve}[/spoiler]
 [spoiler=TÉMOINS]${elements.temoin}[/spoiler]
 [/background]`;
   setter(Code);

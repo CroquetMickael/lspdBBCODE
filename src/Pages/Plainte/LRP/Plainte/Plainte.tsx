@@ -9,9 +9,7 @@ import { PeineContainer } from "@component/Peine/PeineContainer";
 
 const PlainteComponent = (props: any) => {
   const [fait, setFait] = useState("");
-  const [preuve, setPreuve] = useState(
-    "[spoiler=PREUVES RETENUES]Joindre les preuves ici[/spoiler]"
-  );
+  const [preuve, setPreuve] = useState("");
   const [auxi, setAuxi] = useState(false);
   const [temoin, setTemoin] = useState("NOM Prénom - Numéro de téléphone");
   const ModalValues = useContext(ModalContext);
