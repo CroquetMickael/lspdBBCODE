@@ -2,14 +2,13 @@ import React, { useState, useContext, useEffect } from "react";
 import { EditorState, ContentState } from "draft-js";
 import { ModalContext } from "@component/Context/ModalContext";
 import { GenerateButtonComponent } from "@component/GenerateButton/GenerateButton.container";
-import { PageLayout } from "../../../Layout/PageLayout";
+import { PageLayout } from "../../../../Layout/PageLayout";
 
-const PlainteARComponent = (props: any) => {
+const PlainteAIComponent = (props: any) => {
   const [editorState, setEditorState] = useState(
     EditorState.createWithContent(ContentState.createFromText(``))
   );
   const ModalValues = useContext(ModalContext);
-
 
   const propsToSend = {
     code: editorState,
@@ -17,6 +16,7 @@ const PlainteARComponent = (props: any) => {
     toggleModal: ModalValues.toggleModal,
     setBBCode: ModalValues.setBBCode,
   };
+
   useEffect(() => {
     ModalValues.setShow(true);
     ModalValues.setLink(
@@ -26,9 +26,9 @@ const PlainteARComponent = (props: any) => {
 
   return (
     <PageLayout>
-      <GenerateButtonComponent rapportType="PLAINTEAR" {...propsToSend} />
+      <GenerateButtonComponent rapportType="PLAINTEAI" {...propsToSend} />
     </PageLayout>
   );
 };
 
-export { PlainteARComponent };
+export { PlainteAIComponent };

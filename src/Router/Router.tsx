@@ -19,14 +19,15 @@ import { ExecutionMandatComponent } from "../Pages/Metropolitan/ExecutionMandat/
 import { InterventionComponent } from "../Pages/Metropolitan/InterventionTactique/Intervention.component";
 import { EmailComponent } from "../Pages/Autre/Email/Email.component";
 import { MEAComponent } from "../Pages/Justice/Mise en accusation/MEA.component";
-import { PlainteARComponent } from "../Pages/Plainte/Nondyna/PlainteAR";
-import { PlainteAIComponent } from "../Pages/Plainte/Nondyna/PlainteAI";
-import { PlainteResoluCIComponent } from "../Pages/Plainte/Nondyna/PlainteResoluCI";
-import { PlainteCSSComponent } from "../Pages/Plainte/ClassementSansSuite";
-import { PlainteResolueMEAComponent } from "../Pages/Plainte/ResolueMEA";
-import { PlainteViergeComponent } from "../Pages/Plainte/PlainteVierge";
-import { PlainteReponseDoComponent } from "../Pages/Plainte/ReponseDo";
-import { PlainteAffectationComponent } from "../Pages/Plainte/Affectation";
+import { PlainteARComponent } from "../Pages/Plainte/LRP/Nondyna/PlainteAR";
+import { PlainteAIComponent } from "../Pages/Plainte/LRP/Nondyna/PlainteAI";
+import { PlainteResoluCIComponent } from "../Pages/Plainte/LRP/Nondyna/PlainteResoluCI";
+import { PlainteCSSComponent } from "../Pages/Plainte/LRP/ClassementSansSuite";
+import { PlainteResolueMEAComponent } from "../Pages/Plainte/LRP/ResolueMEA";
+import { PlainteViergeComponent } from "../Pages/Plainte/LRP/PlainteVierge";
+import { PlainteReponseDoComponent } from "../Pages/Plainte/LRP/ReponseDo";
+import { PlainteAffectationComponent } from "../Pages/Plainte/LRP/Affectation";
+import { PlainteComponent } from "../Pages/Plainte/LRP/Plainte/Plainte";
 const RouterPage = (
   props: { pageComponent: JSX.Element } & RouteComponentProps
 ) => props.pageComponent;
@@ -79,6 +80,7 @@ const AppRouter = () => (
           />
           <RouterPage path="/email" pageComponent={<EmailComponent />} />
           <RouterPage path="/mea" pageComponent={<MEAComponent />} />
+          <RouterPage path="plainte" pageComponent={<PlainteComponent />} />
           <RouterPage
             path="/plainteAR"
             pageComponent={<PlainteARComponent />}
@@ -107,7 +109,7 @@ const AppRouter = () => (
             path="/plaintedo"
             pageComponent={<PlainteReponseDoComponent />}
           />
-            <RouterPage
+          <RouterPage
             path="/plainteCharge"
             pageComponent={<PlainteAffectationComponent />}
           />

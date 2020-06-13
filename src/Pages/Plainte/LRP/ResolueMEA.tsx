@@ -3,18 +3,21 @@ import { EditorState, ContentState } from "draft-js";
 import { ModalContext } from "@component/Context/ModalContext";
 import { GenerateButtonComponent } from "@component/GenerateButton/GenerateButton.container";
 import { PageLayout } from "../../../Layout/PageLayout";
+import { InputComponent } from "@component/Input.component";
 
-const PlainteResoluCIComponent = (props: any) => {
+const PlainteResolueMEAComponent = (props: any) => {
   const [editorState, setEditorState] = useState(
     EditorState.createWithContent(ContentState.createFromText(``))
   );
   const ModalValues = useContext(ModalContext);
+  const [lien, setLien] = useState("MOTIF A – Formalisme non respecté");
 
   const propsToSend = {
     code: editorState,
     setTitlePost: ModalValues.setTitlePost,
     toggleModal: ModalValues.toggleModal,
     setBBCode: ModalValues.setBBCode,
+    lien
   };
 
   useEffect(() => {
@@ -26,9 +29,17 @@ const PlainteResoluCIComponent = (props: any) => {
 
   return (
     <PageLayout>
-      <GenerateButtonComponent rapportType="PLAINTERCI" {...propsToSend} />
+      <div className="w-full my-8">
+        <InputComponent
+          placeholder="Lien de la MEA"
+          type="text"
+          border={true}
+          onChange={(e: any) => setLien(e.target.value)}
+        />
+      </div>
+      <GenerateButtonComponent rapportType="PLAINTERMEA" {...propsToSend} />
     </PageLayout>
   );
 };
 
-export { PlainteResoluCIComponent };
+export { PlainteResolueMEAComponent };

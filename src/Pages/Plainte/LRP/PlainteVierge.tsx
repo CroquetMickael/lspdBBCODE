@@ -4,7 +4,7 @@ import { HtmlEditor } from "@component/Editor/Editor.component";
 import { ModalContext } from "@component/Context/ModalContext";
 import { GenerateButtonComponent } from "@component/GenerateButton/GenerateButton.container";
 import { UserContext } from "@component/Context/UserContext";
-import { PageLayout } from "../../Layout/PageLayout";
+import { PageLayout } from "../../../Layout/PageLayout";
 import { InputComponent } from "@component/Input.component";
 
 const PlainteViergeComponent = (props: any) => {

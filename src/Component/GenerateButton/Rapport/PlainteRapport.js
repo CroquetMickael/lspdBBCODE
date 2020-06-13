@@ -335,6 +335,59 @@ ${
   setter(Code);
 }
 
+function generatePlainte(elements, code, setter) {
+  elements.setTitlePost(
+    `Plainte contre ${elements.suspectName} ${elements.suspectLastName}`);
+  const Code = `[background=#FFFFFF]
+[center][img]https://www.upload.ee/image/11858112/Logo_LSPD_noir___blanc.png[/img]
+  
+[size=4]DÉPARTEMENT DE POLICE DE LOS SANTOS[/size]
+[size=3]DÉPÔT DE PLAINTE[/size]__________________________[/center]
+  
+  
+  
+  
+${
+  elements.auxi
+    ? "[right][img]https://cdn.discordapp.com/attachments/721058188593594409/721138393291161630/tampon11-1.png[/img][/right]"
+    : ""
+}
+  
+[size=3][b]1.[/b] IDENTITÉ DU PLAIGNANT[/size]
+
+[b]Nom :[/b] ${elements.victimeName}
+[b]Prénom :[/b] ${elements.victimeLastName}
+[b]Date de naissance :[/b]${elements.victimeNaiss}
+[b]Lieu de naissance :[/b]${elements.victimeLieuNaiss}
+[b]Lieu de résidence actuelle :[/b]${elements.victimeLieu}
+[b]Numéro de téléphone :[/b]${elements.victimePhone}
+  
+  
+  
+[size=3] [b]2.[/b] IDENTITÉ DU CONCERNÉ[/size]
+[b]Pseudo LRP :[/b] ${elements.suspectOOC}
+[b]Nom :[/b] ${elements.suspectName}
+[b]Prénom :[/b] ${elements.suspectLastName}
+[b]Lieu de résidence actuelle :[/b] ${elements.suspectLieu}
+[b]Numéro de téléphone :[/b] ${elements.suspectPhone}
+  
+  
+  
+[size=3] [b]3.[/b] CHARGES[/size]
+  
+[b]Accusation(s) au(x) motif(s) de :[/b] 
+${elements.accusation}
+
+[b]Récit des faits :[/b] 
+
+${code}  
+
+${elements.preuve}
+[spoiler=TÉMOINS]${elements.temoin}[/spoiler]
+[/background]`;
+  setter(Code);
+}
+
 export {
   generatePlainteAR,
   generatePlainteAI,
@@ -344,4 +397,5 @@ export {
   generatePlainteVierge,
   generatePlainteDo,
   generatePlainteAffec,
+  generatePlainte,
 };

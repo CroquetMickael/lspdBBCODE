@@ -82,6 +82,10 @@ const links = {
   ],
   Plainte: [
     {
+      href: "/plainte",
+      libelle: "Formulaire de plainte"
+    },
+    {
       href: "/plainteAR",
       libelle: "Accuser de réception",
     },

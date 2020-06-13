@@ -34,6 +34,7 @@ import {
   generatePlainteVierge,
   generatePlainteDo,
   generatePlainteAffec,
+  generatePlainte,
 } from "./Rapport/PlainteRapport";
 
 export function generate(type, elements, code, setter) {
@@ -86,6 +87,9 @@ export function generate(type, elements, code, setter) {
       break;
     case "MEA":
       generateMEA(elements, code, setter);
+      break;
+    case "PLAINTE":
+      generatePlainte(elements, code, setter);
       break;
     case "PLAINTEAR":
       generatePlainteAR(setter);
