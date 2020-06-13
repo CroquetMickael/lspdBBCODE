@@ -54,6 +54,7 @@ const PlainteViergeComponent = (props: any) => {
           onChange={(e: any) => userValues.setSignature(e.target.value)}
         />
       </div>
+      <div className="w-full my-4">Faire des sauts de ligne uniquement avec ENTREE et pas CTRL+ENTREE</div>
         <HtmlEditor editorState={editorState} setEditorState={setEditorState} toolbar="hidden"/>
       <GenerateButtonComponent rapportType="PLAINTEVIERGE" {...propsToSend} />
     </PageLayout>

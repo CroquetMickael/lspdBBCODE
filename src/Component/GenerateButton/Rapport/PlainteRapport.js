@@ -228,6 +228,7 @@ function generatePlainteVierge(elements, code, setter) {
     .join(
       "[justify][img]https://cdn.discordapp.com/attachments/664886940667084851/705820869376606259/unknown.png[/img][size=3][color=black]"
     );
+  modifiedCode = modifiedCode.split("<br>").join("");
   modifiedCode = modifiedCode.split("</p>").join("[/color][/size][/justify]");
   const Code = `[background=#0a3d62][img]https://www.upload.ee/image/11854268/BI_DE_en-t_te.png[/img][/background][box=black]
 
