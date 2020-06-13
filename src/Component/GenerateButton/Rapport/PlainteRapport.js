@@ -327,7 +327,8 @@ function generatePlainte(elements, code, setter) {
 [center][img]https://www.upload.ee/image/11858112/Logo_LSPD_noir___blanc.png[/img]
   
 [size=4]DÉPARTEMENT DE POLICE DE LOS SANTOS[/size]
-[size=3]DÉPÔT DE PLAINTE[/size]__________________________[/center]
+[size=3]DÉPÔT DE PLAINTE[/size]
+__________________________[/center]
   
   
   
