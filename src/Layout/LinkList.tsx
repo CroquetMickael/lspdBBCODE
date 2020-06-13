@@ -87,7 +87,7 @@ const links = {
     },
     {
       href: "/plainteAR",
-      libelle: "Accuser de réception",
+      libelle: "Accusé de réception",
     },
     {
       href: "/plainteAI",
