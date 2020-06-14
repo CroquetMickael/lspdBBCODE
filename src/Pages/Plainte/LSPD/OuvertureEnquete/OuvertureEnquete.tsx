@@ -54,7 +54,7 @@ const OuvertureEnqueteComponent = (props: any) => {
 
   useEffect(() => {
     ModalValues.setShow(true);
-    ModalValues.setLink("https://www.leroleplay.fr/viewforum.php?id=265");
+    ModalValues.setLink("https://lspd-online.forumactif.com/f69-traitement-des-plaintes");
   });
 
   return (
