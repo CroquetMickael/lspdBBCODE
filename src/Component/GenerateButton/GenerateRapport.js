@@ -37,6 +37,9 @@ import {
   generatePlainte,
 } from "./Rapport/PlainteRapport";
 
+import {
+  generateOuvertureEnquete
+} from "./Rapport/BIRapport"
 export function generate(type, elements, code, setter) {
   elements.setTitlePost("");
   switch (type) {
@@ -114,6 +117,9 @@ export function generate(type, elements, code, setter) {
       break;
     case "PLAINTEAFFEC":
       generatePlainteAffec(elements, setter);
+      break;
+    case "OUVERTENQ":
+      generateOuvertureEnquete(elements, code, setter);
       break;
     default:
       break;

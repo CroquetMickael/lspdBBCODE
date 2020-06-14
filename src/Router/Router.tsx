@@ -28,6 +28,7 @@ import { PlainteViergeComponent } from "../Pages/Plainte/LRP/PlainteVierge";
 import { PlainteReponseDoComponent } from "../Pages/Plainte/LRP/ReponseDo";
 import { PlainteAffectationComponent } from "../Pages/Plainte/LRP/Affectation";
 import { PlainteComponent } from "../Pages/Plainte/LRP/Plainte/Plainte";
+import { OuvertureEnqueteComponent } from "../Pages/Plainte/LSPD/OuvertureEnquete/OuvertureEnquete";
 const RouterPage = (
   props: { pageComponent: JSX.Element } & RouteComponentProps
 ) => props.pageComponent;
@@ -112,6 +113,10 @@ const AppRouter = () => (
           <RouterPage
             path="/plainteCharge"
             pageComponent={<PlainteAffectationComponent />}
+          />
+          <RouterPage
+            path="/ouverturePlainte"
+            pageComponent={<OuvertureEnqueteComponent />}
           />
         </Router>
       </UserProvider>

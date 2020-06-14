@@ -83,7 +83,7 @@ const links = {
   Plainte: [
     {
       href: "/plainte",
-      libelle: "Formulaire de plainte"
+      libelle: "Formulaire de plainte",
     },
     {
       href: "/plainteAR",
@@ -118,6 +118,12 @@ const links = {
       libelle: "Enquête /DO",
     },
   ],
+  Investigation: [
+    {
+      href: "/ouverturePlainte",
+      libelle: "Ouverture plainte",
+    },
+  ],
 };
 
 const LinkList = () => (
@@ -128,6 +134,7 @@ const LinkList = () => (
     <DropDown links={links.Metropolitan} title="Rapport de la metropolitan" />
     <DropDown links={links.Justice} title="Rapport justice" />
     <DropDown links={links.Plainte} title="Plainte (Forum LRP)" />
+    <DropDown links={links.Investigation} title="Investigations (forum LSPD)" />
     <DropDown links={links.Autre} title="Autre" />
   </>
 );
