@@ -41,6 +41,7 @@ import {
   generateOuvertureEnquete,
   generateOuvertureEnqueteAutre,
   generateOuvertureEnqueteLRP,
+  generateCSSEnquete,
 } from "./Rapport/BIRapport";
 export function generate(type, elements, code, setter) {
   elements.setTitlePost("");
@@ -128,6 +129,9 @@ export function generate(type, elements, code, setter) {
       break;
     case "OUVERTENQAUT":
       generateOuvertureEnqueteAutre(elements, code, setter);
+      break;
+    case "ENQCSS":
+      generateCSSEnquete(elements, code, setter);
       break;
     default:
       break;

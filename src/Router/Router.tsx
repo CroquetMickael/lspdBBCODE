@@ -31,6 +31,7 @@ import { PlainteComponent } from "../Pages/Plainte/LRP/Plainte/Plainte";
 import { OuvertureEnqueteComponent } from "../Pages/Plainte/LSPD/OuvertureEnquete/OuvertureEnquete";
 import { OuvertureEnqueteAutreComponent } from "../Pages/Plainte/LSPD/OuvertureEnqueteAutre/OuvertureEnqueteAutre";
 import { OuvertureEnqueteLRPComponent } from "../Pages/Plainte/LSPD/OuvertureEnqueteLRP/OuvertureEnqueteLRP";
+import { CSSEnqueteComponent } from "../Pages/Plainte/LSPD/CSSEnquete/CSSEnquete";
 const RouterPage = (
   props: { pageComponent: JSX.Element } & RouteComponentProps
 ) => props.pageComponent;
@@ -127,6 +128,10 @@ const AppRouter = () => (
           <RouterPage
             path="/ouverturePlainteLRP"
             pageComponent={<OuvertureEnqueteLRPComponent />}
+          />
+            <RouterPage
+            path="/cssEnquete"
+            pageComponent={<CSSEnqueteComponent />}
           />
         </Router>
       </UserProvider>

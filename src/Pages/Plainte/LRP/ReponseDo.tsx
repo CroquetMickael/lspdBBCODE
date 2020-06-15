@@ -6,9 +6,7 @@ import { UserContext } from "@component/Context/UserContext";
 import { PageLayout } from "../../../Layout/PageLayout";
 
 const PlainteReponseDoComponent = (props: any) => {
-  const [textAeraValue, setTextAeraValue] = useState(
-    ``
-  );
+  const [textAeraValue, setTextAeraValue] = useState(``);
   const ModalValues = useContext(ModalContext);
   const userValues = useContext(UserContext);
   const propsToSend = {
@@ -35,8 +33,10 @@ const PlainteReponseDoComponent = (props: any) => {
   return (
     <PageLayout>
       <div className="flex flex-col w-full h-full">
-        <div className="my-2">Tapez ici vos /do pour l'enquête, inutile de mettre la couleur violette, elle sera mise automatiquement
-</div>
+        <div className="my-2">
+          Tapez ici vos /do pour l'enquête, inutile de mettre la couleur
+          violette, elle sera mise automatiquement
+        </div>
         <textarea
           className="h-64 p-2 mb-2 shadow textAera"
           value={textAeraValue}
