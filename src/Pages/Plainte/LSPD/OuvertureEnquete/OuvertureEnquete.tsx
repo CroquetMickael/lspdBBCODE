@@ -72,7 +72,7 @@ const OuvertureEnqueteComponent = (props: any) => {
         text={""}
       />
       <div className="flex flex-col w-full h-full">
-        <div className="w-full my-4">Commentaire IC : </div>
+        <div className="w-full my-4">Résumé de la plainte : </div>
         <HtmlEditor editorState={editorState} setEditorState={setEditorState} />
       </div>
       <GenerateButtonComponent rapportType="OUVERTENQ" {...propsToSend} />
