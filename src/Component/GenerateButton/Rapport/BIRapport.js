@@ -60,7 +60,8 @@ Saisine d'initiative[/size][/font][/center]
 
 
 
-La division d'enquête du bureau d'investigation du LSPD [b][url=https://www.leroleplay.fr/viewtopic.php?id=${elements.idPlainte}]a constaté la survenance vraisemblable de certains faits (( lien vers l'enquête fofo LeRP ))[/url][/b] et décide, de ce chef, d'ouvrir une enquête.
+La division d'enquête du bureau d'investigation du LSPD [b][url=https://www.leroleplay.fr/viewtopic.php?id=${elements.idPlainte
+}]a constaté la survenance vraisemblable de certains faits (( lien vers l'enquête fofo LeRP ))[/url][/b] et décide, de ce chef, d'ouvrir une enquête.
 
 [b]Directeur d'enquête :[/b]
 ${elements.officierACharge}

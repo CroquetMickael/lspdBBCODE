@@ -4,7 +4,7 @@ import { ModalContext } from "@component/Context/ModalContext";
 import { GenerateButtonComponent } from "@component/GenerateButton/GenerateButton.container";
 import { UserContext } from "@component/Context/UserContext";
 import { PageLayout } from "../../../../Layout/PageLayout";
-import { OuvertureEnqueteAccComponent } from "../OuvertureEnquete/OuvertureEnqueteAcc";
+import { OuvertureEnqueteLRPAccComponent } from "./OuvertureEnqueteLRPAcc";
 import { PeineContainer } from "@component/Peine/PeineContainer";
 import { HtmlEditor } from "@component/Editor/Editor.component";
 import { EditorState } from "draft-js";
@@ -63,7 +63,7 @@ const OuvertureEnqueteLRPComponent = (props: any) => {
     <PageLayout>
       <div className="w-full">
         <Accordeon title="Information">
-          <OuvertureEnqueteAccComponent {...propsToSend} />
+          <OuvertureEnqueteLRPAccComponent {...propsToSend} />
         </Accordeon>
       </div>
       <PeineContainer
