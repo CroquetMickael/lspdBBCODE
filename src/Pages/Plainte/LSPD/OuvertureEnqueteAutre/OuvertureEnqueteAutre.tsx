@@ -53,7 +53,7 @@ const OuvertureEnqueteAutreComponent = (props: any) => {
 
   useEffect(() => {
     ModalValues.setShow(true);
-    ModalValues.setLink("https://www.leroleplay.fr/viewforum.php?id=265");
+    ModalValues.setLink("https://lspd-online.forumactif.com/f171-section-des-investigations");
   });
 
   return (
