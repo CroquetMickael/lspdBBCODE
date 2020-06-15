@@ -4,12 +4,12 @@ import { ModalContext } from "@component/Context/ModalContext";
 import { GenerateButtonComponent } from "@component/GenerateButton/GenerateButton.container";
 import { UserContext } from "@component/Context/UserContext";
 import { PageLayout } from "../../../../Layout/PageLayout";
-import { OuvertureEnqueteAccComponent } from "./OuvertureEnqueteAcc";
+import { OuvertureEnqueteAutreAccComponent } from "./OuvertureEnqueteAutreAcc";
 import { PeineContainer } from "@component/Peine/PeineContainer";
 import { HtmlEditor } from "@component/Editor/Editor.component";
 import { EditorState } from "draft-js";
 
-const OuvertureEnqueteComponent = (props: any) => {
+const OuvertureEnqueteAutreComponent = (props: any) => {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
   const ModalValues = useContext(ModalContext);
   const userValues = useContext(UserContext);
@@ -20,9 +20,8 @@ const OuvertureEnqueteComponent = (props: any) => {
   const [infraction, setInfraction] = useState(``);
 
   const [officierACharge, setOfficierACharge] = useState("");
-  const [idPlainte, setIdPlainte] = useState("");
   const [titrePlainte, setTitrePlainte] = useState("");
-  
+  const [datePlainte, setDatePlainte] = useState("");
   const propsToSend = {
     peineTotalAmende,
     peineTotalTempsOOC,
@@ -34,8 +33,10 @@ const OuvertureEnqueteComponent = (props: any) => {
     code: editorState,
     officierACharge,
     setOfficierACharge,
-    idPlainte, setIdPlainte,
-    titrePlainte, setTitrePlainte,
+    titrePlainte,
+    setTitrePlainte,
+    datePlainte,
+    setDatePlainte,
     toggleModal: ModalValues.toggleModal,
     date: userValues.currentDate,
     setDate: userValues.setCurrentDate,
@@ -52,14 +53,14 @@ const OuvertureEnqueteComponent = (props: any) => {
 
   useEffect(() => {
     ModalValues.setShow(true);
-    ModalValues.setLink("https://lspd-online.forumactif.com/f69-traitement-des-plaintes");
+    ModalValues.setLink("https://www.leroleplay.fr/viewforum.php?id=265");
   });
 
   return (
     <PageLayout>
       <div className="w-full">
         <Accordeon title="Information">
-          <OuvertureEnqueteAccComponent {...propsToSend} />
+          <OuvertureEnqueteAutreAccComponent {...propsToSend} />
         </Accordeon>
       </div>
       <PeineContainer
@@ -70,12 +71,15 @@ const OuvertureEnqueteComponent = (props: any) => {
         text={""}
       />
       <div className="flex flex-col w-full h-full">
-        <div className="w-full my-4">Résumé de la plainte : </div>
+        <div className="w-full my-4">
+          Résumé de l'affaire détaillez les faits connus au moment du début de
+          l'enquête ET la manière dont vous avez découvert :{" "}
+        </div>
         <HtmlEditor editorState={editorState} setEditorState={setEditorState} />
       </div>
-      <GenerateButtonComponent rapportType="OUVERTENQ" {...propsToSend} />
+      <GenerateButtonComponent rapportType="OUVERTENQAUT" {...propsToSend} />
     </PageLayout>
   );
 };
 
-export { OuvertureEnqueteComponent };
+export { OuvertureEnqueteAutreComponent };

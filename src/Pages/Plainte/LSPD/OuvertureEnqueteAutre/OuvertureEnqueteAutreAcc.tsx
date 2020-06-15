@@ -1,6 +1,6 @@
 import React from "react";
 import { InputComponent } from "@component/Input.component";
-const OuvertureEnqueteAccComponent = (props: any) => (
+const OuvertureEnqueteAutreAccComponent = (props: any) => (
   <form className="w-full">
     <div className="flex flex-wrap justify-between w-full mb-6">
       <div className="w-full mx-4 my-2">Information sur le plaignant</div>
@@ -15,10 +15,10 @@ const OuvertureEnqueteAccComponent = (props: any) => (
         </div>
         <div className="ml-4">
           <InputComponent
-            placeholder="Id de la plainte"
+            placeholder="Date plainte (JJMMAA)"
             type="text"
             border={true}
-            onChange={(e: any) => props.setIdPlainte(e.target.value)}
+            onChange={(e: any) => props.setDatePlainte(e.target.value)}
           />
         </div>
         <div className="ml-4">
@@ -34,4 +34,4 @@ const OuvertureEnqueteAccComponent = (props: any) => (
   </form>
 );
 
-export { OuvertureEnqueteAccComponent };
+export { OuvertureEnqueteAutreAccComponent };

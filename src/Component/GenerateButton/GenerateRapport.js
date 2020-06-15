@@ -38,7 +38,7 @@ import {
 } from "./Rapport/PlainteRapport";
 
 import {
-  generateOuvertureEnquete
+  generateOuvertureEnquete, generateOuvertureEnqueteAutre
 } from "./Rapport/BIRapport"
 export function generate(type, elements, code, setter) {
   elements.setTitlePost("");
@@ -120,6 +120,9 @@ export function generate(type, elements, code, setter) {
       break;
     case "OUVERTENQ":
       generateOuvertureEnquete(elements, code, setter);
+      break;
+    case "OUVERTENQAUT":
+      generateOuvertureEnqueteAutre(elements, code, setter);
       break;
     default:
       break;
