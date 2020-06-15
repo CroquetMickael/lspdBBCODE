@@ -38,8 +38,10 @@ import {
 } from "./Rapport/PlainteRapport";
 
 import {
-  generateOuvertureEnquete, generateOuvertureEnqueteAutre
-} from "./Rapport/BIRapport"
+  generateOuvertureEnquete,
+  generateOuvertureEnqueteAutre,
+  generateOuvertureEnqueteLRP,
+} from "./Rapport/BIRapport";
 export function generate(type, elements, code, setter) {
   elements.setTitlePost("");
   switch (type) {
@@ -120,6 +122,9 @@ export function generate(type, elements, code, setter) {
       break;
     case "OUVERTENQ":
       generateOuvertureEnquete(elements, code, setter);
+      break;
+    case "OUVERTENQLRP":
+      generateOuvertureEnqueteLRP(elements, code, setter);
       break;
     case "OUVERTENQAUT":
       generateOuvertureEnqueteAutre(elements, code, setter);

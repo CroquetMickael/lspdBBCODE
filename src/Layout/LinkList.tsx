@@ -124,6 +124,10 @@ const links = {
       libelle: "Ouverture plainte",
     },
     {
+      href: "/ouverturePlainteLRP",
+      libelle: "Ouverture enquête fofo LRP",
+    },
+    {
       href: "/ouverturePlainteAutre",
       libelle: "Ouverture enquête autre",
     },
