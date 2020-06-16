@@ -7,15 +7,15 @@ const OuvertureEnqueteAutreAccComponent = (props: any) => (
       <div className="flex flex-wrap w-full">
         <div className="ml-4">
           <InputComponent
-            placeholder="Officier a charge"
+            placeholder="Enquêteur en charge"
             type="text"
             border={true}
             onChange={(e: any) => props.setOfficierACharge(e.target.value)}
           />
         </div>
-        <div className="ml-4">
+        <div className="w-1/6 ml-4">
           <InputComponent
-            placeholder="Date plainte (JJMMAA)"
+            placeholder="Date supposée des faits (JJMMAAAA)"
             type="text"
             border={true}
             onChange={(e: any) => props.setDatePlainte(e.target.value)}
@@ -23,7 +23,7 @@ const OuvertureEnqueteAutreAccComponent = (props: any) => (
         </div>
         <div className="ml-4">
           <InputComponent
-            placeholder="Titre de la plainte"
+            placeholder="Titre de l'enquête"
             type="text"
             border={true}
             onChange={(e: any) => props.setTitrePlainte(e.target.value)}
