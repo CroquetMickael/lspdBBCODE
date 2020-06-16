@@ -11,7 +11,7 @@ Saisine par plainte[/size][/font][/center]
     
     
     
-La division d'enquête du département de police de la ville de Los Santos, San Andreas, ouvre une enquête suite au dépôt de la [u][b][url=https://www.leroleplay.fr/viewtopic.php?id=${elements.idplainte}]plainte accessible à ce lien[/url][/b][/u].
+La division d'enquête du département de police de la ville de Los Santos, San Andreas, ouvre une enquête suite au dépôt de la [u][b][url=https://www.leroleplay.fr/viewtopic.php?id=${elements.idPlainte}]plainte accessible à ce lien[/url][/b][/u].
     
 [b]Directeur d'enquête :[/b] ${elements.officierACharge}
     
