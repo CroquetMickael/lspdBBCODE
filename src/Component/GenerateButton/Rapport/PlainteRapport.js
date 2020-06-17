@@ -336,7 +336,7 @@ __________________________[/center]
   
 ${
   elements.auxi
-    ? "[right][img]https://cdn.discordapp.com/attachments/721058188593594409/721138393291161630/tampon11-1.png[/img][/right]"
+    ? "[right][img]https://cdn.discordapp.com/attachments/722863242715725885/722928655398994051/578aa62f9ef92811dfe20c528923a7c7.png[/img][/right]"
     : ""
 }
   

@@ -92,7 +92,7 @@ const PlainteAccComponent = (props: any) => (
         </div>
         <div className="ml-4">
           <InputComponent
-            placeholder="Pseudo forum LRP du concerné"
+            placeholder="Pseudo forum LRP du plaignant"
             type="text"
             border={true}
             onChange={(e: any) => props.setSuspectOOC(e.target.value)}
