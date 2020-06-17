@@ -43,6 +43,7 @@ import {
   generateOuvertureEnqueteLRP,
   generateCSSEnquete,
 } from "./Rapport/BIRapport";
+import { generateObservation, generateReclamation } from "./Rapport/AuxiRapport";
 export function generate(type, elements, code, setter) {
   elements.setTitlePost("");
   switch (type) {
@@ -132,6 +133,12 @@ export function generate(type, elements, code, setter) {
       break;
     case "ENQCSS":
       generateCSSEnquete(elements, code, setter);
+      break;
+    case "OBSERAUXI":
+      generateObservation(elements, code, setter);
+      break;
+    case "RECLAAUXI":
+      generateReclamation(elements, setter);
       break;
     default:
       break;

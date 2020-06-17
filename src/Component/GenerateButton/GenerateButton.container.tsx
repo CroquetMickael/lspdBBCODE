@@ -5,7 +5,13 @@ import { convertToRaw } from "draft-js";
 
 const GenerateButtonComponent = (props: any) => {
   const GenerateElement = () => {
-    if(props.rapportType === "DET" || props.rapportType === "MEA" || props.rapportType === "PLAINTEDO" || props.rapportType === "PLAINTE"){
+    if (
+      props.rapportType === "DET" ||
+      props.rapportType === "MEA" ||
+      props.rapportType === "PLAINTEDO" ||
+      props.rapportType === "PLAINTE" ||
+      "RECLAAUXI"
+    ) {
       generate(props.rapportType, props, props.code, props.setBBCode);
       props.toggleModal();
     } else {

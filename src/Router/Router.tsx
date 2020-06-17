@@ -32,6 +32,8 @@ import { OuvertureEnqueteComponent } from "../Pages/Plainte/LSPD/OuvertureEnquet
 import { OuvertureEnqueteAutreComponent } from "../Pages/Plainte/LSPD/OuvertureEnqueteAutre/OuvertureEnqueteAutre";
 import { OuvertureEnqueteLRPComponent } from "../Pages/Plainte/LSPD/OuvertureEnqueteLRP/OuvertureEnqueteLRP";
 import { CSSEnqueteComponent } from "../Pages/Plainte/LSPD/CSSEnquete/CSSEnquete";
+import { ObservationComponent } from "../Pages/Auxiliaire/Observation/Observation.component";
+import { ReclamationComponent } from "../Pages/Auxiliaire/Reclamation/Reclamation.component";
 const RouterPage = (
   props: { pageComponent: JSX.Element } & RouteComponentProps
 ) => props.pageComponent;
@@ -129,9 +131,17 @@ const AppRouter = () => (
             path="/ouverturePlainteLRP"
             pageComponent={<OuvertureEnqueteLRPComponent />}
           />
-            <RouterPage
+          <RouterPage
             path="/cssEnquete"
             pageComponent={<CSSEnqueteComponent />}
+          />
+          <RouterPage
+            path="/Observation"
+            pageComponent={<ObservationComponent />}
+          />
+          <RouterPage
+            path="/Reclamation"
+            pageComponent={<ReclamationComponent />}
           />
         </Router>
       </UserProvider>

@@ -136,6 +136,16 @@ const links = {
       libelle: "Cloture enquête",
     },
   ],
+  Auxiliaire: [
+    {
+      href: "/Observation",
+      libelle: "Rapport d'observation",
+    },
+    {
+      href: "/Reclamation",
+      libelle: "Formulaire réclamation",
+    },
+  ],
 };
 
 const LinkList = () => (
@@ -150,6 +160,7 @@ const LinkList = () => (
       links={links.Investigation}
       title="Investigations - Forum LSPD)"
     />
+    <DropDown links={links.Auxiliaire} title="Rapport Auxiliaire" />
     <DropDown links={links.Autre} title="Autre" />
   </>
 );
