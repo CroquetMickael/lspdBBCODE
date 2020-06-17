@@ -6,7 +6,7 @@ import { PageLayout } from "../../../Layout/PageLayout";
 import { InputComponent } from "@component/Input.component";
 
 const PlainteCSSComponent = (props: any) => {
-  const [editorState, setEditorState] = useState(
+  const [editorState] = useState(
     EditorState.createWithContent(ContentState.createFromText(``))
   );
   const ModalValues = useContext(ModalContext);

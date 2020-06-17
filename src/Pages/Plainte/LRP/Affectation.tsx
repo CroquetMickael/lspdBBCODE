@@ -7,7 +7,7 @@ import { InputComponent } from "@component/Input.component";
 import { ToggleButtonComponent } from "@component/ToggleButton.component";
 
 const PlainteAffectationComponent = (props: any) => {
-  const [editorState, setEditorState] = useState(
+  const [editorState] = useState(
     EditorState.createWithContent(ContentState.createFromText(``))
   );
   const ModalValues = useContext(ModalContext);

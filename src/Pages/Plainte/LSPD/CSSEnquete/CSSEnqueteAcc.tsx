@@ -1,5 +1,4 @@
 import React from "react";
-import { InputComponent } from "@component/Input.component";
 const CSSEnqueteAccComponent = (props: any) => (
   <form className="w-full">
     <div className="flex flex-wrap justify-between w-full mb-6">

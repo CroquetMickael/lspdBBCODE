@@ -1,5 +1,4 @@
 import React, { useState, useContext, useEffect } from "react";
-import { Accordeon } from "@component/Accordeon";
 import { ModalContext } from "@component/Context/ModalContext";
 import { GenerateButtonComponent } from "@component/GenerateButton/GenerateButton.container";
 import { UserContext } from "@component/Context/UserContext";

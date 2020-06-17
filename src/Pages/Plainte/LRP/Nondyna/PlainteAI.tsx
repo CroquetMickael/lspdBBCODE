@@ -5,7 +5,7 @@ import { GenerateButtonComponent } from "@component/GenerateButton/GenerateButto
 import { PageLayout } from "../../../../Layout/PageLayout";
 
 const PlainteAIComponent = (props: any) => {
-  const [editorState, setEditorState] = useState(
+  const [editorState] = useState(
     EditorState.createWithContent(ContentState.createFromText(``))
   );
   const ModalValues = useContext(ModalContext);
