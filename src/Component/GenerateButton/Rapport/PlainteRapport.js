@@ -13,6 +13,8 @@ ___________________________________[/center]
 
 
 
+
+
 [center][size=5][color=black]Notice d'information[/color][/size]
 ___________________________________[/center]
 
