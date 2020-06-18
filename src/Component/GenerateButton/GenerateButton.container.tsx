@@ -10,7 +10,7 @@ const GenerateButtonComponent = (props: any) => {
       props.rapportType === "MEA" ||
       props.rapportType === "PLAINTEDO" ||
       props.rapportType === "PLAINTE" ||
-      "RECLAAUXI"
+      props.rapportType === "RECLAAUXI"
     ) {
       generate(props.rapportType, props, props.code, props.setBBCode);
       props.toggleModal();
