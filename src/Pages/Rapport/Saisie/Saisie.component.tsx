@@ -88,7 +88,7 @@ const SaisieComponent = (props: any) => {
   useEffect(() => {
     ModalValues.setShow(true);
     ModalValues.setLink(
-      "https://lspd-online.forumactif.com/t2880-bureau-central-depot-de-saisie"
+      "https://lspd-online.forumactif.com/f10-enregistrements-en-detention"
     );
   });
   return (
