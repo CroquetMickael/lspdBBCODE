@@ -14,7 +14,6 @@ const FourriereComponent = (props: any) => {
   const userValues = useContext(UserContext);
 
   const [Officers, setOfficers] = useState<string>("");
-  const [Grade, setGrade] = useState<string>("");
   const [Affectation, setAffectation] = useState<string>("");
 
   const [modeleVeh, setModeleVeh] = useState<string>("");
@@ -30,8 +29,8 @@ const FourriereComponent = (props: any) => {
     toggleModal: ModalValues.toggleModal,
     date: userValues.currentDate,
     setDate: userValues.setCurrentDate,
-    Grade,
-    setGrade,
+    grade: userValues.grade,
+    setGrade: userValues.setGrade,
     Affectation,
     setAffectation,
     proprio,

@@ -13,7 +13,6 @@ const ContraventionComponent = (props: any) => {
   const ModalValues = useContext(ModalContext);
   const userValues = useContext(UserContext);
 
-  const [Grade, setGrade] = useState<string>("");
   
   const [lieu, setLieu] = useState<string>("");
   const [personne, setPersonne] = useState<string>("");
@@ -24,8 +23,8 @@ const ContraventionComponent = (props: any) => {
     toggleModal: ModalValues.toggleModal,
     date: userValues.currentDate,
     setDate: userValues.setCurrentDate,
-    Grade,
-    setGrade,
+    grade: userValues.grade,
+    setGrade: userValues.setGrade,
     lieu,
     setLieu,
     personne,

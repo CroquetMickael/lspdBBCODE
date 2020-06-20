@@ -11,7 +11,7 @@ const ReclamationComponent = (props: any) => {
 
   const [montant, setMontant] = useState<string>("");
   const [numVeh, setNumVeh] = useState<string>("");
-  const [grade, setGrade] = useState<string>("");
+
   const [urlImage, setUrlImage] = useState<string>("");
   const [motif, setMotif] = useState<string>("Réparation");
   const propsToSend = {
@@ -21,10 +21,10 @@ const ReclamationComponent = (props: any) => {
     setNumVeh,
     motif,
     setMotif,
-    grade,
-    setGrade,
     urlImage,
     setUrlImage,
+    grade: userValues.grade,
+    setGrade: userValues.setGrade,
     toggleModal: ModalValues.toggleModal,
     date: userValues.currentDate,
     setDate: userValues.setCurrentDate,
@@ -81,7 +81,7 @@ const ReclamationComponent = (props: any) => {
             placeholder="Grade"
             type="text"
             border={true}
-            onChange={(e: any) => setGrade(e.target.value)}
+            onChange={(e: any) => userValues.setGrade(e.target.value)}
           />
         </div>
         <div className="ml-4">
@@ -109,7 +109,7 @@ const ReclamationComponent = (props: any) => {
             onChange={(e: any) => setMontant(e.target.value)}
           />
         </div>
-        <div className="ml-4 w-1/2">
+        <div className="w-1/2 ml-4">
           <InputComponent
             placeholder="Lien de la photo"
             type="text"

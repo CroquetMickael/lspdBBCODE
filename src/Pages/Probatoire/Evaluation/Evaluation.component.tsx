@@ -21,7 +21,6 @@ const EvaluationComponent = (props: any) => {
   const [conduite, setConduite] = useState<string>("XGOOD");
   const [AvisG, setAvisG] = useState<string>("XGOOD");
   const [incident, setIncident] = useState<String>("");
-  const [grade, setGrade] = useState<string>("");
 
   //OOC
   const [expresOOC, setExpresOOC] = useState<string>("XGOOD");
@@ -52,10 +51,10 @@ const EvaluationComponent = (props: any) => {
     setRemarqueOOC,
     AvisG,
     setAvisG,
-    grade,
+    grade: userValues.grade,
+    setGrade: userValues.setGrade,
     evolutionOOC,
     setEvolutionOOC,
-    setGrade,
     incident,
     setIncident,
     bbCode: ModalValues.bbCode,

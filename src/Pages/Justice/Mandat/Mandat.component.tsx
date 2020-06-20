@@ -13,7 +13,6 @@ const MandatComponent = (props: any) => {
   const ModalValues = useContext(ModalContext);
   const userValues = useContext(UserContext);
 
-  const [Grade, setGrade] = useState<string>("");
   const [lieu, setLieu] = useState<string>("");
   const [suspectName, setSuspectName] = useState<string>("");
   const [dateFait, setDateFait] = useState(`Fait ` +
@@ -26,8 +25,8 @@ const MandatComponent = (props: any) => {
     toggleModal: ModalValues.toggleModal,
     date: userValues.currentDate,
     setDate: userValues.setCurrentDate,
-    Grade,
-    setGrade,
+    grade: userValues.grade,
+    setGrade: userValues.setGrade,
     lieu,
     setLieu,
     suspectName,
