@@ -6,7 +6,7 @@ const Header = () => {
   const [isCollapse, setIsCollapse] = useState(false);
   const ToggleIsCollapse = () => setIsCollapse(!isCollapse);
   return (
-    <div className="z-20 flex flex-wrap w-full p-2 bg-blue-800">
+    <div className="z-30 flex flex-wrap w-full p-2 bg-blue-800">
       <div className="p-2 mx-auto text-center text-gray-700">
         <img alt="lspdLogo" className="hidden m-auto sm:block" src={Logo}></img>
         <hr className="hidden my-4 sm:block" />

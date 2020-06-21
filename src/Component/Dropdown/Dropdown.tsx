@@ -14,7 +14,7 @@ const DropDown = (props: DropDownProps) => (
     <button className="block w-full mt-4 mr-4 text-gray-600 lg:inline-block lg:mt-0 hover:text-white">
       <span>{props.title}</span>
     </button>
-    <ul className="absolute z-30 hidden w-64 p-4 pt-1 text-gray-700 bg-blue-800 rounded dropdown-content">
+    <ul className="absolute z-20 hidden w-64 p-4 pt-1 text-gray-700 bg-blue-800 rounded dropdown-content">
       {props.links.map((link, index: number) => (
         <Match path={link.href} key={index}>
           {(match) => (
