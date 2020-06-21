@@ -33,7 +33,7 @@ const ModalComponent = (props: any) => {
   return (
     <div
       className={`fixed transition-all duration-100 ${
-        props.modalOpen ? "opacity-100 z-20" : "opacity-0 z-0"
+        props.modalOpen ? "opacity-100 z-40" : "opacity-0 z-0"
       } w-full h-full pin flex items-center`}
     >
       <div
