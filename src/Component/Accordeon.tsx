@@ -36,8 +36,8 @@ const Accordeon = (props: Accordeon) => {
         </div>
       </div>
       <div className="relative">
-        <div
-          className={`bg-white text-grey-darkest ease-in-out shadow absolute delay-75 z-30 w-full transition duration-300 overflow-hidden ${
+      <div
+          className={`bg-white text-grey-darkest ease-in-out shadow absolute delay-75 z-20 w-full transition duration-300 overflow-hidden ${
             isCollapse ? "h-auto" : "h-0 "
           }`}
         >

@@ -10,7 +10,9 @@ const Layout = (props: any) => {
       <div className="flex flex-col content-start h-full">
         <Header />
         <div className="z-10 w-full h-full">{props.children}</div>
-
+        <footer className="w-full p-4 text-center text-white bg-blue-800 border-t border-grey pin-b">
+          Made by @Haze for LSPD LRP 2020-2021
+        </footer>
         <ModalContainer
           modalOpen={modalValues.modalOpen}
           toggleModal={modalValues.toggleModal}
