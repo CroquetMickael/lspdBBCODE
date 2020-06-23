@@ -22,13 +22,13 @@ const PlainteComponent = (props: any) => {
   const [victimeLieuNaiss, setVictimeLieuNaiss] = useState("");
   const [victimeLieu, setVictimeLieu] = useState("");
   const [victimePhone, setVictimePhone] = useState("");
+  const [victimeOOC, setVictimeOOC] = useState("");
 
   // Suspect
   const [suspectName, setSuspectName] = useState("");
   const [suspectLastName, setSuspectLastName] = useState("");
   const [suspectLieu, setSuspectLieu] = useState("");
   const [suspectPhone, setSuspectPhone] = useState("");
-  const [suspectOOC, setSuspectOOC] = useState("");
 
   const [search, setSearch] = useState<string>("");
   const [peineTotalAmende, setPeineTotalAmende] = useState<string>("0.000");
@@ -64,8 +64,8 @@ const PlainteComponent = (props: any) => {
     peineTotalTempsOOC,
     setPeineTotalAmende,
     setPeineTotalTempsOOC,
-    suspectOOC,
-    setSuspectOOC,
+    victimeOOC,
+    setVictimeOOC,
     accusation,
     search,
     setSearch,

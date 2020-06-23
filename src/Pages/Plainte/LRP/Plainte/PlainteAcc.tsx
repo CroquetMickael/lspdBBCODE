@@ -55,6 +55,14 @@ const PlainteAccComponent = (props: any) => (
             onChange={(e: any) => props.setVictimePhone(e.target.value)}
           />
         </div>
+        <div className="ml-4">
+          <InputComponent
+            placeholder="Pseudo forum LRP du plaignant"
+            type="text"
+            border={true}
+            onChange={(e: any) => props.setVictimeOOC(e.target.value)}
+          />
+        </div>
       </div>
       <div className="w-full mx-4 my-2">Information sur le concerné</div>
       <div className="flex flex-wrap w-full">
@@ -88,14 +96,6 @@ const PlainteAccComponent = (props: any) => (
             type="text"
             border={true}
             onChange={(e: any) => props.setSuspectPhone(e.target.value)}
-          />
-        </div>
-        <div className="ml-4">
-          <InputComponent
-            placeholder="Pseudo forum LRP du plaignant"
-            type="text"
-            border={true}
-            onChange={(e: any) => props.setSuspectOOC(e.target.value)}
           />
         </div>
         <div className="w-full m-4">

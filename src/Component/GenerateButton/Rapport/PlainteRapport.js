@@ -343,7 +343,7 @@ ${
 }
   
 [size=3][b]1.[/b] IDENTITÉ DU PLAIGNANT[/size]
-
+(( [b]Pseudo LRP du plaignant :[/b] ${elements.victimeOOC} ))
 [b]Nom :[/b] ${elements.victimeName}
 [b]Prénom :[/b] ${elements.victimeLastName}
 [b]Date de naissance :[/b]${elements.victimeNaiss}
@@ -354,7 +354,6 @@ ${
   
   
 [size=3] [b]2.[/b] IDENTITÉ DU CONCERNÉ[/size]
-(( [b]Pseudo LRP :[/b] ${elements.suspectOOC} ))
 [b]Nom :[/b] ${elements.suspectName}
 [b]Prénom :[/b] ${elements.suspectLastName}
 [b]Lieu de résidence actuelle :[/b] ${elements.suspectLieu}
