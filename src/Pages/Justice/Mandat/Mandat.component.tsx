@@ -7,7 +7,6 @@ import { GenerateButtonComponent } from "@component/GenerateButton/GenerateButto
 import { UserContext } from "@component/Context/UserContext";
 import { MandatAccComponent } from "./MandatAcc.component";
 import { PageLayout } from "../../../Layout/PageLayout";
-import { PeineContainer } from "@component/Peine/PeineContainer";
 
 const MandatComponent = (props: any) => {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
