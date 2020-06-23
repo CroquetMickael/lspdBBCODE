@@ -7,6 +7,7 @@ import { GenerateButtonComponent } from "@component/GenerateButton/GenerateButto
 import { UserContext } from "@component/Context/UserContext";
 import { MandatAccComponent } from "./MandatAcc.component";
 import { PageLayout } from "../../../Layout/PageLayout";
+import { PeineContainer } from "@component/Peine/PeineContainer";
 
 const MandatComponent = (props: any) => {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
@@ -15,11 +16,16 @@ const MandatComponent = (props: any) => {
 
   const [lieu, setLieu] = useState<string>("");
   const [suspectName, setSuspectName] = useState<string>("");
-  const [dateFait, setDateFait] = useState(`Fait ` +
-    Intl.DateTimeFormat("fr-FR").format(Date.now())
+  const [dateFait, setDateFait] = useState(
+    `Fait ` + Intl.DateTimeFormat("fr-FR").format(Date.now())
   );
   const [type, setType] = useState("");
-  const [charge, setCharge] = useState(`[spoiler="titre"][/spoiler]`);
+  const [preuve, setPreuve] = useState(`[spoiler="Preuve"][/spoiler]`);
+
+  const [search, setSearch] = useState<string>("");
+  const [peineTotalAmende, setPeineTotalAmende] = useState<string>("0.000");
+  const [peineTotalTempsOOC, setPeineTotalTempsOOC] = useState(0);
+  const [charge, setCharge] = useState("");
   const propsToSend = {
     code: editorState,
     toggleModal: ModalValues.toggleModal,
@@ -37,6 +43,14 @@ const MandatComponent = (props: any) => {
     setType,
     charge,
     setCharge,
+    peineTotalAmende,
+    peineTotalTempsOOC,
+    setPeineTotalAmende,
+    setPeineTotalTempsOOC,
+    preuve,
+    setPreuve,
+    search,
+    setSearch,
     bbCode: ModalValues.bbCode,
     setBBCode: ModalValues.setBBCode,
     setFirstName: userValues.setFirstName,
@@ -61,11 +75,17 @@ const MandatComponent = (props: any) => {
         <MandatAccComponent {...propsToSend} />
       </Accordeon>
       <div className="flex flex-col w-full h-full">
-        <div className="w-full my-4">Charge : </div>
+        <PeineContainer
+          {...propsToSend}
+          text={""}
+          placeholder="Charge retenue"
+          setTextAeraValue={setCharge}
+        />
+        <div className="w-full my-4">Preuve : </div>
         <textarea
-          className="w-full"
-          value={charge}
-          onChange={(e: any) => setCharge(e.target.value)}
+          className="w-full h-64"
+          value={preuve}
+          onChange={(e: any) => setPreuve(e.target.value)}
         />
         <div className="w-full my-4">Contexte : </div>
         <HtmlEditor editorState={editorState} setEditorState={setEditorState} />
