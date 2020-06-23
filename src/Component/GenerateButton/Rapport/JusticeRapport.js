@@ -26,7 +26,6 @@ const generateMandat = (elements, code, setter) => {
     </div>
     
     <div style="height: auto; text-align: center; padding:6px;background-color: #003964; color: white ;font-size:17px;padding: 20px 40px;margin: 0 50px;box-shadow: 0px 0px 1px #003964;">[b]ÉLÉMENTS À CHARGE[/b]</div><div style="padding: 40px;background-color:#ffffff;margin: 0 50px;box-shadow: 0px 0px 1px #b1b2b2;">
-    ${elements.charge}
     ${elements.preuve}
     </div>
     

@@ -21,11 +21,6 @@ const MandatComponent = (props: any) => {
   );
   const [type, setType] = useState("");
   const [preuve, setPreuve] = useState(`[spoiler="Preuve"][/spoiler]`);
-
-  const [search, setSearch] = useState<string>("");
-  const [peineTotalAmende, setPeineTotalAmende] = useState<string>("0.000");
-  const [peineTotalTempsOOC, setPeineTotalTempsOOC] = useState(0);
-  const [charge, setCharge] = useState("");
   const propsToSend = {
     code: editorState,
     toggleModal: ModalValues.toggleModal,
@@ -41,16 +36,8 @@ const MandatComponent = (props: any) => {
     setDateFait,
     type,
     setType,
-    charge,
-    setCharge,
-    peineTotalAmende,
-    peineTotalTempsOOC,
-    setPeineTotalAmende,
-    setPeineTotalTempsOOC,
     preuve,
     setPreuve,
-    search,
-    setSearch,
     bbCode: ModalValues.bbCode,
     setBBCode: ModalValues.setBBCode,
     setFirstName: userValues.setFirstName,
@@ -75,12 +62,6 @@ const MandatComponent = (props: any) => {
         <MandatAccComponent {...propsToSend} />
       </Accordeon>
       <div className="flex flex-col w-full h-full">
-        <PeineContainer
-          {...propsToSend}
-          text={""}
-          placeholder="Charge retenue"
-          setTextAeraValue={setCharge}
-        />
         <div className="w-full my-4">Preuve : </div>
         <textarea
           className="w-full h-64"
