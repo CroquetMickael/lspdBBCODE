@@ -310,7 +310,7 @@ function generatePlainteAffec(elements, setter) {
 [justify][img]https://cdn.discordapp.com/attachments/664886940667084851/705820869376606259/unknown.png[/img][size=3][color=black]L'enquêteur aura peut être besoin de vous contacter, merci donc de demeurer joignable et de nous informer de tout changement d'adresse ou de numéro de téléphone.[/color][/size][/justify]
 ${
   elements.showEnqueteur
-    ? `[justify][img]https://cdn.discordapp.com/attachments/721058188593594409/721737400933416995/578aa62f9ef92811dfe20c528923a7c7.png[/img][size=3][color=black]L'enquêteur désigné est: ${elements.enqueteur}[b][/b].[/color][/size][/justify]`
+    ? `[justify][size=3][color=black]L'enquêteur désigné est: ${elements.enqueteur}[b][/b].[/color][/size][/justify]`
     : ""
 } 
 ${
