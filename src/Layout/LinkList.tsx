@@ -79,6 +79,10 @@ const links = {
       href: "/email",
       libelle: "Email interne",
     },
+    {
+      href: "/lettreInterDep",
+      libelle: "Lettre inter-departementale"
+    }
   ],
   Plainte: [
     {

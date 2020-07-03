@@ -24,7 +24,7 @@ import {
   generateAutoEvaluation,
   generateProbatoire,
 } from "./Rapport/ProbatoireRapport";
-import { generateEmail } from "./Rapport/OtherRapport";
+import { generateEmail, generateLetter } from "./Rapport/OtherRapport";
 import {
   generatePlainteAR,
   generatePlainteAI,
@@ -43,7 +43,10 @@ import {
   generateOuvertureEnqueteLRP,
   generateCSSEnquete,
 } from "./Rapport/BIRapport";
-import { generateObservation, generateReclamation } from "./Rapport/AuxiRapport";
+import {
+  generateObservation,
+  generateReclamation,
+} from "./Rapport/AuxiRapport";
 export function generate(type, elements, code, setter) {
   elements.setTitlePost("");
   switch (type) {
@@ -139,6 +142,9 @@ export function generate(type, elements, code, setter) {
       break;
     case "RECLAAUXI":
       generateReclamation(elements, setter);
+      break;
+    case "LETTERINTERDEP":
+      generateLetter(elements, code, setter);
       break;
     default:
       break;

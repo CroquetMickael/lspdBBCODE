@@ -34,6 +34,7 @@ import { OuvertureEnqueteLRPComponent } from "../Pages/Plainte/LSPD/OuvertureEnq
 import { CSSEnqueteComponent } from "../Pages/Plainte/LSPD/CSSEnquete/CSSEnquete";
 import { ObservationComponent } from "../Pages/Auxiliaire/Observation/Observation.component";
 import { ReclamationComponent } from "../Pages/Auxiliaire/Reclamation/Reclamation.component";
+import { LetterComponent } from "../Pages/Autre/Letter/Letter.component";
 const RouterPage = (
   props: { pageComponent: JSX.Element } & RouteComponentProps
 ) => props.pageComponent;
@@ -142,6 +143,10 @@ const AppRouter = () => (
           <RouterPage
             path="/Reclamation"
             pageComponent={<ReclamationComponent />}
+          />
+          <RouterPage
+            path="/lettreInterDep"
+            pageComponent={<LetterComponent />}
           />
         </Router>
       </UserProvider>
